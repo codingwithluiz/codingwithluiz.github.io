@@ -56,6 +56,7 @@ const posts = [
     description: "Aprenda esse efeito do CSS e coloque as imagens em destaque!",
     link: "/posts/css-image-hover/index.html",
   },
+  /*
   {
     id: 7,
     title: "Human Benchmark bot",
@@ -185,7 +186,7 @@ const posts = [
     description:
       "Vamos fazer o velho e bom jogo da forca, aprenda a lógica de programação desenvolvendo um jogo simples.",
     link: "post.html?id=22",
-  },
+  },*/
 ];
 
 const postsPerPage = 8;
