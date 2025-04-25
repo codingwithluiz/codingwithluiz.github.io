@@ -1,0 +1,449 @@
+<html>
+  <head>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/doc.css" />
+  </head>
+  <body>
+  <div class="responsive-wrapper">
+    <aside>
+      <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
+      <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
+      <p><strong>🗓 Publicado:</strong><br />April 7, 2025</p>
+      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+      <p><strong>📁 Categoria:</strong><br />Frontend</p>
+      <p><strong>🛠 Tecnologias:</strong><br />HTML, Javascript, CSS</p>
+      <p><strong>🔗 Links:</strong></p>
+      <p><a target="_blank" href="https://www.youtube.com/watch?v=0WYwNBjO5Hc"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+</svg> YouTube</a></p>
+      <p><a target="_blank" href="https://github.com/codingwithluiz/js-snake-div"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
+    <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"></path>
+</svg> GitHub</a></p>
+      <p><a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
+    </aside>
+    <main>
+<h2 id="html-inicial">HTML Inicial</h2>
+<p>Vamos iniciar criando o HTML inicial, incluir o arquivo <code>style.css</code> e 
+<code>script.js</code>. Nesse projeto será utilizada a biblioteca <code>font-awesome</code>. Para
+incluir o CSS no HTML podemos ir na página https://cdnjs.com/libraries/font-awesome
+e copiar a URL da última versão da biblioteca. No momento da escrita 
+desse artigo a versão é a <code>6.7.2</code>.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Snake Game&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;script src=&quot;index.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="adicionar-fontes-do-google">Adicionar Fontes do Google</h2>
+<p>Ir no site https://fonts.google.com/ e procurar pela fonte "Open Sans". 
+Selecionar a fonte e depois clicar em "Get Font". Então cliar em "Get embed code"
+e na aba "Web" selecionar a opção "@import" e então "Copy code".</p>
+<p>Criar o arquivo <code>style.css</code> e colar a fonte selecionada na primeira linha do
+arquivo.</p>
+<h2 id="html-principal">HTML Principal</h2>
+<p>Vamos criar um <code>&lt;div&gt;</code> principal para ser um <em>wrapper</em> para os elementos do jogo.
+Basicamente são três seções: </p>
+<ul>
+<li><code>game-details</code> - local onde é apresentado a pontuação atual do jogar e também 
+  a maior pontuação já obtida.</li>
+<li><code>play-board</code> - o jogo propriamente dito com a cobrinha e as frutas.</li>
+<li><code>controls</code> - mostra os controles para movimentar a cobrinha. As setas são
+  da biblioteca "Font Awesome".</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class=&quot;game-details&quot;&gt;
+        &lt;span class=&quot;score&quot;&gt;Score: 0&lt;/span&gt;
+        &lt;span class=&quot;high-score&quot;&gt;High Score: 0&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;play-board&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;controls&quot;&gt;
+        &lt;i data-key=&quot;ArrowLeft&quot; class=&quot;fa-solid fa-arrow-left-long&quot;&gt;&lt;/i&gt;
+        &lt;i data-key=&quot;ArrowUp&quot; class=&quot;fa-solid fa-arrow-up-long&quot;&gt;&lt;/i&gt;
+        &lt;i data-key=&quot;ArrowRight&quot; class=&quot;fa-solid fa-arrow-right-long&quot;&gt;&lt;/i&gt;
+        &lt;i data-key=&quot;ArrowDown&quot; class=&quot;fa-solid fa-arrow-down-long&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="estilos">Estilos</h2>
+<p>Vamos abrir o arquivo <code>style.css</code> e iniciar a estilização do nosso jogo.</p>
+<h3 id="estilos-globais">🌍 Estilos Globais</h3>
+<pre><code class="language-css">* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+</code></pre>
+<ul>
+<li><code>*</code> aplica as regras a <strong>todos os elementos</strong> da página.</li>
+<li><code>margin: 0</code> e <code>padding: 0</code>: remove espaçamentos padrão.</li>
+<li><code>box-sizing: border-box</code>: o tamanho de um elemento inclui bordas e padding.</li>
+<li><code>font-family</code>: define Open Sans como fonte padrão.</li>
+</ul>
+<h3 id="corpo-da-pagina">🖼️ Corpo da Página</h3>
+<pre><code class="language-css">body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e3f2fd;
+}
+</code></pre>
+<ul>
+<li><code>display: flex</code>: ativa o layout flexível.</li>
+<li><code>align-items: center</code>: centraliza verticalmente.</li>
+<li><code>justify-content: center</code>: centraliza horizontalmente.</li>
+<li><code>min-height: 100vh</code>: ocupa no mínimo a altura total da tela.</li>
+<li><code>background</code>: define um fundo azul-claro agradável.</li>
+</ul>
+<h3 id="container-principal">🎮 Container Principal</h3>
+<pre><code class="language-css">.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    background: #293447;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+}
+</code></pre>
+<ul>
+<li><code>.wrapper</code>: onde o jogo acontece.</li>
+<li><code>vmin</code>: unidades relativas ao menor lado da tela (ótimo para design responsivo).</li>
+<li><code>overflow: hidden</code>: evita que conteúdo ultrapasse os limites.</li>
+<li><code>flex-direction: column</code>: os elementos internos são empilhados verticalmente.</li>
+<li><code>background</code>: tom escuro para contrastar com a área de jogo.</li>
+<li><code>border-radius</code>: bordas arredondadas.</li>
+<li><code>box-shadow</code>: adiciona uma sombra suave para dar profundidade.</li>
+</ul>
+<h3 id="detalhes-do-jogo">🧾 Detalhes do Jogo</h3>
+<pre><code class="language-css">.game-details {
+    color: #b8c6dc;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+</code></pre>
+<ul>
+<li>Estilo para barra de informações do jogo.</li>
+<li><code>color</code>: cor de texto clara.</li>
+<li><code>font-weight</code>: define peso da fonte (mais espessa).</li>
+<li><code>display: flex</code> e <code>justify-content: space-between</code>: distribui pontuação e 
+  outros detalhes igualmente nas extremidades.</li>
+</ul>
+<h3 id="tabuleiro-do-jogo">🟩 Tabuleiro do Jogo</h3>
+<pre><code class="language-css">.play-board {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background: #212837;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+</code></pre>
+<ul>
+<li><code>display: grid</code>: cria uma grade.</li>
+<li><code>grid-template</code>: 30 linhas e 30 colunas, todos do mesmo tamanho (<code>1fr</code>).</li>
+<li>Isso permite movimentar a cobrinha e a comida por células bem definidas.</li>
+<li><code>background</code>: cor escura que ajuda a destacar a cabeça e a comida.</li>
+</ul>
+<h3 id="comida-da-cobrinha">🍎 Comida da Cobrinha</h3>
+<pre><code class="language-css">.play-board .food {
+    background: #ff003d;
+}
+</code></pre>
+<ul>
+<li>Define a cor da célula que representa a comida: <strong>vermelho vibrante</strong>.</li>
+</ul>
+<h3 id="cabeca-da-cobrinha">🐍 Cabeça da Cobrinha</h3>
+<pre><code class="language-css">.play-board .head {
+    background: #60cbff;
+}
+</code></pre>
+<ul>
+<li>Cor da <strong>cabeça da cobrinha</strong>: azul claro, para se destacar no tabuleiro.</li>
+</ul>
+<h3 id="controles-visiveis-so-no-mobile">🎮 Controles (visíveis só no mobile)</h3>
+<pre><code class="language-css">.controls{
+    display: none;
+    justify-content: space-between;
+}
+</code></pre>
+<ul>
+<li>Esconde os controles por padrão.</li>
+<li><code>justify-content: space-between</code>: quando visíveis, os botões ficam bem 
+  distribuídos.</li>
+</ul>
+<pre><code class="language-css">.controls i {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #b8c6dc;
+    width: calc(100% / 4);
+    cursor: pointer;
+    border-right: 1px solid #171b26;
+}
+</code></pre>
+<ul>
+<li>Estilo dos botões de direção (ícones <code>&lt;i&gt;</code>).</li>
+<li><code>width: calc(100% / 4)</code>: 4 botões com o mesmo tamanho.</li>
+<li><code>cursor: pointer</code>: mostra que é clicável.</li>
+<li><code>border-right</code>: separa visualmente os botões.</li>
+</ul>
+<h3 id="responsividade-para-telas-menores">📱 Responsividade (para telas menores)</h3>
+<pre><code class="language-css">@media screen and (max-width: 800px) {
+</code></pre>
+<ul>
+<li>Tudo dentro desse bloco só vale se a tela for menor ou igual a 800px 
+  (smartphones e tablets).</li>
+</ul>
+<pre><code class="language-css">    .wrapper {
+        width: 90vmin;
+        height: 115vmin;
+    }
+</code></pre>
+<ul>
+<li>Aumenta o tamanho do jogo no celular, para melhor jogabilidade.</li>
+</ul>
+<pre><code class="language-css">    .game-details {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+</code></pre>
+<ul>
+<li>Diminui um pouco o tamanho da fonte e o espaçamento na barra de informações.</li>
+</ul>
+<pre><code class="language-css">    .controls {
+        display: flex;
+    }
+</code></pre>
+<ul>
+<li>Exibe os controles (botões de direção) no mobile.</li>
+</ul>
+<pre><code class="language-css">    .controls i {
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}
+</code></pre>
+<ul>
+<li>Ajusta o tamanho dos ícones dos controles para caber melhor em telas menores.</li>
+</ul>
+<h2 id="javascript">Javascript</h2>
+<p>Vamos criar a arquivo <code>index.js</code> para iniciar a codificação da lógica do jogo da
+cobrinha.</p>
+<h3 id="selecionando-elementos-do-dom">Selecionando Elementos do DOM</h3>
+<pre><code class="language-javascript">const playBoard = document.querySelector(&quot;.play-board&quot;);
+const scoreElement = document.querySelector(&quot;.score&quot;);
+const highScoreElement = document.querySelector(&quot;.high-score&quot;);
+const controls = document.querySelectorAll(&quot;.controls i&quot;);
+</code></pre>
+<ul>
+<li>Aqui selecionamos elementos do HTML usando <code>document.querySelector</code>:</li>
+<li><code>.play-board</code>: a área do jogo.</li>
+<li><code>.score</code>: exibe a pontuação atual.</li>
+<li><code>.high-score</code>: exibe o recorde.</li>
+<li><code>.controls i</code>: todos os botões dentro da classe <code>controls</code> (para celulares).</li>
+</ul>
+<h3 id="variaveis-do-jogo">Variáveis do Jogo</h3>
+<pre><code class="language-javascript">let gameOver = false;
+let foodX, foodY;
+let snakeX = 5, snakeY = 5;
+let velocityX = 0, velocityY = 0;
+let snakeBody = [];
+let setIntervalId;
+let score = 0;
+</code></pre>
+<ul>
+<li><code>gameOver</code>: indica se o jogo terminou.</li>
+<li><code>foodX</code>, <code>foodY</code>: coordenadas da comida.</li>
+<li><code>snakeX</code>, <code>snakeY</code>: posição da cabeça da cobra.</li>
+<li><code>velocityX</code>, <code>velocityY</code>: direção de movimento da cobra.</li>
+<li><code>snakeBody</code>: array com as posições do corpo da cobra.</li>
+<li><code>setIntervalId</code>: ID do <code>setInterval</code> para controle.</li>
+<li><code>score</code>: pontuação atual.</li>
+</ul>
+<h3 id="armazenando-e-exibindo-o-recorde">🏆 Armazenando e Exibindo o Recorde</h3>
+<pre><code class="language-javascript">let highScore = localStorage.getItem(&quot;high-score&quot;) || 0;
+highScoreElement.innerText = `High Score: ${highScore}`;
+</code></pre>
+<ul>
+<li>Verifica se há um <code>high-score</code> salvo no navegador.</li>
+<li>Se não existir, define como 0.</li>
+<li>Atualiza o texto da pontuação máxima.</li>
+</ul>
+<h3 id="atualiza-a-posicao-da-comida">🍎 Atualiza a Posição da Comida</h3>
+<pre><code class="language-javascript">const updateFoodPosition = () =&gt; {
+    foodX = Math.floor(Math.random() * 30) + 1;
+    foodY = Math.floor(Math.random() * 30) + 1;
+}
+</code></pre>
+<ul>
+<li>Gera posições aleatórias de 1 a 30 (colunas e linhas do grid).</li>
+<li><code>Math.random()</code> retorna um número de 0 a 1.</li>
+<li><code>Math.floor()</code> arredonda para baixo.</li>
+</ul>
+<h3 id="lida-com-o-fim-do-jogo">💀 Lida com o Fim do Jogo</h3>
+<pre><code class="language-javascript">const handleGameOver = () =&gt; {
+    clearInterval(setIntervalId);
+    alert(&quot;Game Over! Press OK to replay...&quot;);
+    location.reload();
+}
+</code></pre>
+<ul>
+<li>Para o jogo com <code>clearInterval</code>.</li>
+<li>Mostra um <code>alert()</code> para o jogador.</li>
+<li>Recarrega a página para reiniciar o jogo.</li>
+</ul>
+<h3 id="muda-a-direcao-da-cobra-com-o-teclado">🎮 Muda a Direção da Cobra com o Teclado</h3>
+<pre><code class="language-javascript">const changeDirection = e =&gt; {
+    if (e.key === &quot;ArrowUp&quot; &amp;&amp; velocityY != 1) {
+        velocityX = 0;
+        velocityY = -1;
+    } else if (e.key === &quot;ArrowDown&quot; &amp;&amp; velocityY != -1) {
+        velocityX = 0;
+        velocityY = 1;
+    } else if (e.key === &quot;ArrowLeft&quot; &amp;&amp; velocityX != 1) {
+        velocityX = -1;
+        velocityY = 0;
+    } else if (e.key === &quot;ArrowRight&quot; &amp;&amp; velocityX != -1) {
+        velocityX = 1;
+        velocityY = 0;
+    }
+}
+</code></pre>
+<ul>
+<li>Verifica a tecla pressionada.</li>
+<li>Garante que a cobra não possa inverter diretamente (por exemplo, ir de cima para baixo).</li>
+<li>Atualiza a direção da cobra com <code>velocityX</code> e <code>velocityY</code>.</li>
+</ul>
+<h3 id="muda-a-direcao-com-botoes-celular">🕹️ Muda a Direção com Botões (Celular)</h3>
+<pre><code class="language-javascript">controls.forEach(button =&gt; 
+    button.addEventListener(&quot;click&quot;, () =&gt; 
+        changeDirection({ key: button.dataset.key }))
+);
+</code></pre>
+<ul>
+<li>Para cada botão de controle, adiciona um evento <code>click</code>.</li>
+<li>Simula uma tecla pressionada com <code>{ key: button.dataset.key }</code>.</li>
+</ul>
+<h3 id="funcao-principal-initgame">🟢 Função Principal: <code>initGame()</code></h3>
+<pre><code class="language-javascript">const initGame = () =&gt; {
+    if (gameOver) return handleGameOver();
+</code></pre>
+<ul>
+<li>Se <code>gameOver</code> for <code>true</code>, para tudo e chama <code>handleGameOver()</code>.</li>
+</ul>
+<h4 id="renderiza-a-comida">✅ Renderiza a comida</h4>
+<pre><code class="language-javascript">    let html = `&lt;div class=&quot;food&quot; style=&quot;grid-area: ${foodY} / ${foodX}&quot;&gt;&lt;/div&gt;`;
+</code></pre>
+<ul>
+<li>Cria a comida dinamicamente usando <code>grid-area</code> para posicionamento.</li>
+</ul>
+<h4 id="a-cobra-come-a-comida">🍽️ A cobra come a comida?</h4>
+<pre><code class="language-javascript">    if (snakeX === foodX &amp;&amp; snakeY === foodY) {
+        updateFoodPosition();
+        snakeBody.push([foodY, foodX]);
+        score++;
+        highScore = score &gt;= highScore ? score : highScore;
+        localStorage.setItem(&quot;high-score&quot;, highScore);
+        scoreElement.innerText = `Score: ${score}`;
+        highScoreElement.innerText = `High Score: ${highScore}`;
+    }
+</code></pre>
+<ul>
+<li>Se a cabeça da cobra está na mesma posição da comida:</li>
+<li>Gera nova comida.</li>
+<li>Adiciona um novo segmento no corpo.</li>
+<li>Incrementa o score.</li>
+<li>Atualiza o <code>highScore</code> e salva no navegador.</li>
+</ul>
+<h4 id="atualiza-a-posicao-da-cabeca">🧠 Atualiza a posição da cabeça</h4>
+<pre><code class="language-javascript">    snakeX += velocityX;
+    snakeY += velocityY;
+</code></pre>
+<ul>
+<li>Move a cabeça com base na velocidade/direção.</li>
+</ul>
+<h4 id="move-o-corpo-da-cobra">👕 Move o corpo da cobra</h4>
+<pre><code class="language-javascript">    for (let i = snakeBody.length - 1; i &gt; 0; i--) {
+        snakeBody[i] = snakeBody[i - 1];
+    }
+    snakeBody[0] = [snakeX, snakeY];
+</code></pre>
+<ul>
+<li>Move cada parte do corpo para a posição da anterior.</li>
+<li>A primeira posição vira a nova cabeça.</li>
+</ul>
+<h4 id="verifica-colisoes-com-parede">🚧 Verifica colisões com parede</h4>
+<pre><code class="language-javascript">    if (snakeX &lt;= 0 || snakeX &gt; 30 || snakeY &lt;= 0 || snakeY &gt; 30) {
+        return gameOver = true;
+    }
+</code></pre>
+<ul>
+<li>Se a cobra passar dos limites do grid (1 a 30), o jogo acaba.</li>
+</ul>
+<h4 id="renderiza-a-cobra">🐍 Renderiza a cobra</h4>
+<pre><code class="language-javascript">    for (let i = 0; i &lt; snakeBody.length; i++) {
+        html += `&lt;div class=&quot;head&quot; style=&quot;grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}&quot;&gt;&lt;/div&gt;`;
+</code></pre>
+<ul>
+<li>Cria visualmente cada parte do corpo da cobra.</li>
+</ul>
+<h4 id="verifica-colisao-com-o-proprio-corpo">☠️ Verifica colisão com o próprio corpo</h4>
+<pre><code class="language-javascript">        if (i !== 0 &amp;&amp; snakeBody[0][1] === snakeBody[i][1] &amp;&amp; snakeBody[0][0] === snakeBody[i][0]) {
+            gameOver = true;
+        }
+    }
+    playBoard.innerHTML = html;
+}
+</code></pre>
+<ul>
+<li>Se a cabeça estiver na mesma posição de alguma parte do corpo, o jogo acaba.</li>
+<li>Por fim, atualiza o conteúdo da <code>playBoard</code>.</li>
+</ul>
+<h3 id="inicializa-o-jogo">▶️ Inicializa o Jogo</h3>
+<pre><code class="language-javascript">updateFoodPosition();
+setIntervalId = setInterval(initGame, 100);
+document.addEventListener(&quot;keyup&quot;, changeDirection);
+</code></pre>
+<ul>
+<li>Coloca a comida em uma posição inicial.</li>
+<li>Chama <code>initGame</code> a cada 100ms.</li>
+<li>Ouve teclas pressionadas para mudar a direção.</li>
+</ul></div>
+</main>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/prism.js"></script>
+<script>
+  Prism.plugins.NormalizeWhitespace.setDefaults({
+    "remove-trailing": true,
+    "remove-indent": true,
+    "left-trim": true,
+    "right-trim": true,
+    /*'break-lines': 80,
+    'indent': 2,
+    'remove-initial-line-feed': false,
+    'tabs-to-spaces': 4,
+    'spaces-to-tabs': 4*/
+  });
+</script>  
+</body>
+</html>

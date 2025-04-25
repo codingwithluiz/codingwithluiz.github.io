@@ -22,7 +22,7 @@ const posts = [
     date: "07-Abr-2025",
     description:
       "Vamos recriar esse incrível jogo usando apenas JavaScript, HTML e CSS, sem usar canvas — tudo feito com divs!",
-    link: "post.html?id=2",
+    link: "posts/js-snake-div/index.html",
   },
   {
     id: 3,
