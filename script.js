@@ -13,7 +13,7 @@ const posts = [
     image: "images/youtube/unsplash-api.jpg",
     date: "15-Abr-2025",
     description: "Aprenda a utilizar a API do Unsplash com Javascript.",
-    link: "post.html?id=1",
+    link: "posts/unsplash-api/index.html",
   },
   {
     id: 2,
