@@ -1,0 +1,898 @@
+<html>
+  <head>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/doc.css" />
+  </head>
+  <body>
+  <div class="responsive-wrapper">
+    <aside>
+      <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
+      <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
+      <p><strong>🗓 Publicado:</strong><br />March 08, 2025</p>
+      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+      <p><strong>📁 Categoria:</strong><br />Frontend</p>
+      <p><strong>🛠 Tecnologias:</strong><br />React, MongoDB</p>
+      <p><strong>🔗 Links:</strong></p>
+      <p><a target="_blank" href="https://www.youtube.com/watch?v=WJNFKIe39LA"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+</svg> YouTube</a></p>
+      <p><a target="_blank" href="https://github.com/codingwithluiz/react-google-docs-clone"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
+    <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"></path>
+</svg> GitHub</a></p>
+      <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
+    </aside>
+    <main>
+<h2 id="pre-requisitos">Pré-Requisitos</h2>
+<h3 id="mongodb">MongoDB</h3>
+<h4 id="local">Local</h4>
+<p>Instalar MongoDB.</p>
+<h4 id="cloud">Cloud</h4>
+<h2 id="database-setup-mongodb">Database Setup (MongoDB)</h2>
+<p><strong>Go to <code>mongodb.com</code> and create a free database:</strong></p>
+<ol>
+<li>Create organization</li>
+<li>Create new project: netflix</li>
+<li>Create new cluster: Free plan</li>
+<li>Copy generated username/password (luizfestivalet/2XDzgpnqfburRKZ4)</li>
+<li>Get connection string for Node.js (mongodb+srv://luizfestivalet:<db_password>@cluster0.kvgfj.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Cluster0)</li>
+<li>Create <code>.env</code> file in the root of the project and paste the connection string to a variable <code>MONGO_URI</code> adding the name of the database after the "mongodb.net/" (put "mongodb.net/netflix_db")
+ MONGO_URI=mongodb+srv://luizfestivalet:2XDzgpnqfburRKZ4@cluster0.kvgfj.mongodb.net/mydocs_db?retryWrites=true&amp;w=majority&amp;appName=Cluster0</li>
+<li>Go to "Network Access" (still in the mongodb website)</li>
+<li>In "IP Access List" add ip address and click on "Allow access from anywhere"</li>
+<li>Go to Database and check that there's nothing there</li>
+</ol>
+<p>Create folder <code>config</code> in <code>backend</code> folder and create a file <code>envVars.js</code></p>
+<pre><code class="language-js">import dotenv from &quot;dotenv&quot;
+
+dotenv.config();
+
+export const ENV_VARS = {
+    MONGO_URI: process.env.MONGO_URI,
+    PORT: process.env.PORT || 5000,
+};
+</code></pre>
+<p>Add <code>PORT</code> to <code>env</code> file:</p>
+<pre><code>...
+PORT=5000
+</code></pre>
+<p>In <code>server.js</code></p>
+<pre><code class="language-js">...
+import { ENV_VARS } from './config/envVars.js';
+...
+const PORT = ENV_VARS.PORT;
+...
+app.listen(PORT, () =&gt; {
+    console.log('Server started at http://localhost:' + PORT);
+});
+</code></pre>
+<p>Create <code>db.js</code> in <code>config</code> folder:</p>
+<pre><code class="language-js">import mongoose from &quot;mongoose&quot;;
+import { ENV_VARS } from &quot;./envVars.js&quot;;
+
+export const connectDB = async () =&gt; {
+  try {
+    const conn = await mongoose.connect(ENV_VARS.MONGO_URI);
+    console.log(&quot;MongoDB connected: &quot; + conn.connection.host);
+  } catch (error) {
+    console.error(&quot;Error connection to MONGODB:&quot; + error.message);
+    process.exit(1);
+  }
+};
+</code></pre>
+<p>In <code>server.js</code> connect to the database</p>
+<pre><code class="language-js">...
+import { connectDB } from &quot;./config/db.js&quot;;
+...
+app.listen(PORT, () =&gt; {
+    console.log('Server started at http://localhost:' + PORT);
+    connectDB();
+});
+</code></pre>
+<h2 id="visao-geral">Visão Geral</h2>
+<h3 id="backend">Backend</h3>
+<p><strong>index.js</strong>: </p>
+<ul>
+<li>Configura o servidor Socket.IO</li>
+<li>Trata as conexões dos clientes</li>
+<li>Define listeners para "get-document", "send-changes" e "save-document"</li>
+<li>Interage com MongoDB através de controladores</li>
+</ul>
+<p><strong>documentSchema.js</strong>:</p>
+<ul>
+<li>Define o esquema do MongoDB com campos: <code>_id</code> e <code>data</code></li>
+</ul>
+<p><strong>db.js</strong>:</p>
+<ul>
+<li>Estabelece a conexão do MongoDB através do Moongoose</li>
+</ul>
+<p><strong>document-controller.js</strong>:</p>
+<ul>
+<li>Funções para interagir com o MongoDB: <code>getDocument</code> recupera ou cria um documento por ID e <code>updateDocument</code> atualiza um documento com dados novos</li>
+</ul>
+<h3 id="frontend">Frontend</h3>
+<p><strong>App.js</strong>:</p>
+<ul>
+<li>Gerencia rotas</li>
+<li>Criação inicial do documento</li>
+<li>Direciona usuários para uma página de edição única quando visitar a URL principal</li>
+</ul>
+<p><strong>Editor.jsx</strong>:</p>
+<ul>
+<li>Implementa a interface visual para o editor de documentos usando o Quill.js</li>
+<li>Gerencia a colaboração em tempo-real através do Socket.IO</li>
+<li>Trata o carregamento do documento, mudanças de conteúdo e funcionalidade de salvamento automático</li>
+</ul>
+<h2 id="preparacao-do-backend">Preparação do Backend</h2>
+<h3 id="step-1-create-directory-for-project">Step 1: Create directory for project.</h3>
+<pre><code class="language-bash">mkdir Google-Docs-Clone
+</code></pre>
+<h3 id="step-2-create-sub-directories-for-frontend-and-backend">Step 2: Create sub directories for frontend and backend.</h3>
+<pre><code class="language-bash">mkdir client
+mkdir server
+</code></pre>
+<h3 id="step-3-open-backend-directory-using-the-following-command">Step 3: Open backend directory using the following command.</h3>
+<pre><code class="language-bash">cd server
+</code></pre>
+<h3 id="step-4-initialize-node-package-manager-using-the-following-command">Step 4: Initialize Node Package Manager using the following command.</h3>
+<pre><code class="language-bash">npm init
+</code></pre>
+<h3 id="step-5-install-socketio-mongoose-and-dotenv-package-in-backend-using-the-following-command">Step 5: Install socket.io mongoose and dotenv package in backend using the following command.</h3>
+<pre><code class="language-bash">npm install socket.io mongoose dotenv
+</code></pre>
+<h2 id="explicacao-detalhada-do-codigo-backend-indexjs">Explicação Detalhada do Código Backend (<code>index.js</code>)</h2>
+<p>Este código implementa um <strong>servidor WebSocket</strong> usando <strong>Socket.io</strong>, que permite a sincronização em tempo real de um editor de texto colaborativo. Ele escuta eventos de conexão, recuperação, modificação e salvamento de documentos.  </p>
+<h3 id="analisando-o-codigo-linha-por-linha">Analisando o Código Linha por Linha</h3>
+<h4 id="importacao-de-dependencias">Importação de Dependências</h4>
+<pre><code class="language-js">import { Server } from &quot;socket.io&quot;;
+import Connection from &quot;./database/db.js&quot;;
+import { getDocument, updateDocument } from &quot;./controller/document-controller.js&quot;;
+</code></pre>
+<ul>
+<li>Importa a classe <code>Server</code> do <strong>Socket.io</strong>, responsável por gerenciar conexões WebSocket.</li>
+<li>Importa a função <code>Connection()</code>, que configura a conexão com o banco de dados (provavelmente MongoDB).</li>
+<li>Importa duas funções do controlador:<ul>
+<li><code>getDocument(documentId)</code>: Busca um documento no banco de dados pelo ID.</li>
+<li><code>updateDocument(documentId, data)</code>: Atualiza o documento no banco de dados.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="configuracao-da-porta">Configuração da Porta</h4>
+<pre><code class="language-js">const PORT = process.env.PORT || 9000;
+</code></pre>
+<p>Define a porta do servidor. Se não houver uma variável de ambiente <code>PORT</code>, usa a porta <strong>9000</strong>.</p>
+<hr />
+<h4 id="conexao-com-o-banco-de-dados">Conexão com o Banco de Dados</h4>
+<pre><code class="language-js">Connection();
+</code></pre>
+<p>Executa a função <code>Connection()</code>, que conecta o servidor ao banco de dados.</p>
+<hr />
+<h4 id="configuracao-do-servidor-websocket">Configuração do Servidor WebSocket</h4>
+<pre><code class="language-js">const io = new Server(PORT, {
+  cors: {
+    origin: &quot;*&quot;,
+    methods: [&quot;GET&quot;, &quot;POST&quot;],
+  },
+});
+</code></pre>
+<p><strong><code>new Server(PORT, {...})</code></strong>  </p>
+<ul>
+<li>Inicializa o servidor WebSocket na porta definida (<code>9000</code>).</li>
+<li><code>io</code> será responsável por gerenciar conexões WebSocket.</li>
+</ul>
+<p><strong><code>cors: { origin: "*", methods: ["GET", "POST"] }</code></strong>  </p>
+<ul>
+<li>Permite conexões <strong>de qualquer origem</strong> (<code>origin: "*"</code>, ou seja, sem restrição de domínio).</li>
+<li>Permite apenas requisições <code>GET</code> e <code>POST</code>.</li>
+</ul>
+<hr />
+<h4 id="manipulacao-de-conexoes-websocket">Manipulação de Conexões WebSocket</h4>
+<pre><code class="language-js">io.on(&quot;connection&quot;, (socket) =&gt; {
+</code></pre>
+<ul>
+<li>O evento <code>"connection"</code> é disparado <strong>quando um novo cliente se conecta</strong> ao servidor.  </li>
+<li><code>socket</code> representa a conexão individual do cliente.</li>
+</ul>
+<hr />
+<h4 id="carregando-documento-quando-solicitado">Carregando Documento Quando Solicitado</h4>
+<pre><code class="language-js">socket.on(&quot;get-document&quot;, async (documentId) =&gt; {
+  const document = await getDocument(documentId);
+  socket.join(documentId);
+  socket.emit(&quot;load-document&quot;, document.data);
+</code></pre>
+<p><strong>Quando o cliente solicita um documento (<code>"get-document"</code>), o servidor:</strong>
+1. <strong>Busca o documento no banco de dados</strong> (<code>getDocument(documentId)</code>).
+2. <strong>Adiciona o socket do usuário a uma "sala" WebSocket</strong> (<code>socket.join(documentId)</code>).
+   - Cada documento tem uma <strong>sala única</strong>, permitindo que <strong>vários usuários colaborem no mesmo documento</strong>.
+3. <strong>Envia o documento para o cliente</strong> (<code>socket.emit("load-document", document.data)</code>).
+   - O cliente recebe os dados do documento e os carrega na interface.</p>
+<hr />
+<h4 id="escutando-mudancas-e-enviando-para-outros-usuarios">Escutando Mudanças e Enviando Para Outros Usuários</h4>
+<pre><code class="language-js">socket.on(&quot;send-changes&quot;, (delta) =&gt; {
+  socket.broadcast.to(documentId).emit(&quot;receive-changes&quot;, delta);
+});
+</code></pre>
+<p>Quando um usuário faz alterações no editor:</p>
+<ul>
+<li>O evento <code>"send-changes"</code> é disparado pelo cliente com as mudanças (<code>delta</code>).</li>
+<li>O servidor <strong>retransmite essas mudanças para todos os outros clientes na mesma sala</strong> (<code>documentId</code>).</li>
+<li><code>socket.broadcast.to(documentId).emit("receive-changes", delta);</code></li>
+<li>O uso de <strong><code>broadcast.to(documentId)</code></strong> garante que <strong>apenas outros usuários</strong> na sala recebam as mudanças, e não o próprio remetente.</li>
+</ul>
+<hr />
+<h4 id="salvando-o-documento-periodicamente">Salvando o Documento Periodicamente</h4>
+<pre><code class="language-js">socket.on(&quot;save-document&quot;, async (data) =&gt; {
+  await updateDocument(documentId, data);
+});
+</code></pre>
+<ul>
+<li>Quando um cliente quer salvar o documento, ele dispara <code>"save-document"</code> com os dados.</li>
+<li>O servidor então <strong>atualiza o banco de dados</strong> chamando <code>updateDocument(documentId, data)</code>.</li>
+<li>Isso garante que o documento seja salvo <strong>periódica e automaticamente</strong>.</li>
+</ul>
+<hr />
+<h3 id="fluxo-completo-do-servidor">Fluxo Completo do Servidor</h3>
+<ol>
+<li>
+<p><strong>Usuário acessa o editor</strong>  </p>
+</li>
+<li>
+<p>O frontend solicita um documento pelo evento <code>"get-document"</code>.</p>
+</li>
+<li>
+<p>O servidor carrega o documento e o envia ao cliente.  </p>
+</li>
+<li>
+<p><strong>Usuário edita o documento</strong>  </p>
+</li>
+<li>
+<p>O frontend detecta mudanças e emite <code>"send-changes"</code>.</p>
+</li>
+<li>
+<p>O servidor retransmite as mudanças para <strong>outros usuários na mesma sala</strong>.  </p>
+</li>
+<li>
+<p><strong>Documento é salvo automaticamente</strong>  </p>
+</li>
+<li>
+<p>O frontend emite <code>"save-document"</code> periodicamente.  </p>
+</li>
+<li>O servidor <strong>salva os dados no banco de dados</strong>.  </li>
+</ol>
+<hr />
+<h2 id="resumo-final">Resumo Final</h2>
+<p>✅ <strong><code>Server</code> do Socket.io</strong>: Permite comunicação em tempo real.<br />
+✅ <strong>Eventos WebSocket</strong>: <code>"get-document"</code>, <code>"send-changes"</code>, <code>"save-document"</code>.<br />
+✅ <strong>Uso de Salas (<code>socket.join()</code>)</strong>: Usuários que editam o mesmo documento compartilham mudanças.<br />
+✅ <strong>Atualização em Tempo Real</strong>: Usuários veem as edições instantaneamente.<br />
+✅ <strong>Salvamento Automático</strong>: O servidor armazena as alterações periodicamente.  </p>
+<p>Este código implementa <strong>colaboração em tempo real</strong> de forma eficiente! 🚀</p>
+<h2 id="explicacao-detalhada-do-codigo-backend-documentschemajs">Explicação Detalhada do Código Backend (<code>documentSchema.js</code>)</h2>
+<p>Este código define um <strong>modelo de documento</strong> para o MongoDB usando <strong>Mongoose</strong>, uma biblioteca que facilita a interação com bancos de dados <strong>MongoDB</strong> em aplicações Node.js.</p>
+<hr />
+<h3 id="analisando-o-codigo-linha-por-linha_1">Analisando o Código Linha por Linha</h3>
+<h4 id="importacao-do-mongoose">Importação do Mongoose</h4>
+<pre><code class="language-js">import mongoose from &quot;mongoose&quot;;
+</code></pre>
+<ul>
+<li><strong><code>mongoose</code></strong> é uma biblioteca que permite interagir com um banco de dados MongoDB de forma estruturada.  </li>
+<li>Ele é usado para definir <strong>esquemas</strong> e <strong>modelos</strong> que representam documentos no banco de dados.</li>
+</ul>
+<hr />
+<h4 id="definicao-do-schema-documentschema">Definição do Schema (<code>documentSchema</code>)</h4>
+<pre><code class="language-js">const documentSchema = mongoose.Schema({
+  _id: {
+    type: String,
+    required: true,
+  },
+  data: {
+    type: Object,
+    required: true,
+  },
+});
+</code></pre>
+<p>Aqui, é definido um <strong>schema</strong> para os documentos armazenados no MongoDB.  </p>
+<h5 id="explicacao-de-cada-campo">Explicação de Cada Campo:</h5>
+<p><strong><code>_id</code> (Identificador Único)</strong>  </p>
+<ul>
+<li>Tipo: <strong>String</strong>  </li>
+<li>Obrigatório: <strong>Sim (<code>required: true</code>)</strong>  </li>
+<li>Representa o <strong>identificador único do documento</strong> (por exemplo, um UUID).  </li>
+<li>Esse ID será usado para buscar, editar e salvar documentos específicos.  </li>
+</ul>
+<p><strong><code>data</code> (Conteúdo do Documento)</strong>  </p>
+<ul>
+<li>Tipo: <strong>Object</strong>  </li>
+<li>Obrigatório: <strong>Sim (<code>required: true</code>)</strong>  </li>
+<li>Contém os <strong>dados reais do documento</strong> (o texto ou estrutura formatada do editor).  </li>
+<li>Esse campo armazenará as edições feitas pelos usuários.  </li>
+</ul>
+<blockquote>
+<p><strong>Nota:</strong> O MongoDB é um banco <strong>NoSQL</strong>, então o campo <code>data</code> pode conter um objeto JSON dinâmico.</p>
+</blockquote>
+<hr />
+<h4 id="criando-o-modelo-do-documento">Criando o Modelo do Documento</h4>
+<pre><code class="language-js">const document = mongoose.model(&quot;document&quot;, documentSchema);
+</code></pre>
+<p><strong><code>mongoose.model("document", documentSchema)</code></strong>  </p>
+<ul>
+<li>Cria um <strong>modelo</strong> chamado <code>"document"</code> com base no esquema <code>documentSchema</code>.  </li>
+<li>Esse modelo representa a <strong>coleção "documents" no MongoDB</strong> (o MongoDB pluraliza o nome automaticamente).  </li>
+</ul>
+<p>Agora, podemos usar <strong><code>document</code></strong> para criar, buscar, atualizar e deletar documentos no banco.</p>
+<hr />
+<h4 id="exportando-o-modelo">Exportando o Modelo</h4>
+<pre><code class="language-js">export default document;
+</code></pre>
+<ul>
+<li>Torna o modelo <strong>disponível para outros arquivos</strong> do projeto.  </li>
+<li>Permite que o <strong>controlador</strong> (<code>document-controller.js</code>) utilize esse modelo para acessar o banco de dados.</li>
+</ul>
+<hr />
+<h3 id="como-esse-codigo-se-encaixa-no-projeto">Como Esse Código Se Encaixa no Projeto?</h3>
+<ol>
+<li>Quando o servidor recebe uma solicitação para um documento (<code>get-document</code>), ele <strong>busca</strong> o documento no banco <strong>usando esse modelo</strong>.</li>
+<li>Quando um usuário faz alterações e as envia (<code>save-document</code>), o servidor <strong>atualiza</strong> o documento no MongoDB.</li>
+<li>O modelo <strong>garante que os documentos tenham um formato padronizado</strong>, facilitando a manipulação dos dados.</li>
+</ol>
+<hr />
+<h2 id="resumo-final_1">Resumo Final</h2>
+<p>✅ <strong>Mongoose Schema</strong>: Define a estrutura dos documentos no MongoDB.<br />
+✅ <strong>Campos (<code>_id</code> e <code>data</code>)</strong>: O ID identifica o documento e <code>data</code> armazena seu conteúdo.<br />
+✅ <strong>Modelo Mongoose</strong>: Cria a coleção <code>"documents"</code> para armazenar os arquivos do editor.<br />
+✅ <strong>Facilita a comunicação com o banco</strong>: O controlador usa esse modelo para buscar e salvar dados.  </p>
+<p>Esse código é <strong>essencial para armazenar e recuperar documentos no MongoDB</strong>! 🚀</p>
+<h2 id="explicacao-detalhada-do-controller-document-controllerjs">Explicação Detalhada do Controller (<code>document-controller.js</code>)</h2>
+<p>Este código é responsável por manipular os <strong>documentos no banco de dados MongoDB</strong>. Ele utiliza o <strong>modelo Mongoose</strong> (<code>Document</code>) para buscar e atualizar os documentos.  </p>
+<hr />
+<h3 id="analisando-o-codigo-linha-por-linha_2">Analisando o Código Linha por Linha</h3>
+<h4 id="importacao-do-modelo-document">Importação do Modelo <code>Document</code></h4>
+<pre><code class="language-js">import Document from &quot;../schema/documentSchema.js&quot;;
+</code></pre>
+<ul>
+<li>Importamos o <strong>modelo Mongoose</strong> que foi definido no arquivo <code>documentSchema.js</code>.  </li>
+<li>Isso nos permite realizar operações no banco de dados, como <strong>buscar, criar e atualizar documentos</strong>.  </li>
+</ul>
+<hr />
+<h3 id="funcao-getdocument-buscar-ou-criar-um-documento">Função <code>getDocument</code> - Buscar ou Criar um Documento</h3>
+<pre><code class="language-js">export const getDocument = async (id) =&gt; {
+  if (id === null) return;
+
+  const document = await Document.findById(id);
+
+  if (document) return document;
+
+  return await Document.create({ _id: id, data: &quot;&quot; });
+};
+</code></pre>
+<p><strong>O que essa função faz?</strong></p>
+<ol>
+<li><strong>Recebe um ID de documento</strong> como argumento.</li>
+<li><strong>Verifica se o ID é nulo</strong> – se for, retorna imediatamente sem fazer nada.</li>
+<li><strong>Tenta encontrar o documento no banco de dados</strong> pelo ID (<code>Document.findById(id)</code>).</li>
+<li><strong>Se o documento existir</strong>, ele é retornado.</li>
+<li><strong>Se o documento não existir</strong>, ele é <strong>criado automaticamente</strong> no banco de dados com o ID fornecido e com <code>data</code> inicial como uma string vazia (<code>""</code>).</li>
+</ol>
+<p><strong>Por que essa função é importante?</strong></p>
+<ul>
+<li><strong>Garante que sempre haverá um documento válido</strong> para o editor carregar.  </li>
+<li><strong>Evita erros</strong> caso o usuário acesse um documento que ainda não existe.  </li>
+<li><strong>Facilita a colaboração</strong>: Se um usuário acessa um documento compartilhado por outro, ele sempre verá a versão mais recente.</li>
+</ul>
+<hr />
+<h3 id="funcao-updatedocument-atualizar-um-documento">Função <code>updateDocument</code> - Atualizar um Documento**</h3>
+<pre><code class="language-js">export const updateDocument = async (id, data) =&gt; {
+  return await Document.findByIdAndUpdate(id, { data });
+};
+</code></pre>
+<p><strong>O que essa função faz?</strong></p>
+<ol>
+<li><strong>Recebe um ID de documento e os dados atualizados</strong> como parâmetros.</li>
+<li><strong>Busca e atualiza o documento</strong> no banco de dados usando <code>Document.findByIdAndUpdate(id, { data })</code>.  </li>
+<li>Isso altera o conteúdo (<code>data</code>) do documento com o novo texto vindo do editor.</li>
+<li><strong>Retorna o documento atualizado</strong>.</li>
+</ol>
+<p><strong>Por que essa função é importante?</strong></p>
+<ul>
+<li><strong>Mantém as edições salvas no banco de dados</strong>.  </li>
+<li><strong>Permite sincronização em tempo real</strong>: Quando um usuário digita, os outros veem as mudanças.  </li>
+<li><strong>Evita perda de dados</strong>, garantindo que tudo seja salvo automaticamente.</li>
+</ul>
+<hr />
+<h3 id="como-esse-controller-funciona-no-backend">Como Esse Controller Funciona no Backend?</h3>
+<p><strong>Quando um usuário abre um documento</strong>:  </p>
+<ol>
+<li>O frontend envia um evento <code>"get-document"</code> para o servidor.  </li>
+<li>O servidor chama <code>getDocument(id)</code>.  </li>
+<li>Se o documento existir, ele é carregado.  </li>
+<li>Se não existir, um novo documento é criado e enviado ao usuário.  </li>
+</ol>
+<p><strong>Quando um usuário faz uma alteração no editor</strong>:  </p>
+<ol>
+<li>O frontend envia um evento <code>"save-document"</code>.  </li>
+<li>O servidor chama <code>updateDocument(id, data)</code>.  </li>
+<li>O MongoDB atualiza o documento no banco.  </li>
+</ol>
+<hr />
+<h2 id="resumo-final_2">Resumo Final</h2>
+<p>✅ <strong><code>getDocument(id)</code></strong>: Busca um documento pelo ID. Se não existir, cria um novo.<br />
+✅ <strong><code>updateDocument(id, data)</code></strong>: Atualiza um documento no banco com as edições do usuário.<br />
+✅ <strong>Facilita a colaboração</strong>: O documento é sempre salvo e carregado corretamente.<br />
+✅ <strong>Essencial para o funcionamento do editor</strong>: Garante que todas as mudanças sejam registradas no MongoDB.  </p>
+<p>Esse <strong>controller</strong> é a ponte entre o servidor e o banco de dados! 🚀</p>
+<h2 id="preparacao-do-frontend">Preparação do Frontend</h2>
+<h3 id="step-1-open-frontend-directory-using-the-following-command">Step 1: Open frontend directory using the following command.</h3>
+<pre><code class="language-bash">cd client
+</code></pre>
+<h3 id="step-2-create-react-application-in-the-current-directory-using-the-following-command">Step 2: Create react application in the current directory using the following command.</h3>
+<pre><code class="language-bash">npx create-react-app google-docs-clone
+</code></pre>
+<h3 id="step-3-install-socketio-client-react-router-dom-quill-and-uuid-package-in-client-using-the-following-command">Step 3: Install socket.io-client , react-router-dom, quill and uuid package in client using the following command.</h3>
+<pre><code class="language-bash">npm install socket.io-client react react-dom react-scripts react-router-dom quill uuid
+npm install @mui/material @emotion/react @emotion/styled
+</code></pre>
+<p>Aqui está um tutorial detalhado sobre o código do componente <code>Editor</code>, explicando cada parte com base nos conceitos do <strong>React 19</strong>.  </p>
+<hr />
+<h2 id="explicacao-completa-do-componente-editor-em-react-19">Explicação Completa do Componente Editor em React 19</h2>
+<p>Este componente é um editor de texto colaborativo baseado no <strong>Quill.js</strong> e na <strong>WebSocket API</strong> utilizando <strong>Socket.io</strong>. Ele permite que múltiplos usuários editem um mesmo documento em tempo real.</p>
+<hr />
+<h3 id="1-use-client-modo-cliente-em-react-19"><strong>1. "use client"; – Modo Cliente em React 19</strong></h3>
+<p>A diretiva <code>"use client";</code> indica que este componente deve ser renderizado no <strong>cliente</strong> e não no <strong>servidor</strong>. Isso é necessário porque:</p>
+<ul>
+<li>Estamos usando <strong>eventos do navegador</strong> (como WebSockets e manipulação do DOM com <code>useRef</code>).</li>
+<li><code>Quill.js</code> é uma biblioteca que só funciona no <strong>cliente</strong>.</li>
+<li>WebSockets (<code>socket.io-client</code>) só podem ser manipulados no navegador.</li>
+</ul>
+<hr />
+<h3 id="2-importacoes"><strong>2. Importações</strong></h3>
+<pre><code class="language-javascript">import { useEffect, useState, useRef } from &quot;react&quot;;
+import Quill from &quot;quill&quot;;
+import &quot;quill/dist/quill.snow.css&quot;;
+import { Box } from &quot;@mui/material&quot;;
+import styled from &quot;@emotion/styled&quot;;
+import { io } from &quot;socket.io-client&quot;;
+import { useParams } from &quot;react-router-dom&quot;;
+</code></pre>
+<h4 id="explicacao-das-bibliotecas"><strong>Explicação das Bibliotecas</strong></h4>
+<ul>
+<li><code>useEffect, useState, useRef</code>: Hooks do React usados para manipular estado e referências no DOM.</li>
+<li><code>Quill</code>: Editor de texto WYSIWYG.</li>
+<li><code>styled</code> (Emotion): Define estilos CSS dentro do JS.</li>
+<li><code>socket.io-client</code>: Biblioteca para WebSockets.</li>
+<li><code>useParams</code>: Obtém o ID do documento da URL.</li>
+</ul>
+<hr />
+<h3 id="3-definicao-de-estilos-com-emotion"><strong>3. Definição de Estilos com Emotion</strong></h3>
+<pre><code class="language-javascript">const Component = styled.div`
+  background: #f5f5f5;
+`;
+</code></pre>
+<ul>
+<li>Utilizamos a biblioteca <code>@emotion/styled</code> para estilizar componentes no React.</li>
+<li>O <code>Component</code> recebe um fundo cinza-claro.</li>
+</ul>
+<hr />
+<h3 id="4-definicao-da-barra-de-ferramentas-do-editor"><strong>4. Definição da Barra de Ferramentas do Editor</strong></h3>
+<pre><code class="language-javascript">const toolbarOptions = [
+  [&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;, &quot;strike&quot;],
+  [&quot;blockquote&quot;, &quot;code-block&quot;],
+  [{ header: 1 }, { header: 2 }],
+  [{ list: &quot;ordered&quot; }, { list: &quot;bullet&quot; }],
+  [{ script: &quot;sub&quot; }, { script: &quot;super&quot; }],
+  [{ indent: &quot;-1&quot; }, { indent: &quot;+1&quot; }],
+  [{ direction: &quot;rtl&quot; }],
+  [{ size: [&quot;small&quot;, false, &quot;large&quot;, &quot;huge&quot;] }],
+  [{ header: [1, 2, 3, 4, 5, 6, false] }],
+  [{ color: [] }, { background: [] }],
+  [{ font: [] }],
+  [{ align: [] }],
+  [&quot;clean&quot;],
+];
+</code></pre>
+<ul>
+<li>Define quais ferramentas estarão disponíveis no editor.</li>
+<li>Configurações incluem negrito, itálico, listas ordenadas, alinhamento, tamanhos de fonte, etc.</li>
+</ul>
+<hr />
+<h3 id="5-definicao-do-componente-editor"><strong>5. Definição do Componente <code>Editor</code></strong></h3>
+<pre><code class="language-javascript">const Editor = () =&gt; {
+</code></pre>
+<h4 id="51-estados-e-referencias"><strong>5.1. Estados e Referências</strong></h4>
+<pre><code class="language-javascript">const [socket, setSocket] = useState(null);
+const quillRef = useRef(null);
+const containerRef = useRef(null);
+const { id } = useParams();
+</code></pre>
+<ul>
+<li><strong><code>socket</code></strong>: Estado que armazena a conexão WebSocket.</li>
+<li><strong><code>quillRef</code></strong>: Referência ao editor Quill.</li>
+<li><strong><code>containerRef</code></strong>: Referência ao elemento HTML onde o Quill será inserido.</li>
+<li><strong><code>id</code></strong>: Obtém o ID do documento pela URL.</li>
+</ul>
+<hr />
+<h3 id="6-conectando-ao-servidor-websocket"><strong>6. Conectando ao Servidor WebSocket</strong></h3>
+<pre><code class="language-javascript">useEffect(() =&gt; {
+  const socketServer = io(&quot;http://localhost:9000&quot;);
+  setSocket(socketServer);
+
+  return () =&gt; socketServer.disconnect();
+}, []);
+</code></pre>
+<ul>
+<li>O <code>useEffect</code> executa a conexão <strong>apenas uma vez</strong> (<code>[]</code> como dependência).</li>
+<li>Quando o componente é desmontado, a conexão é fechada.</li>
+</ul>
+<hr />
+<h3 id="7-inicializando-o-editor-quill"><strong>7. Inicializando o Editor Quill</strong></h3>
+<pre><code class="language-javascript">useEffect(() =&gt; {
+  if (!containerRef.current || quillRef.current) return; 
+
+  const quillInstance = new Quill(containerRef.current, {
+    theme: &quot;snow&quot;,
+    modules: { toolbar: toolbarOptions },
+  });
+
+  quillInstance.disable();
+  quillInstance.setText(&quot;Loading the document...&quot;);
+  quillRef.current = quillInstance;
+}, []);
+</code></pre>
+<h4 id="explicacao"><strong>Explicação</strong></h4>
+<ul>
+<li>O editor <strong>só é inicializado</strong> quando o <code>containerRef</code> está disponível.</li>
+<li>O <strong>tema</strong> <code>"snow"</code> define o estilo visual do Quill.</li>
+<li>Inicialmente, o editor é <strong>desabilitado</strong> (<code>disable()</code>) até que o documento seja carregado.</li>
+<li><code>setText("Loading the document...")</code> mostra um texto temporário.</li>
+</ul>
+<hr />
+<h3 id="8-detectando-alteracoes-do-usuario-e-enviando-para-o-servidor"><strong>8. Detectando Alterações do Usuário e Enviando para o Servidor</strong></h3>
+<pre><code class="language-javascript">useEffect(() =&gt; {
+  if (!socket || !quillRef.current) return;
+
+  const handleChange = (delta, oldData, source) =&gt; {
+    if (source === &quot;user&quot;) {
+      socket.emit(&quot;send-changes&quot;, delta);
+    }
+  };
+
+  quillRef.current.on(&quot;text-change&quot;, handleChange);
+  return () =&gt; quillRef.current.off(&quot;text-change&quot;, handleChange);
+}, [socket]);
+</code></pre>
+<h4 id="explicacao_1"><strong>Explicação</strong></h4>
+<ul>
+<li>O <code>text-change</code> detecta alterações no texto.</li>
+<li>Se a alteração foi feita pelo <strong>usuário</strong>, ela é enviada ao servidor via <code>socket.emit("send-changes", delta)</code>.</li>
+<li>Quando o componente é desmontado, o evento é removido.</li>
+</ul>
+<hr />
+<h3 id="9-recebendo-alteracoes-de-outros-usuarios"><strong>9. Recebendo Alterações de Outros Usuários</strong></h3>
+<pre><code class="language-javascript">useEffect(() =&gt; {
+  if (!socket || !quillRef.current) return;
+
+  const handleReceiveChange = (delta) =&gt; {
+    quillRef.current.updateContents(delta);
+  };
+
+  socket.on(&quot;receive-changes&quot;, handleReceiveChange);
+  return () =&gt; socket.off(&quot;receive-changes&quot;, handleReceiveChange);
+}, [socket]);
+</code></pre>
+<h4 id="explicacao_2"><strong>Explicação</strong></h4>
+<ul>
+<li>O servidor envia alterações para todos os usuários (<code>receive-changes</code>).</li>
+<li><code>updateContents(delta)</code> aplica as mudanças no editor.</li>
+</ul>
+<hr />
+<h3 id="10-carregando-documento-do-servidor"><strong>10. Carregando Documento do Servidor</strong></h3>
+<pre><code class="language-javascript">useEffect(() =&gt; {
+  if (!socket || !quillRef.current) return;
+
+  socket.once(&quot;load-document&quot;, (document) =&gt; {
+    quillRef.current.setContents(document);
+    quillRef.current.enable();
+  });
+
+  socket.emit(&quot;get-document&quot;, id);
+}, [socket, id]);
+</code></pre>
+<h4 id="explicacao_3"><strong>Explicação</strong></h4>
+<ul>
+<li>Quando o servidor responde com <code>load-document</code>, o documento é carregado e o editor é habilitado (<code>enable()</code>).</li>
+<li><code>socket.emit("get-document", id)</code> solicita o documento do servidor.</li>
+</ul>
+<hr />
+<h3 id="11-salvando-documento-no-servidor-a-cada-2-segundos"><strong>11. Salvando Documento no Servidor a Cada 2 Segundos</strong></h3>
+<pre><code class="language-javascript">useEffect(() =&gt; {
+  if (!socket || !quillRef.current) return;
+
+  const interval = setInterval(() =&gt; {
+    socket.emit(&quot;save-document&quot;, quillRef.current.getContents());
+  }, 2000);
+
+  return () =&gt; clearInterval(interval);
+}, [socket]);
+</code></pre>
+<h4 id="explicacao_4"><strong>Explicação</strong></h4>
+<ul>
+<li>O conteúdo do editor é salvo no servidor a cada 2 segundos.</li>
+<li><code>clearInterval(interval)</code> garante que o intervalo seja interrompido quando o componente for desmontado.</li>
+</ul>
+<hr />
+<h3 id="12-renderizacao-do-editor"><strong>12. Renderização do Editor</strong></h3>
+<pre><code class="language-javascript">return (
+  &lt;Component&gt;
+    &lt;Box className=&quot;container&quot; ref={containerRef} id=&quot;container&quot;&gt;&lt;/Box&gt;
+  &lt;/Component&gt;
+);
+</code></pre>
+<ul>
+<li>O <code>Box</code> contém o editor Quill.</li>
+<li><code>containerRef</code> é onde o Quill será montado.</li>
+</ul>
+<hr />
+<h2 id="conclusao"><strong>Conclusão</strong></h2>
+<p>Este componente implementa:</p>
+<p>✅ Um <strong>editor colaborativo</strong> com <strong>Quill.js</strong><br />
+✅ Comunicação <strong>em tempo real</strong> com <strong>Socket.io</strong><br />
+✅ <strong>Carregamento e salvamento</strong> de documentos automaticamente<br />
+✅ Uso de <strong>React 19</strong> com <strong>"use client"</strong>, <strong>useEffect</strong>, <strong>useState</strong> e <strong>useRef</strong>  </p>
+<p>Isso permite que múltiplos usuários editem o mesmo documento simultaneamente! 🚀</p>
+<p>Aqui está uma explicação detalhada do código com base nos conceitos do React 19 para um tutorial:</p>
+<hr />
+<h2 id="explicacao-completa-do-componente-app-em-react-19"><strong>Explicação Completa do Componente <code>App</code> em React 19</strong></h2>
+<p>O código apresentado define a estrutura principal de uma aplicação React utilizando o <strong>React Router</strong> para navegação e um editor de documentos baseado no componente <code>Editor</code>. Vamos analisar cada parte detalhadamente.</p>
+<hr />
+<h3 id="1-use-client-modo-cliente-no-react-19"><strong>1. <code>"use client";</code> – Modo Cliente no React 19</strong></h3>
+<pre><code class="language-javascript">&quot;use client&quot;;
+</code></pre>
+<p>O React 19 introduziu o conceito de <strong>componentes do lado do cliente e do servidor</strong>. Como este componente usa <strong>navegação no cliente</strong> com <code>react-router-dom</code>, ele precisa ser explicitamente definido como um <strong>componente cliente</strong>.</p>
+<h4 id="por-que-isso-e-necessario"><strong>Por que isso é necessário?</strong></h4>
+<ul>
+<li><code>react-router-dom</code> depende da API do navegador para manipular rotas.</li>
+<li><code>uuid()</code> gera um ID único no lado do cliente.</li>
+<li>O <code>Editor</code> interage com o DOM e WebSockets, o que só pode acontecer no cliente.</li>
+</ul>
+<hr />
+<h3 id="2-importacoes_1"><strong>2. Importações</strong></h3>
+<pre><code class="language-javascript">import &quot;./App.css&quot;;
+import { BrowserRouter as Router, Routes, Route, Navigate } from &quot;react-router-dom&quot;;
+import { v4 as uuid } from &quot;uuid&quot;;
+import Editor from &quot;./component/Editor&quot;;
+</code></pre>
+<h4 id="explicacao_5"><strong>Explicação</strong></h4>
+<ul>
+<li><strong><code>"./App.css"</code></strong>: Importa os estilos da aplicação.</li>
+<li><strong><code>BrowserRouter</code></strong>: Gerencia as rotas no navegador.</li>
+<li><strong><code>Routes</code> e <code>Route</code></strong>: Definem as rotas disponíveis na aplicação.</li>
+<li><strong><code>Navigate</code></strong>: Permite redirecionamento automático de URLs.</li>
+<li><strong><code>uuid()</code></strong>: Gera um <strong>identificador único</strong> para cada documento.</li>
+<li><strong><code>Editor</code></strong>: Componente que renderiza o editor de texto.</li>
+</ul>
+<hr />
+<h3 id="3-definicao-do-componente-app"><strong>3. Definição do Componente <code>App</code></strong></h3>
+<pre><code class="language-javascript">function App() {
+</code></pre>
+<p>Este é o <strong>componente principal</strong> da aplicação, que define o roteamento para os documentos.</p>
+<hr />
+<h3 id="4-configuracao-do-router"><strong>4. Configuração do <code>Router</code></strong></h3>
+<pre><code class="language-javascript">return (
+  &lt;Router&gt;
+    &lt;Routes&gt;
+      &lt;Route path=&quot;/&quot; element={&lt;Navigate replace to={`/docs/${uuid()}`} /&gt;} /&gt;
+      &lt;Route path=&quot;/docs/:id&quot; element={&lt;Editor /&gt;} /&gt;
+    &lt;/Routes&gt;
+  &lt;/Router&gt;
+);
+</code></pre>
+<h4 id="explicacao_6"><strong>Explicação</strong></h4>
+<p>O código define duas rotas principais:</p>
+<h4 id="1-rota-criando-um-documento-unico"><strong>🔹 1. Rota <code>/</code> – Criando um Documento Único</strong></h4>
+<pre><code class="language-javascript">&lt;Route path=&quot;/&quot; element={&lt;Navigate replace to={`/docs/${uuid()}`} /&gt;} /&gt;
+</code></pre>
+<ul>
+<li>Quando o usuário acessa <strong><code>/</code></strong>, ele é automaticamente redirecionado para <strong><code>/docs/:id</code></strong>, onde <code>:id</code> é um identificador único gerado por <code>uuid()</code>.</li>
+<li>Isso garante que <strong>cada usuário</strong> que acessa a página inicial seja enviado para um documento exclusivo.</li>
+</ul>
+<h4 id="2-rota-docsid-abrindo-o-editor"><strong>🔹 2. Rota <code>/docs/:id</code> – Abrindo o Editor</strong></h4>
+<pre><code class="language-javascript">&lt;Route path=&quot;/docs/:id&quot; element={&lt;Editor /&gt;} /&gt;
+</code></pre>
+<ul>
+<li>Se o usuário acessar um documento existente (<code>/docs/abc123</code>), ele verá o editor <code>Editor</code>.</li>
+<li>O <strong>parâmetro <code>:id</code></strong> será usado dentro do <code>Editor</code> para carregar o documento correto.</li>
+</ul>
+<hr />
+<h3 id="5-exportacao-do-componente"><strong>5. Exportação do Componente</strong></h3>
+<pre><code class="language-javascript">export default App;
+</code></pre>
+<ul>
+<li>Permite que <code>App</code> seja importado e utilizado em outros arquivos.</li>
+</ul>
+<hr />
+<h2 id="resumo-do-funcionamento"><strong>📌 Resumo do Funcionamento</strong></h2>
+<p>✅ Se um usuário acessa <code>/</code>, ele é redirecionado para um novo documento (<code>/docs/uuid</code>).<br />
+✅ Se um usuário acessa <code>/docs/:id</code>, o <code>Editor</code> correspondente é carregado.<br />
+✅ O React Router controla toda a navegação da aplicação.  </p>
+<p>Este código cria um <strong>sistema de edição de documentos colaborativo</strong>, garantindo que cada usuário acesse um documento único! 🚀</p>
+<hr />
+<h2 id="explicacao-completa-do-codigo-indexjs-em-react-19"><strong>Explicação Completa do Código <code>index.js</code> em React 19</strong></h2>
+<p>O arquivo <code>index.js</code> é o <strong>ponto de entrada</strong> da aplicação React. Ele é responsável por inicializar o React e renderizar o componente raiz (<code>App</code>) dentro da árvore DOM. Vamos analisar cada parte em detalhes.</p>
+<hr />
+<h3 id="1-importacoes"><strong>1. Importações</strong></h3>
+<pre><code class="language-javascript">import React from &quot;react&quot;;
+import { createRoot } from &quot;react-dom/client&quot;;
+import &quot;./index.css&quot;;
+import App from &quot;./App&quot;;
+</code></pre>
+<h4 id="explicacao_7"><strong>Explicação</strong></h4>
+<ul>
+<li>Importa o núcleo do React, necessário para usar JSX.</li>
+<li><code>createRoot</code> é a nova API introduzida no React 18 para renderização.</li>
+<li>Importa os estilos globais da aplicação.</li>
+<li>Importa o componente raiz da aplicação.</li>
+</ul>
+<hr />
+<h3 id="2-selecao-do-container-no-dom"><strong>2. Seleção do Container no DOM</strong></h3>
+<pre><code class="language-javascript">const container = document.getElementById(&quot;root&quot;);
+</code></pre>
+<h4 id="o-que-isso-faz"><strong>O que isso faz?</strong></h4>
+<ul>
+<li>Obtém a referência ao elemento <code>&lt;div id="root"&gt;&lt;/div&gt;</code> dentro do <code>index.html</code>.</li>
+<li>Esse elemento <strong>serve como o ponto de montagem</strong> da aplicação React.</li>
+</ul>
+<hr />
+<h3 id="3-criando-a-raiz-com-createroot"><strong>3. Criando a Raiz com <code>createRoot()</code></strong></h3>
+<pre><code class="language-javascript">const root = createRoot(container);
+</code></pre>
+<h4 id="por-que-createroot"><strong>Por que <code>createRoot()</code>?</strong></h4>
+<ul>
+<li>No React 18+, <code>createRoot()</code> substitui <code>ReactDOM.render()</code> para melhorar a <strong>eficiência</strong> e permitir o <strong>modo concurrent rendering</strong>.</li>
+<li>Ele permite que o React gerencie a renderização de forma mais eficiente, melhorando desempenho e interatividade.</li>
+</ul>
+<hr />
+<h3 id="4-renderizacao-do-componente-app"><strong>4. Renderização do Componente <code>App</code></strong></h3>
+<pre><code class="language-javascript">root.render(
+  &lt;React.StrictMode&gt;
+    &lt;App /&gt;
+  &lt;/React.StrictMode&gt;
+);
+</code></pre>
+<h4 id="explicacao_8"><strong>Explicação</strong></h4>
+<p><strong><code>&lt;React.StrictMode&gt;</code></strong>  </p>
+<ul>
+<li><strong>Modo de verificação</strong> que alerta sobre problemas potenciais no código.</li>
+<li>Ajuda a identificar práticas desatualizadas e futuras mudanças na API.</li>
+</ul>
+<p><strong><code>&lt;App /&gt;</code></strong>  </p>
+<ul>
+<li>Renderiza o componente principal da aplicação (<code>App.js</code>).</li>
+<li>O <code>App</code> contém as rotas e lógica da aplicação.</li>
+</ul>
+<hr />
+<h2 id="resumo-do-funcionamento_1"><strong>📌 Resumo do Funcionamento</strong></h2>
+<p>✅ <strong>Obtém o elemento <code>root</code> do HTML</strong> para ser o ponto de montagem.<br />
+✅ <strong>Cria a raiz do React usando <code>createRoot()</code></strong>.<br />
+✅ <strong>Renderiza o componente <code>App</code></strong> dentro do <code>&lt;React.StrictMode&gt;</code>.  </p>
+<p>Este código é a <strong>base para iniciar uma aplicação React 19</strong> e garantir que tudo seja carregado corretamente no navegador. 🚀</p>
+<h2 id="explicacao-detalhada-do-appcss"><strong>Explicação Detalhada do <code>App.css</code></strong></h2>
+<p>O código CSS define estilos para dois elementos principais da interface do editor:<br />
+1. <strong><code>.container</code></strong> → Estiliza a área principal do editor.<br />
+2. <strong><code>.ql-toolbar.ql-snow</code></strong> → Define o estilo da barra de ferramentas do editor Quill.  </p>
+<p>Vamos analisar cada trecho detalhadamente.  </p>
+<hr />
+<h3 id="1-estilizando-o-conteiner-principal-container"><strong>📌 1. Estilizando o Contêiner Principal (<code>.container</code>)</strong></h3>
+<pre><code class="language-css">.container {
+  width: 60%;
+  background: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  margin: 10px auto 10px auto !important;
+  min-height: 100vh;
+}
+</code></pre>
+<h4 id="explicacao-linha-por-linha">🔍 <strong>Explicação Linha por Linha</strong></h4>
+<p><strong><code>width: 60%;</code></strong>  </p>
+<ul>
+<li>Define a largura do contêiner como <strong>60% da tela</strong>.</li>
+<li>Mantém uma área centralizada e bem distribuída.</li>
+</ul>
+<p><strong><code>background: #fff;</code></strong>  </p>
+<ul>
+<li>Define o <strong>fundo branco</strong> (<code>#fff</code> → branco puro).</li>
+<li>Mantém o fundo limpo para a interface de edição.</li>
+</ul>
+<p><strong><code>box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);</code></strong>  </p>
+<ul>
+<li>Adiciona uma sombra ao redor do contêiner para destacá-lo.  </li>
+<li><code>0 0 5px 0</code> → Suaviza as bordas da sombra.  </li>
+<li><code>rgba(0, 0, 0, 0.5)</code> → Cor preta com <strong>50% de transparência</strong>.  </li>
+</ul>
+<p><strong><code>margin: 10px auto 10px auto !important;</code></strong>  </p>
+<ul>
+<li>Define <strong>margem superior e inferior de 10px</strong>.  </li>
+<li><code>auto</code> nas laterais <strong>centraliza horizontalmente</strong>.  </li>
+<li><code>!important</code> força a aplicação da regra.  </li>
+</ul>
+<p><strong><code>min-height: 100vh;</code></strong>  </p>
+<ul>
+<li>Define uma <strong>altura mínima de 100% da altura da tela</strong>.  </li>
+<li>Garante que o editor sempre ocupe a tela inteira.  </li>
+</ul>
+<hr />
+<h3 id="2-estilizando-a-barra-de-ferramentas-ql-toolbarql-snow"><strong>📌 2. Estilizando a Barra de Ferramentas (<code>.ql-toolbar.ql-snow</code>)</strong></h3>
+<pre><code class="language-css">.ql-toolbar.ql-snow {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #f3f3f3;
+  border: none !important;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+</code></pre>
+<h4 id="explicacao-linha-por-linha_1">🔍 <strong>Explicação Linha por Linha</strong></h4>
+<p><strong><code>.ql-toolbar.ql-snow</code></strong>  </p>
+<ul>
+<li>Seleciona a <strong>barra de ferramentas do Quill Editor</strong> no tema "Snow".</li>
+<li>O <code>Quill.js</code> usa <code>ql-toolbar</code> para os botões de formatação.</li>
+</ul>
+<p><strong><code>display: flex;</code></strong>  </p>
+<ul>
+<li>Habilita o modelo <strong>Flexbox</strong> para o layout da toolbar.</li>
+</ul>
+<p><strong><code>justify-content: center;</code></strong>  </p>
+<ul>
+<li><strong>Centraliza os botões horizontalmente</strong>.</li>
+</ul>
+<p><strong><code>position: sticky;</code></strong>  </p>
+<ul>
+<li>Mantém a barra fixa no topo ao rolar a página.</li>
+<li><strong>Diferente de <code>fixed</code></strong>, o elemento só fica fixo <strong>enquanto está no viewport</strong>.</li>
+</ul>
+<p><strong><code>top: 0;</code></strong>  </p>
+<ul>
+<li>Garante que a barra <strong>fique grudada no topo</strong>.</li>
+</ul>
+<p><strong><code>z-index: 1;</code></strong>  </p>
+<ul>
+<li>Garante que a toolbar <strong>fique acima dos outros elementos</strong>.</li>
+</ul>
+<p><strong><code>background: #f3f3f3;</code></strong>  </p>
+<ul>
+<li>Define um fundo <strong>cinza claro</strong> para a barra de ferramentas.</li>
+</ul>
+<p><strong><code>border: none !important;</code></strong>  </p>
+<ul>
+<li>Remove a borda padrão.</li>
+</ul>
+<p><strong><code>box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);</code></strong>  </p>
+<ul>
+<li>Aplica <strong>sombra semelhante ao contêiner</strong>, criando uma <strong>separação visual</strong> entre a barra e o editor.</li>
+</ul>
+<hr />
+<h2 id="resumo-final_3"><strong>📌 Resumo Final</strong></h2>
+<p>✅ <strong><code>.container</code></strong>: Define a área do editor, centralizada, com sombra e altura mínima de 100% da tela.<br />
+✅ <strong><code>.ql-toolbar.ql-snow</code></strong>: Mantém a barra de ferramentas fixa no topo, com estilo flexível e fundo destacado.  </p>
+<p>Esse CSS garante uma <strong>interface bem estruturada</strong> e <strong>responsiva</strong> para o editor de texto! 🚀</p></div>
+</main>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/prism.js"></script>
+<script>
+  Prism.plugins.NormalizeWhitespace.setDefaults({
+    "remove-trailing": true,
+    "remove-indent": true,
+    "left-trim": true,
+    "right-trim": true,
+    /*'break-lines': 80,
+    'indent': 2,
+    'remove-initial-line-feed': false,
+    'tabs-to-spaces': 4,
+    'spaces-to-tabs': 4*/
+  });
+</script>  
+</body>
+</html>

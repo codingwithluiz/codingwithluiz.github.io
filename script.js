@@ -46,7 +46,7 @@ const posts = [
     image: "images/youtube/google-docs-clone.jpg",
     date: "09-Mar-2025",
     description: "Implemente o Google Docs com React 19, Node.js, MongoDB, Socket.io e Quill.js",
-    link: "post.html?id=5",
+    link: "posts/react-google-docs-clone/index.html",
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ const posts = [
     image: "images/youtube/image-hover.webp",
     date: "08-Mar-2025",
     description: "Aprenda esse efeito do CSS e coloque as imagens em destaque!",
-    link: "post.html?id=6",
+    link: "/posts/css-image-hover/index.html",
   },
   {
     id: 7,
