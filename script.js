@@ -99,14 +99,16 @@ const posts = [
     description: "Crie popups sem utilizar o Javascript com o Popover API",
     link: "post.html?id=11",
   },
+  */
   {
     id: 12,
     title: "API ViaCEP usando JavaScript e Async/Await",
     image: "images/youtube/viacep.webp",
     date: "13-Jan-2025",
     description: "Aprenda a usar funções assíncronas no Javascript consultando a API ViaCEP",
-    link: "post.html?id=12",
+    link: "posts/js-api-viacep/index.html",
   },
+  /*
   {
     id: 13,
     title: "CSS Grid: Fácil e descomplicado",
@@ -139,14 +141,16 @@ const posts = [
     description: "Introdução a linguagem Python de forma rápida e prática",
     link: "post.html?id=16",
   },
+  */
   {
     id: 17,
     title: "Popups com HTML, CSS e JavaScript",
     image: "images/youtube/popup-js.jpg",
     date: "06-Dez-2024",
     description: "Aprenda a criar uma popup simples e funcional usando HTML, CSS e JavaScript! ",
-    link: "post.html?id=17",
+    link: "posts/js-modal-popup/index.html",
   },
+  /*
   {
     id: 18,
     title: "Visual Studio Code - Domine esse editor",
@@ -156,29 +160,32 @@ const posts = [
       "Vamos aprender a instalar e configurar o Visual Studio Code para facilitar o seu dia-a-dia de programador",
     link: "post.html?id=18",
   },
+  */
   {
     id: 19,
     title: "Lista de Convidados com LocalStorage",
     image: "images/youtube/guestlist-ls.jpg",
     date: "18-Nov-2024",
     description: "Aprenda a usar o LocalStorage para armazenar dados diretamente no navegador",
-    link: "post.html?id=19",
+    link: "posts/js-guest-list-local-storage/index.html",
   },
+
   {
     id: 20,
     title: "Calculadora em Javascript, HTML e CSS",
     image: "images/youtube/calculator.jpg",
     date: "07-Nov-2024",
     description: "Como Criar uma Calculadora Simples com HTML, CSS e JavaScript.",
-    link: "post.html?id=20",
+    link: "posts/js-calculator/index.html",
   },
+
   {
     id: 21,
     title: "Criar Contagem Regressiva",
     image: "images/youtube/countdown-js.jpg",
     date: "04-Nov-2024",
     description: "Aprenda como criar uma contagem regressiva para qualquer data que desejar.",
-    link: "post.html?id=21",
+    link: "posts/js-countdown/index.html",
   },
   {
     id: 22,
@@ -187,8 +194,8 @@ const posts = [
     date: "28-Out-2024",
     description:
       "Vamos fazer o velho e bom jogo da forca, aprenda a lógica de programação desenvolvendo um jogo simples.",
-    link: "post.html?id=22",
-  },*/
+    link: "posts/js-hangman/index.html",
+  },
 ];
 
 const postsPerPage = 8;
@@ -215,6 +222,7 @@ function renderPosts() {
         <a class="read-more" href="${post.link}">Leia mais</a>
       </div>
     `;
+    el.addEventListener("click", () => (document.location = `${post.link}`));
     container.appendChild(el);
   });
 
