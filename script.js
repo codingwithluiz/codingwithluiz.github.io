@@ -73,14 +73,16 @@ const posts = [
     description: "Com Python e Selenium podemos traduzir textos inteiros em poucos minutos.",
     link: "post.html?id=8",
   },
+  */
   {
     id: 9,
     title: "Quiz com HTML, CSS e JavaScript",
     image: "images/youtube/quiz.jpg",
     date: "12-Fev-2025",
     description: "Crie um Quiz com diversas perguntas para desafiar seus amigos!",
-    link: "post.html?id=9",
+    link: "posts/js-quiz/index.html",
   },
+  /*
   {
     id: 10,
     title: "10 Tags HTML Essenciais",
