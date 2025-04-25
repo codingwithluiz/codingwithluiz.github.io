@@ -1,0 +1,447 @@
+<html>
+  <head>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/doc.css" />
+  </head>
+  <body>
+  <div class="responsive-wrapper">
+    <aside>
+      <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
+      <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
+      <p><strong>🗓 Publicado:</strong><br />March 25, 2025</p>
+      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+      <p><strong>📁 Categoria:</strong><br />Frontend</p>
+      <p><strong>🛠 Tecnologias:</strong><br />HTML, CSS, Javascript</p>
+      <p><strong>🔗 Links:</strong></p>
+      <p><a target="_blank" href="https://www.youtube.com/watch?v=QgQL8z0yp0o"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+</svg> YouTube</a></p>
+      <p><a target="_blank" href="https://github.com/codingwithluiz/js-openweather-api"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50">
+    <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"></path>
+</svg> GitHub</a></p>
+      <p><a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
+    </aside>
+    <main>
+<h2 id="descricao-do-projeto">Descrição do Projeto</h2>
+<p><img src="img/weather-app.jpg"/></p>
+<p>Já imaginou criar um aplicativo de clima do zero? 🌎☀️ Neste vídeo, você aprenderá a desenvolver um app de previsão do tempo usando JavaScript e a API OpenWeatherMap! Vamos construir uma interface interativa onde o usuário pode digitar o nome de uma cidade e obter informações detalhadas sobre o clima, incluindo temperatura, umidade e condições atmosféricas. Além disso, vamos usar ícones dinâmicos para representar o clima atual e aprender a tratar erros ao buscar dados da API.</p>
+<p>🔥 O que você vai aprender?<br />
+✅ Como integrar a API OpenWeatherMap em um projeto JavaScript<br />
+✅ Como buscar e exibir dados meteorológicos em tempo real<br />
+✅ Como usar ícones dinâmicos para representar o clima<br />
+✅ Como tratar erros com try...catch para uma experiência fluida  </p>
+<p>💡 Tecnologias utilizadas: JavaScript, OpenWeatherMap API, HTML, CSS</p>
+<p>📌 Se inscreva no canal e ative o sininho 🔔 para mais tutoriais incríveis! 🚀</p>
+<h2 id="estrutura-do-html">Estrutura do HTML</h2>
+<p>Vamos iniciar o nosso projeto pelo HTML. A página vai ser bastante simples
+com uma caixa de texto para que possamos digitar o nome da cidade que
+queremos ver o clima atual e um botão para disparar a consulta.</p>
+<p>Depois vamos ter um espaço para colocar uma imagem representando o clima
+atual e alguns detalhes como sensação térmica, humidade e velocidade do
+vento.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Weather App&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h1&gt;Weather App&lt;/h1&gt;
+      &lt;form&gt;
+        &lt;input type=&quot;text&quot; id=&quot;city-input&quot; placeholder=&quot;Enter City&quot; /&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Get Weather&quot; /&gt;
+      &lt;/form&gt;
+      &lt;div id=&quot;weather-data&quot;&gt;
+        &lt;div class=&quot;icon&quot;&gt;
+          &lt;!-- Imagem dinamica representando o clima:
+           &lt;img src=&quot;http://openweathermap.org/img/wn/01d.png&quot; alt=&quot;Weather Icon&quot;&gt; 
+           --&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;temperature&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;description&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;details&quot;&gt;
+          &lt;!-- Detalhes do clima:
+           &lt;div&gt;Feels like: 23°C&lt;/div&gt;
+           &lt;div&gt;Humidity: 40%&lt;/div&gt;
+           &lt;div&gt;Wind speed: 5 m/s&lt;/div&gt; 
+           --&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;index.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="api-openweather">API OpenWeather</h2>
+<p>Para acessar a API <a href="https://openweathermap.org/">OpenWeather</a> precisamos fazer
+um cadastro no site.</p>
+<p><img src="img/openweather-signup.jpg"/></p>
+<h2 id="acessando-api">Acessando API</h2>
+<p>O código implementa uma aplicação simples de previsão do tempo que permite ao 
+usuário digitar o nome de uma cidade e visualizar informações climáticas em 
+tempo real usando a API do OpenWeatherMap.</p>
+<h3 id="declaracao-de-variaveis">📌 Declaração de Variáveis</h3>
+<p>No início do código, definimos três constantes que armazenam elementos do HTML:</p>
+<p><strong>🔑 Chave da API</strong></p>
+<pre><code class="language-js">const apikey = &quot;ece54d0e9bcc6551e6a6a66bf8574931&quot;;
+</code></pre>
+<ul>
+<li>A API Key é um <strong>código de autenticação</strong> que permite acessar os dados da API do OpenWeatherMap.</li>
+<li>Esse código deve ser <strong>mantido em segredo</strong> (o ideal é armazená-lo em variáveis de ambiente para segurança).</li>
+</ul>
+<p><strong>📌 Seleção de Elementos no HTML</strong></p>
+<pre><code class="language-js">const weatherDataEl = document.getElementById(&quot;weather-data&quot;);
+const cityInputEl = document.getElementById(&quot;city-input&quot;);
+const formEl = document.querySelector(&quot;form&quot;);
+</code></pre>
+<ul>
+<li><strong><code>weatherDataEl</code></strong> → Elemento <code>&lt;div&gt;</code> que contém os dados do clima.</li>
+<li><strong><code>cityInputEl</code></strong> → Campo de texto onde o usuário digita o nome da cidade.</li>
+<li><strong><code>formEl</code></strong> → O formulário HTML, responsável por capturar o evento de envio.</li>
+</ul>
+<h3 id="adicionando-um-evento-ao-formulario">📌 Adicionando um Evento ao Formulário</h3>
+<pre><code class="language-js">formEl.addEventListener(&quot;submit&quot;, (event) =&gt; {
+  event.preventDefault();
+  const cityValue = cityInputEl.value;
+  getWeatherData(cityValue);
+});
+</code></pre>
+<p><strong>O que acontece aqui?</strong>
+1. <strong>Evento de submit</strong>: Escutamos o evento <code>"submit"</code> no formulário.
+2. <strong><code>event.preventDefault();</code></strong> → Evita que a página seja recarregada ao enviar
+ o formulário.
+3. <strong>Captura do valor</strong>: Pegamos o texto digitado no campo <code>&lt;input&gt;</code>.
+4. <strong>Chamamos a função <code>getWeatherData(cityValue)</code></strong> → Passamos a cidade digitada
+ para buscar os dados da API.</p>
+<h3 id="funcao-para-buscar-dados-do-clima">📌 Função para Buscar Dados do Clima</h3>
+<p>Agora, analisemos a função <code>getWeatherData()</code> que faz a requisição à API:</p>
+<pre><code class="language-js">async function getWeatherData(cityValue) {
+</code></pre>
+<ul>
+<li>A função é <strong>assíncrona (<code>async</code>)</strong> porque faz uma requisição externa 
+(demorada), e precisamos esperar a resposta antes de continuar.</li>
+</ul>
+<p>Vamos consultar a <a href="https://openweathermap.org/current#name">API</a> para ver como podemos
+construir a nossa requisição. Existem diversas formas de utilizar a API e uma
+delas é consultar através do nome da cidade.</p>
+<pre><code class="language-js">const response = await fetch(
+  `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&amp;appid=${apikey}&amp;units=metric`
+);
+</code></pre>
+<ul>
+<li><strong><code>fetch()</code></strong> → Realiza uma solicitação HTTP para obter os dados da cidade informada.</li>
+<li><strong>URL de Requisição</strong></li>
+<li><code>q=${cityValue}</code> → Nome da cidade fornecida pelo usuário.</li>
+<li><code>appid=${apikey}</code> → Chave da API para autenticação.</li>
+<li><code>units=metric</code> → Define que a unidade de temperatura será <strong>Celsius</strong>.</li>
+</ul>
+<p><strong>📌 5. Verificando a Resposta</strong></p>
+<pre><code class="language-js">if (!response.ok) {
+  throw new Error(&quot;Network response was not ok&quot;);
+}
+</code></pre>
+<ul>
+<li><strong>Verifica se a resposta foi bem-sucedida (<code>response.ok</code>).</strong></li>
+<li>Se houver erro (exemplo: cidade inválida ou problema na API), um erro é gerado com <code>throw new Error()</code>.</li>
+</ul>
+<p><strong>📌 6. Convertendo os Dados da API</strong></p>
+<pre><code class="language-js">const data = await response.json();
+</code></pre>
+<ul>
+<li><strong>Converte a resposta da API para um objeto JavaScript (<code>JSON</code>).</strong></li>
+<li>Esse objeto contém todas as informações meteorológicas da cidade.</li>
+</ul>
+<p>O formato do JSON retornado pela API pode ser consultado <a href="https://openweathermap.org/current#example_JSON">aqui</a>.</p>
+<h3 id="extraindo-os-dados-do-clima">📌 Extraindo os Dados do Clima</h3>
+<p>A API retorna um JSON com muitas informações. Pegamos apenas as mais relevantes:</p>
+<pre><code class="language-js">const temperature = Math.round(data.main.temp);
+const description = data.weather[0].description;
+const icon = data.weather[0].icon;
+</code></pre>
+<ul>
+<li><strong>Temperatura (<code>data.main.temp</code>)</strong> → Temperatura arredondada (<code>Math.round()</code>).</li>
+<li><strong>Descrição (<code>data.weather[0].description</code>)</strong> → Texto com a condição climática (ex: "nublado").</li>
+<li><strong>Ícone (<code>data.weather[0].icon</code>)</strong> → Código usado para exibir a imagem correspondente ao clima.</li>
+</ul>
+<p><strong>📌 8. Criando os Detalhes do Clima</strong></p>
+<pre><code class="language-js">const details = [
+  `Feels like: ${Math.round(data.main.feels_like)}`,
+  `Humidity: ${data.main.humidity}%`,
+  `Wind speed: ${data.wind.speed} m/s`,
+];
+</code></pre>
+<ul>
+<li><strong>Sensação térmica</strong> (<code>data.main.feels_like</code>).</li>
+<li><strong>Umidade do ar</strong> (<code>data.main.humidity%</code>).</li>
+<li><strong>Velocidade do vento</strong> (<code>data.wind.speed</code>).</li>
+</ul>
+<h3 id="atualizando-o-html-com-os-dados">📌 Atualizando o HTML com os Dados</h3>
+<p>Agora que temos os dados, vamos exibí-los na página:</p>
+<p><strong>🖼️ Exibir o Ícone do Clima</strong></p>
+<pre><code class="language-js">weatherDataEl.querySelector(&quot;.icon&quot;).innerHTML = `&lt;img src=&quot;http://openweathermap.org/img/wn/${icon}.png&quot; alt=&quot;Weather Icon&quot;&gt;`;
+</code></pre>
+<ul>
+<li>Insere uma imagem correspondente ao ícone do clima obtido da API.</li>
+</ul>
+<p><strong>🌡️ Exibir a Temperatura</strong></p>
+<pre><code class="language-js">weatherDataEl.querySelector(&quot;.temperature&quot;).textContent = `${temperature}°C`;
+</code></pre>
+<ul>
+<li>Atualiza a temperatura no HTML.</li>
+</ul>
+<p><strong>📝 Exibir a Descrição</strong></p>
+<pre><code class="language-js">weatherDataEl.querySelector(&quot;.description&quot;).textContent = description;
+</code></pre>
+<ul>
+<li>Exibe a descrição textual do clima.</li>
+</ul>
+<p><strong>📊 Exibir os Detalhes Adicionais</strong></p>
+<pre><code class="language-js">weatherDataEl.querySelector(&quot;.details&quot;).innerHTML = details.map((detail) =&gt; `&lt;div&gt;${detail}&lt;/div&gt;`).join(&quot;&quot;);
+</code></pre>
+<ol>
+<li><strong>Cria um <code>&lt;div&gt;</code> para cada detalhe (<code>map()</code>).</strong></li>
+<li><strong>Une todos os <code>&lt;div&gt;</code> em uma string (<code>join("")</code>).</strong></li>
+<li><strong>Insere a string dentro da <code>&lt;div class="details"&gt;</code>.</strong></li>
+</ol>
+<h3 id="tratamento-de-erros">📌 Tratamento de Erros</h3>
+<p>Se houver erro na requisição, exibimos uma mensagem na tela:</p>
+<pre><code class="language-js">} catch (error) {
+  weatherDataEl.querySelector(&quot;.icon&quot;).innerHTML = &quot;&quot;;
+  weatherDataEl.querySelector(&quot;.temperature&quot;).textContent = &quot;&quot;;
+  weatherDataEl.querySelector(&quot;.description&quot;).textContent = &quot;An error happened, please try again later&quot;;
+  weatherDataEl.querySelector(&quot;.details&quot;).innerHTML = &quot;&quot;;
+}
+</code></pre>
+<ul>
+<li><strong>Apaga as informações antigas</strong> se um erro acontecer.</li>
+<li><strong>Mostra a mensagem de erro</strong> <code>"An error happened, please try again later"</code>.</li>
+</ul>
+<h2 id="estilizando-a-pagina">Estilizando a Página</h2>
+<h3 id="estilos-globais-do-body">Estilos Globais do <code>body</code></h3>
+<pre><code class="language-css">body {
+  margin: 0;
+  font-family: &quot;Montserrat&quot;, sans-serif;
+  background-color: #f7f7f7;
+}
+</code></pre>
+<ul>
+<li><code>margin: 0;</code> → Remove a margem padrão do corpo da página, evitando espaços extras ao redor do conteúdo.</li>
+<li><code>font-family: "Montserrat", sans-serif;</code> → Define a fonte principal do texto para "Montserrat". Caso ela não esteja disponível, um fallback genérico <code>sans-serif</code> será utilizado.</li>
+<li><code>background-color: #f7f7f7;</code> → Define um fundo cinza claro para a página.</li>
+</ul>
+<h3 id="estilizando-a-container">Estilizando a <code>.container</code></h3>
+<pre><code class="language-css">.container {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  max-width: 600px;
+  border-radius: 5px;
+  padding: 20px;
+}
+</code></pre>
+<ul>
+<li><code>background-color: #fff;</code> → Define o fundo do contêiner como branco.</li>
+<li><code>box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);</code> → Adiciona uma sombra suave ao redor do contêiner, dando um efeito elevado.</li>
+<li><code>margin: 0 auto;</code> → Centraliza o contêiner horizontalmente.</li>
+<li><code>margin-top: 50px;</code> → Cria um espaçamento superior de 50px, afastando o contêiner do topo da página.</li>
+<li><code>text-align: center;</code> → Centraliza o conteúdo de texto dentro do contêiner.</li>
+<li><code>max-width: 600px;</code> → Limita a largura do contêiner a 600 pixels.</li>
+<li><code>border-radius: 5px;</code> → Arredonda os cantos do contêiner.</li>
+<li><code>padding: 20px;</code> → Adiciona um espaçamento interno de 20px em todas as direções.</li>
+</ul>
+<h3 id="estilizando-o-form">Estilizando o <code>form</code></h3>
+<pre><code class="language-css">form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+</code></pre>
+<ul>
+<li><code>display: flex;</code> → Usa Flexbox para organizar os elementos do formulário em linha.</li>
+<li><code>justify-content: center;</code> → Centraliza os elementos horizontalmente.</li>
+<li><code>align-items: center;</code> → Alinha os elementos verticalmente ao centro.</li>
+<li><code>margin-bottom: 20px;</code> → Adiciona um espaço abaixo do formulário.</li>
+</ul>
+<hr />
+<h3 id="estilizando-o-campo-de-texto">Estilizando o Campo de Texto</h3>
+<pre><code class="language-css">form input[type=&quot;text&quot;] {
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  width: 60%;
+}
+</code></pre>
+<ul>
+<li><code>padding: 10px;</code> → Adiciona um espaçamento interno para melhorar a aparência.</li>
+<li><code>border: none;</code> → Remove a borda padrão do campo de entrada.</li>
+<li><code>outline: none;</code> → Remove o contorno ao focar no campo (evita o efeito de borda azul padrão).</li>
+<li><code>font-size: 18px;</code> → Define o tamanho da fonte como 18px.</li>
+<li><code>width: 60%;</code> → Define a largura do campo de entrada como 60% do contêiner pai.</li>
+</ul>
+<h3 id="estilizando-o-botao-de-envio">Estilizando o Botão de Envio</h3>
+<pre><code class="language-css">form input[type=&quot;submit&quot;] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+</code></pre>
+<ul>
+<li><code>background-color: #007bff;</code> → Define a cor de fundo do botão como azul.</li>
+<li><code>color: #fff;</code> → Define a cor do texto como branca.</li>
+<li><code>border: none;</code> → Remove a borda do botão.</li>
+<li><code>padding: 10px 20px;</code> → Adiciona espaçamento interno.</li>
+<li><code>border-radius: 5px;</code> → Arredonda os cantos do botão.</li>
+<li><code>font-size: 18px;</code> → Define o tamanho da fonte.</li>
+<li><code>cursor: pointer;</code> → Altera o cursor para um ponteiro ao passar o mouse, indicando que o botão é clicável.</li>
+<li><code>outline: none;</code> → Remove o contorno ao focar no botão.</li>
+<li><code>transition: background-color 0.3s ease;</code> → Adiciona uma transição suave para mudanças de cor.</li>
+</ul>
+<h3 id="efeito-hover-no-botao">Efeito Hover no Botão</h3>
+<pre><code class="language-css">form input[type=&quot;submit&quot;]:hover {
+  background-color: #0062cc;
+}
+</code></pre>
+<ul>
+<li><code>background-color: #0062cc;</code> → Muda a cor de fundo quando o mouse passa sobre o botão, criando um efeito visual interativo.</li>
+</ul>
+<h3 id="estilizando-a-imagem-do-icone">Estilizando a Imagem do Ícone</h3>
+<pre><code class="language-css">.icon img {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+</code></pre>
+<ul>
+<li><code>width: 100px;</code> e <code>height: 100px;</code> → Define um tamanho fixo para a imagem do ícone.</li>
+<li><code>background-size: contain;</code> → Garante que a imagem seja ajustada dentro do espaço disponível sem ser cortada.</li>
+<li><code>background-repeat: no-repeat;</code> → Evita a repetição da imagem.</li>
+<li><code>background-position: center center;</code> → Centraliza a imagem dentro do espaço disponível.</li>
+</ul>
+<h3 id="estilizando-a-temperatura">Estilizando a Temperatura</h3>
+<pre><code class="language-css">.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+</code></pre>
+<ul>
+<li><code>font-size: 48px;</code> → Define um tamanho grande para a exibição da temperatura.</li>
+<li><code>font-weight: bold;</code> → Torna o texto em negrito.</li>
+<li><code>margin: 20px 0;</code> → Adiciona espaçamento acima e abaixo da temperatura.</li>
+</ul>
+<h3 id="estilizando-a-descricao">Estilizando a Descrição</h3>
+<pre><code class="language-css">.description {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+</code></pre>
+<ul>
+<li><code>font-size: 24px;</code> → Define um tamanho de fonte maior para a descrição do tempo.</li>
+<li><code>margin-bottom: 20px;</code> → Adiciona espaço abaixo da descrição.</li>
+</ul>
+<h3 id="estilizando-a-secao-details">Estilizando a Seção <code>.details</code></h3>
+<pre><code class="language-css">.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+</code></pre>
+<ul>
+<li><code>display: flex;</code> → Usa Flexbox para organizar os elementos.</li>
+<li><code>justify-content: center;</code> → Centraliza os elementos horizontalmente.</li>
+<li><code>align-items: center;</code> → Alinha verticalmente ao centro.</li>
+<li><code>flex-wrap: wrap;</code> → Permite que os elementos quebrem linha se necessário.</li>
+</ul>
+<h3 id="estilizando-os-blocos-de-detalhes">Estilizando os Blocos de Detalhes</h3>
+<pre><code class="language-css">.details &gt; div {
+  padding: 20px;
+  background-color: #f1f1f1;
+  margin: 10px;
+  flex: 1;
+  border-radius: 5px;
+  text-align: center;
+  min-height: 45px;
+}
+</code></pre>
+<ul>
+<li><code>padding: 20px;</code> → Adiciona espaçamento interno.</li>
+<li><code>background-color: #f1f1f1;</code> → Define um fundo cinza claro.</li>
+<li><code>margin: 10px;</code> → Adiciona espaçamento externo.</li>
+<li><code>flex: 1;</code> → Permite que os elementos cresçam proporcionalmente no espaço disponível.</li>
+<li><code>border-radius: 5px;</code> → Arredonda os cantos.</li>
+<li><code>text-align: center;</code> → Centraliza o texto.</li>
+<li><code>min-height: 45px;</code> → Define uma altura mínima.</li>
+</ul>
+<h3 id="responsividade-media-query">Responsividade (Media Query)</h3>
+<pre><code class="language-css">@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+  }
+
+  form input[type=&quot;text&quot;] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+</code></pre>
+<ul>
+<li>Para telas menores que 768px:</li>
+<li>O formulário passa a ter <code>flex-direction: column;</code>, colocando os elementos em coluna.</li>
+<li>O campo de entrada ocupa toda a largura disponível e recebe <code>margin-bottom: 10px;</code> para separação.</li>
+</ul>
+<h2 id="resumo-do-fluxo-completo">🎯 Resumo do Fluxo Completo</h2>
+<p>1️⃣ <strong>Usuário digita a cidade</strong> e pressiona "Enter".<br />
+2️⃣ <strong>JavaScript captura o evento</strong> e chama <code>getWeatherData()</code>.<br />
+3️⃣ <strong>A API do OpenWeatherMap retorna os dados</strong> do clima.<br />
+4️⃣ <strong>JavaScript extrai as informações necessárias</strong>.<br />
+5️⃣ <strong>As informações são exibidas na tela</strong>.<br />
+6️⃣ <strong>Se houver erro, o usuário vê uma mensagem apropriada</strong>.  </p>
+<h2 id="melhorias-possiveis">🚀 <strong>Melhorias Possíveis</strong></h2>
+<ul>
+<li><strong>Validar a entrada do usuário</strong> (não permitir campos vazios).  </li>
+<li><strong>Adicionar mensagens de carregamento</strong> enquanto os dados estão sendo buscados.  </li>
+<li><strong>Melhorar a aparência do layout</strong> com mais estilos CSS.  </li>
+</ul>
+<h2 id="referencia">Referência</h2>
+<ul>
+<li>https://www.100jsprojects.com/project/weather-app</li>
+</ul></div>
+</main>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/prism.js"></script>
+<script>
+  Prism.plugins.NormalizeWhitespace.setDefaults({
+    "remove-trailing": true,
+    "remove-indent": true,
+    "left-trim": true,
+    "right-trim": true,
+    /*'break-lines': 80,
+    'indent': 2,
+    'remove-initial-line-feed': false,
+    'tabs-to-spaces': 4,
+    'spaces-to-tabs': 4*/
+  });
+</script>  
+</body>
+</html>

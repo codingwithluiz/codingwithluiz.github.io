@@ -30,7 +30,7 @@ const posts = [
     image: "images/youtube/weather-app.jpg",
     date: "30-Mar-2025",
     description: "Aprenda a utilizar a API OpenWeatherMap e construa um app para mostrar o clima das cidades.",
-    link: "post.html?id=3",
+    link: "posts/js-openweather-api/index.html",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const posts = [
     image: "images/youtube/digital-clock.jpg",
     date: "17-Mar-2025",
     description: "Com o Javascript podemos criar um relógio digital!",
-    link: "post.html?id=4",
+    link: "posts/js-digital-clock/index.html",
   },
   {
     id: 5,
