@@ -1,30 +1,339 @@
-@import "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.1/github-markdown.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+/*==============================
+  Variables
+==============================*/
+:root {
+  --bg: #f4f6f8;
+  --text: #2c3e50;
+  --header-bg: #ffffff;
+  --header-text: #2c3e50;
+  --link: #1a73e8;
+  --link-hover: #1558d6;
+  --card-bg: #ffffff;
+  --sidebar-bg: #e9ecef;
+}
+
+body.dark-mode {
+  --bg: #202124;
+  --text: #e0e0e0;
+  --header-bg: #3a404d;
+  --header-text: #f4f4f4;
+  --link: #64b5f6;
+  --link-hover: #4fa3e3;
+  --card-bg: #2d2f31;
+  --sidebar-bg: #26292e;
+}
+
+/*==============================
+  Base Styles
+==============================*/
 body {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  /*padding-top: 60px;*/
+}
+
+/*==============================
+  Layout
+==============================*/
+.container {
+  display: flex;
+  max-width: 1600px;
+  margin: auto;
+  padding: 2rem 3rem;
+  gap: 3rem;
+}
+
+main {
+  flex: 1;
+}
+
+/*==============================
+  Header & Navigation
+==============================*/
+header {
+  position: relative;
+
+  top: 0;
+  width: 100%;
+  height: 140px;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--header-text);
+  text-decoration: none;
+}
+
+/*==============================
+  Sidebar Elements
+==============================*/
+#search,
+.newsletter input[type="email"] {
+  width: 20%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/*==============================
+  Posts
+==============================*/
+#posts-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.post {
+  background-color: var(--card-bg);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .post {
+  border: 1px solid #555;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .post:hover {
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.25);
+}
+
+.post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 1rem 1.2rem;
+}
+
+.post-content h2 {
+  margin-top: 0;
+}
+
+.post-content h2 a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.post-content h2 a:hover {
+  color: var(--link-hover);
+}
+
+.post-content p.date {
+  font-size: 0.9em;
+  color: #777;
+}
+
+a.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--link);
+  text-decoration: none;
+}
+
+a.read-more:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+a.read-more::after {
+  content: " →";
+}
+
+/*==============================
+  Utility / Misc
+==============================*/
+.intro,
+.featured-post,
+.categories {
+  margin-bottom: 3rem;
+}
+/*
+.dark-toggle {
+  background: none;
+  border: 1px solid var(--header-text);
+  color: var(--header-text);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}*/
+
+.dark-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.dark-toggle:hover {
+  opacity: 0.8;
+}
+
+/*==============================
+  Pagination
+==============================*/
+.pagination {
+  text-align: center;
+  padding: 1rem;
+}
+
+.pagination button {
+  background-color: var(--link);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button.active,
+.pagination button:hover {
+  background-color: var(--link-hover);
+}
+
+/*==============================
+  Footer
+==============================*/
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  margin-top: 2rem;
+}
+
+.channel-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  margin-bottom: 2rem;
+}
+
+.banner-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.profile-text h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.profile-text p {
+  margin: 0.2rem 0 1rem 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
   margin: 0;
 }
 
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #ffffff;
+.nav-links a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/*==============================
+  Responsive
+==============================*/
+@media (min-width: 1800px) {
+  .container {
+    max-width: 90%;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #0d1117;
+@media (max-width: 992px) {
+  #posts-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.markdown-body {
-  box-sizing: border-box;
-  min-width: 200px;
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 45px;
-}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
 
-@media (max-width: 767px) {
-  .markdown-body {
-    padding: 15px;
+  .sidebar {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  #posts-container {
+    grid-template-columns: 1fr;
   }
 }

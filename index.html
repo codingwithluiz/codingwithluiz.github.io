@@ -1,1 +1,48 @@
-test html as index!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Blog</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="channel-header">
+      <div class="profile-info">
+        <img src="images/youtube/profile.jpg" alt="Profile Picture" class="profile-pic" />
+        <div class="profile-text">
+          <h1>CodingWithLuiz</h1>
+          <p>Desenvolvimento Web | Tutoriais | Dicas de Código</p>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+          <button id="darkModeToggle" class="dark-toggle">🌙</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+        <section class="intro">
+          <h2>Bem-vindo ao meu blog de desenvolvimento!</h2>
+          <p>
+            Aqui você encontrará análises escritas de todos os meus vídeos do YouTube - ideal para quem prefere ler ou
+            quer acompanhar exemplos de código, recursos e atualizações.
+          </p>
+          <input type="text" id="search" placeholder="Pesquise postagens..." />
+        </section>
+
+        <div id="posts-container"></div>
+        <div class="pagination" id="pagination"></div>
+      </main>
+    </div>
+
+    <footer>
+      <p>© 2025 codingwithluiz</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
