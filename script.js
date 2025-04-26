@@ -82,24 +82,25 @@ const posts = [
     description: "Crie um Quiz com diversas perguntas para desafiar seus amigos!",
     link: "posts/js-quiz/index.html",
   },
-  /*
+
   {
     id: 10,
     title: "10 Tags HTML Essenciais",
     image: "images/youtube/html-10-tags.jpg",
     date: "29-Jan-2025",
     description: "Você precisa conhecer essas 10 tags do HTML para facilitar o seu dia-a-dia na programação frontend",
-    link: "post.html?id=10",
+    link: "posts/html-10-tags/index.html",
   },
+
   {
     id: 11,
     title: "Popups com Popover API",
     image: "images/youtube/popover-api.webp",
     date: "2025-04-11",
     description: "Crie popups sem utilizar o Javascript com o Popover API",
-    link: "post.html?id=11",
+    link: "posts/html-popover-api/index.html",
   },
-  */
+
   {
     id: 12,
     title: "API ViaCEP usando JavaScript e Async/Await",
