@@ -1,0 +1,284 @@
+<html>
+  <head>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/doc.css" />
+  </head>
+  <body>
+  <div class="responsive-wrapper">
+    <aside>
+      <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
+      <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
+      <p><strong>🗓 Publicado:</strong><br />May 18, 2025</p>
+      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+      <p><strong>📁 Categoria:</strong><br />Frontend</p>
+      <p><strong>🛠 Tecnologias:</strong><br />HTML, Javascript</p>
+      <p><strong>🔗 Links:</strong></p>
+      <p><a target="_blank" href="https://www.youtube.com/watch?v=SmGXwUjNDfM"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+</svg> YouTube</a></p>
+      <p><a target="_blank" href="https://github.com/codingwithluiz/js-css-image-brightness"><img src="../../images/github.png" style="margin:0;display: inline;" width="32"> GitHub</a></p>
+      <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
+    </aside>
+    <main>
+<p>Vamos começar com a <strong>estrutura HTML (index.html)</strong>:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Ajuste de Brilho da Imagem&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;imgbox&quot;&gt;
+        &lt;img
+          src=&quot;https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGltYWdlJTIwYnJpdGhuZXNzfGVufDB8fHx8MTY5MjA3NTQ1NQ&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=400&quot;
+          alt=&quot;Imagem para ajuste de brilho&quot;
+        /&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;slider-box&quot;&gt;
+        &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;200&quot; value=&quot;100&quot; /&gt;
+        &lt;span&gt;100&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+      const image = document.querySelector(&quot;img&quot;);
+      const slider = document.querySelector(&quot;input&quot;);
+      const counter = document.querySelector(&quot;span&quot;);
+
+      slider.addEventListener(&quot;mousemove&quot;, function () {
+        image.style.filter = `brightness(${slider.value}%)`;
+        let number = Math.floor(slider.value / 2);
+        counter.innerText = number;
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>Explicação da estrutura HTML:</strong></p>
+<ol>
+<li><strong><code>&lt;!DOCTYPE html&gt;</code> e <code>&lt;html lang="en"&gt;</code></strong>: Iniciam o documento HTML5 e definem o idioma principal como inglês.</li>
+<li><strong><code>&lt;head&gt;</code></strong>: Contém metadados sobre o documento:<ul>
+<li><code>&lt;meta charset="UTF-8" /&gt;</code>: Define a codificação de caracteres para suportar diversos idiomas.</li>
+<li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</code>: Configura a viewport para responsividade em diferentes dispositivos.</li>
+<li><code>&lt;title&gt;Ajuste de Brilho da Imagem&lt;/title&gt;</code>: Define o título que aparece na aba do navegador.</li>
+<li><code>&lt;link rel="stylesheet" href="style.css" /&gt;</code>: Vincula o arquivo CSS (<code>style.css</code>) para aplicar estilos à página.</li>
+</ul>
+</li>
+<li><strong><code>&lt;body&gt;</code></strong>: Contém o conteúdo visível da página:<ul>
+<li><code>&lt;div class="container"&gt;</code>: Um contêiner principal para organizar os elementos.</li>
+<li><code>&lt;div class="imgbox"&gt;</code>: Envolve a imagem.<ul>
+<li><code>&lt;img src="..." alt="..."&gt;</code>: A tag <code>&lt;img&gt;</code> exibe a imagem. O atributo <code>src</code> define o caminho da imagem (neste caso, uma URL de uma imagem online), e <code>alt</code> fornece um texto alternativo para acessibilidade.</li>
+</ul>
+</li>
+<li><code>&lt;div class="slider-box"&gt;</code>: Contém o controle deslizante e o contador.<ul>
+<li><code>&lt;input type="range" min="0" max="200" value="100" /&gt;</code>: Cria um controle deslizante (<code>range input</code>).<ul>
+<li><code>min="0"</code>: Define o valor mínimo do slider.</li>
+<li><code>max="200"</code>: Define o valor máximo do slider.</li>
+<li><code>value="100"</code>: Define o valor inicial do slider.</li>
+</ul>
+</li>
+<li><code>&lt;span&gt;100&lt;/span&gt;</code>: Um elemento <code>&lt;span&gt;</code> para exibir o valor de brilho (inicialmente configurado para 100, mas será atualizado pelo JavaScript).</li>
+</ul>
+</li>
+<li><code>&lt;script&gt;</code>: Contém o código JavaScript que adiciona a interatividade. Explicaremos essa parte separadamente.</li>
+</ul>
+</li>
+</ol>
+<p>Agora, vamos detalhar o <strong>estilo CSS (style.css)</strong>:</p>
+<pre><code class="language-css">@import url(&quot;https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap&quot;);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: &quot;Poppins&quot;, sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: tomato;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 550px;
+  height: 700px;
+  background: #fff;
+  padding: 1.5em;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.imgbox {
+  height: 80%;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(100%);
+}
+
+.slider-box {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 0;
+  padding: 0 1em;
+}
+
+input[type=&quot;range&quot;] {
+  appearance: none !important;
+  outline: none;
+  width: 80%;
+  height: 5px;
+  background: tomato;
+  margin-top: 30px;
+  border-radius: 50px;
+}
+
+input[type=&quot;range&quot;]::-webkit-slider-thumb {
+  appearance: none !important;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3e3d3d;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.1 ease-in;
+}
+
+input[type=&quot;range&quot;]::-webkit-slider-thumb:active {
+  scale: 1.3;
+}
+
+span {
+  font-size: 2em;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+</code></pre>
+<p><strong>Detalhes do CSS:</strong></p>
+<ol>
+<li><strong><code>@import url(...)</code></strong>: Importa a fonte "Poppins" do Google Fonts para ser usada no projeto.</li>
+<li><strong><code>* { ... }</code> (Seletor Universal)</strong>: Aplica estilos a todos os elementos da página, resetando margens e paddings padrão, definindo <code>box-sizing: border-box</code> para um modelo de caixa mais intuitivo e aplicando a fonte "Poppins".</li>
+<li><strong><code>body { ... }</code></strong>: Estilos para o corpo da página:<ul>
+<li><code>min-height: 100vh;</code>: Garante que o body ocupe pelo menos a altura total da viewport.</li>
+<li><code>display: grid; place-items: center;</code>: Utiliza o sistema de grid para centralizar o conteúdo horizontal e verticalmente.</li>
+<li><code>background: tomato;</code>: Define a cor de fundo como "tomato" (vermelho-laranja).</li>
+</ul>
+</li>
+<li><strong><code>.container { ... }</code></strong>: Estilos para o contêiner principal:<ul>
+<li><code>display: flex; flex-direction: column; justify-content: space-between;</code>: Utiliza Flexbox para organizar os elementos internos em coluna e espaçá-los verticalmente.</li>
+<li><code>width: 550px; height: 700px;</code>: Define a largura e altura do contêiner.</li>
+<li><code>background: #fff;</code>: Define o fundo do contêiner como branco.</li>
+<li><code>padding: 1.5em;</code>: Adiciona um preenchimento interno de 1.5em (unidade relativa ao tamanho da fonte do elemento).</li>
+<li><code>box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);</code>: Adiciona uma sombra sutil ao redor do contêiner.</li>
+</ul>
+</li>
+<li><strong><code>.imgbox { ... }</code></strong>: Estilos para a caixa da imagem:<ul>
+<li><code>height: 80%;</code>: Define a altura da caixa da imagem como 80% da altura do contêiner.</li>
+</ul>
+</li>
+<li><strong><code>img { ... }</code></strong>: Estilos para a tag <code>&lt;img&gt;</code>:<ul>
+<li><code>height: 100%; width: 100%;</code>: Faz a imagem ocupar toda a largura e altura do seu contêiner pai (<code>.imgbox</code>).</li>
+<li><code>object-fit: cover;</code>: Garante que a imagem cubra a área do contêiner sem distorcer, cortando as bordas se necessário.</li>
+<li><code>filter: brightness(100%);</code>: Define o brilho inicial da imagem como 100% (normal). Essa propriedade será manipulada pelo JavaScript.</li>
+</ul>
+</li>
+<li><strong><code>.slider-box { ... }</code></strong>: Estilos para a caixa do controle deslizante:<ul>
+<li><code>display: flex; justify-content: space-between;</code>: Utiliza Flexbox para espaçar o controle deslizante e o contador.</li>
+<li><code>margin: auto 0;</code>: Define margens superior e inferior automáticas (para centralização vertical dentro do flex container pai, embora aqui não tenha muito efeito prático devido ao <code>flex-direction: column</code> do <code>.container</code>), e margens laterais como 0.</li>
+<li><code>padding: 0 1em;</code>: Adiciona um preenchimento horizontal de 1em.</li>
+</ul>
+</li>
+<li><strong><code>input[type="range"] { ... }</code></strong>: Estilos para o controle deslizante (<code>&lt;input type="range"&gt;</code>):<ul>
+<li><code>appearance: none !important;</code>: Remove a aparência padrão do navegador para o controle deslizante, permitindo um estilo personalizado.</li>
+<li><code>outline: none;</code>: Remove a borda de foco padrão.</li>
+<li><code>width: 80%; height: 5px;</code>: Define a largura e altura da trilha do slider.</li>
+<li><code>background: tomato;</code>: Define a cor da trilha do slider como "tomato".</li>
+<li><code>margin-top: 30px;</code>: Adiciona uma margem superior para espaçamento.</li>
+<li><code>border-radius: 50px;</code>: Arredonda as bordas da trilha do slider.</li>
+</ul>
+</li>
+<li><strong><code>input[type="range"]::-webkit-slider-thumb { ... }</code></strong>: Estilos específicos para a "manopla" (thumb) do controle deslizante em navegadores WebKit (Chrome, Safari):<ul>
+<li><code>appearance: none !important;</code>: Remove a aparência padrão da manopla.</li>
+<li><code>width: 20px; height: 20px;</code>: Define a largura e altura da manopla.</li>
+<li><code>border: 2px solid #3e3d3d;</code>: Adiciona uma borda à manopla.</li>
+<li><code>background: #fff;</code>: Define o fundo da manopla como branco.</li>
+<li><code>border-radius: 50%;</code>: Deixa a manopla circular.</li>
+<li><code>cursor: pointer;</code>: Define o cursor como uma mãozinha ao passar sobre a manopla.</li>
+<li><code>transition: 0.1s ease-in;</code>: Adiciona uma transição suave para efeitos de hover/active.</li>
+</ul>
+</li>
+<li><strong><code>input[type="range"]::-webkit-slider-thumb:active { ... }</code></strong>: Estilo aplicado à manopla quando está sendo arrastada (ativa):<ul>
+<li><code>scale: 1.3;</code>: Aumenta ligeiramente o tamanho da manopla.</li>
+</ul>
+</li>
+<li><strong><code>span { ... }</code></strong>: Estilos para o elemento <code>&lt;span&gt;</code> que exibe o valor do brilho:<ul>
+<li><code>font-size: 2em;</code>: Define o tamanho da fonte como duas vezes o tamanho da fonte padrão.</li>
+<li><code>opacity: 0.6;</code>: Define a opacidade para 60%, dando um efeito levemente transparente.</li>
+<li><code>margin-top: 10px;</code>: Adiciona uma margem superior para espaçamento.</li>
+</ul>
+</li>
+</ol>
+<p>Finalmente, vamos ao <strong>código JavaScript</strong>:</p>
+<pre><code class="language-javascript">const image = document.querySelector(&quot;img&quot;);
+const slider = document.querySelector(&quot;input&quot;);
+const counter = document.querySelector(&quot;span&quot;);
+
+slider.addEventListener(&quot;mousemove&quot;, function () {
+  image.style.filter = `brightness(${slider.value}%)`;
+  let number = Math.floor(slider.value / 2);
+  counter.innerText = number;
+});
+</code></pre>
+<p><strong>Explicação do JavaScript:</strong></p>
+<ol>
+<li><strong><code>const image = document.querySelector("img");</code></strong>: Seleciona o primeiro elemento <code>&lt;img&gt;</code> no HTML e armazena uma referência a ele na constante <code>image</code>.</li>
+<li><strong><code>const slider = document.querySelector("input");</code></strong>: Seleciona o primeiro elemento <code>&lt;input&gt;</code> (que no nosso caso é o <code>type="range"</code>) e armazena uma referência na constante <code>slider</code>.</li>
+<li><strong><code>const counter = document.querySelector("span");</code></strong>: Seleciona o primeiro elemento <code>&lt;span&gt;</code> e armazena uma referência na constante <code>counter</code>.</li>
+<li><strong><code>slider.addEventListener("mousemove", function () { ... });</code></strong>: Adiciona um "ouvinte de evento" ao elemento <code>slider</code>. Este ouvinte aguarda o evento <code>mousemove</code> (que ocorre quando o mouse se move sobre o elemento) e executa a função dentro das chaves <code>{}</code> quando o evento acontece.</li>
+<li>**<code>image.style.filter = \</code>brightness(${slider.value}%)`;<code>**: Dentro da função do evento</code>mousemove`:<ul>
+<li><code>image.style.filter</code>: Acessa a propriedade <code>filter</code> do estilo do elemento <code>image</code>. A propriedade <code>filter</code> permite aplicar efeitos visuais a um elemento.</li>
+<li><code>\</code>brightness(${slider.value}%)`<code>: Define o valor do filtro</code>brightness`.<ul>
+<li><code>${slider.value}</code>: Interpola o valor atual do controle deslizante (<code>slider.value</code>) dentro da string.</li>
+<li><code>%</code>: Adiciona o símbolo de porcentagem, pois a unidade para o filtro <code>brightness</code> é geralmente expressa em porcentagem (onde 100% é o brilho normal, 0% é preto e valores maiores que 100% aumentam o brilho).</li>
+<li>Portanto, à medida que o usuário move o controle deslizante, o valor do brilho da imagem é atualizado dinamicamente.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><code>let number = Math.floor(slider.value / 2);</code></strong>:<ul>
+<li><code>slider.value</code>: Obtém o valor atual do controle deslizante (que varia de 0 a 200).</li>
+<li><code>/ 2</code>: Divide o valor do slider por 2.</li>
+<li><code>Math.floor(...)</code>: Arredonda o resultado para o inteiro mais próximo (para baixo).</li>
+<li><code>let number = ...</code>: Armazena o resultado na variável <code>number</code>.</li>
+</ul>
+</li>
+<li><strong><code>counter.innerText = number;</code></strong>: Atualiza o conteúdo de texto do elemento <code>&lt;span&gt;</code> (<code>counter</code>) com o valor da variável <code>number</code>. Isso faz com que o número exibido ao lado do slider reflita aproximadamente a metade do valor do slider.</li>
+</ol></div>
+</main>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/prism.js"></script>
+<script>
+  Prism.plugins.NormalizeWhitespace.setDefaults({
+    "remove-trailing": true,
+    "remove-indent": true,
+    "left-trim": true,
+    "right-trim": true,
+    /*'break-lines': 80,
+    'indent': 2,
+    'remove-initial-line-feed': false,
+    'tabs-to-spaces': 4,
+    'spaces-to-tabs': 4*/
+  });
+</script>  
+</body>
+</html>

@@ -1,5 +1,13 @@
 const posts = [
   {
+    id: 24,
+    title: "Ajuste o Brilho de Imagens com HTML, CSS e JavaScript!",
+    image: "posts/js-css-image-brightness/images/cover.jpg",
+    date: "18-Mai-2025",
+    description: "Aprenda como criar um controle de brilho para imagens usando apenas HTML, CSS e JavaScript!",
+    link: "posts/js-css-image-brightness/index.html",
+  },
+  {
     id: 23,
     title: "Implemente o Tema Dark Mode em suas Páginas",
     image: "posts/dark-mode/images/cover.jpg",
