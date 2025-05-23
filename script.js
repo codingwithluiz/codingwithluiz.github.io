@@ -1,5 +1,13 @@
 const posts = [
   {
+    id: 25,
+    title: "Kanban com Drag & Drop",
+    image: "posts/js-kanban-dragdrop/images/kanban.webp",
+    date: "22-Mai-2025",
+    description: "Como Criar um Quadro Kanban com Drag & Drop Usando Apenas HTML, CSS e JavaScript",
+    link: "posts/js-kanban-dragdrop/index.html",
+  },
+  {
     id: 24,
     title: "Ajuste o Brilho de Imagens com HTML, CSS e JavaScript!",
     image: "posts/js-css-image-brightness/images/cover.jpg",

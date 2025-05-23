@@ -1,0 +1,525 @@
+<html>
+  <head>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/doc.css" />
+  </head>
+  <body>
+  <div class="responsive-wrapper">
+    <aside>
+      <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
+      <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
+      <p><strong>🗓 Publicado:</strong><br />May 22, 2025</p>
+      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+      <p><strong>📁 Categoria:</strong><br />Frontend</p>
+      <p><strong>🛠 Tecnologias:</strong><br />HTML, Javascript, CSS</p>
+      <p><strong>🔗 Links:</strong></p>
+      <p><a target="_blank" href="https://www.youtube.com/watch?v=YDu8E3wSUMg"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+</svg> YouTube</a></p>
+      <p><a target="_blank" href="https://github.com/codingwithluiz/js-kanban-dragdrop"><img src="../../images/github.png" style="margin:0;display: inline;" width="32"> GitHub</a></p>
+      <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
+    </aside>
+    <main>
+<h2 id="html">HTML</h2>
+<h3 id="parte-1-estrutura-geral-da-aplicacao">💡 Parte 1 – Estrutura geral da aplicação</h3>
+<pre><code class="language-html">&lt;div class=&quot;app&quot;&gt;
+  &lt;!-- ... --&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Essa <code>div.app</code> é o contêiner principal da aplicação. Dentro dela, temos duas 
+áreas principais:</p>
+<ul>
+<li>Um painel de entrada de tarefas (<code>task-input-container</code>)</li>
+<li>O quadro Kanban em si (<code>main.kanban</code>), dividido em colunas.</li>
+</ul>
+<h3 id="parte-2-campo-de-entrada-para-nova-tarefa">📥 Parte 2 – Campo de entrada para nova tarefa</h3>
+<pre><code class="language-html">&lt;div class=&quot;task-input-container&quot;&gt;
+  &lt;div class=&quot;task-input-fields&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;taskTitle&quot; placeholder=&quot;Título da nova tarefa&quot; /&gt;
+    &lt;select id=&quot;taskColumn&quot;&gt;
+      &lt;option value=&quot;1&quot;&gt;Backlog&lt;/option&gt;
+      &lt;option value=&quot;2&quot;&gt;Priorizado&lt;/option&gt;
+      &lt;option value=&quot;3&quot;&gt;Desenvolvimento&lt;/option&gt;
+      &lt;option value=&quot;4&quot;&gt;Teste&lt;/option&gt;
+      &lt;option value=&quot;5&quot;&gt;Finalizado&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button id=&quot;addTaskBtn&quot;&gt;Adicionar&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<ul>
+<li>O input recebe o título da nova tarefa.</li>
+<li>O select permite escolher a coluna onde a tarefa será criada.</li>
+<li>O botão com <code>id="addTaskBtn"</code> será usado no JavaScript para adicionar 
+  dinamicamente a tarefa ao quadro.</li>
+</ul>
+<h3 id="parte-3-colunas-do-kanban">🧱 Parte 3 – Colunas do Kanban</h3>
+<p><strong>Exemplo com coluna "Backlog":</strong></p>
+<pre><code class="language-html">&lt;div class=&quot;kanban-column&quot; data-id=&quot;1&quot;&gt;
+  &lt;div class=&quot;kanban-title&quot;&gt;
+    &lt;h2&gt;Backlog&lt;/h2&gt;
+    &lt;button class=&quot;add-card&quot;&gt;&lt;i class=&quot;fa-solid fa-plus&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;kanban-cards&quot;&gt;
+    &lt;!-- Cartões serão inseridos aqui --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<ul>
+<li>Cada coluna tem uma <code>data-id</code> que corresponde ao valor do <code>&lt;option&gt;</code> do 
+  seletor acima.</li>
+<li>Os botões com <code>add-card</code> são decorativos por enquanto (a não ser que você 
+  planeje usá-los no JS depois).</li>
+<li>As tarefas são adicionadas na <code>div.kanban-cards</code>.</li>
+</ul>
+<h3 id="parte-4-cartoes-das-tarefas">Parte 4 – Cartões das tarefas</h3>
+<pre><code class="language-html">&lt;div class=&quot;kanban-card&quot; draggable=&quot;true&quot;&gt;
+  &lt;div class=&quot;badge medium&quot;&gt;
+    &lt;span&gt; Média prioridade &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;card-title&quot;&gt;Revisar documento do projeto&lt;/p&gt;
+  &lt;div class=&quot;card-infos&quot;&gt;
+    &lt;div class=&quot;card-icons&quot;&gt;
+      &lt;p&gt;&lt;i class=&quot;fa-regular fa-comment&quot;&gt;&lt;/i&gt;1&lt;/p&gt;
+      &lt;p&gt;&lt;i class=&quot;fa-solid fa-paperclip&quot;&gt;&lt;/i&gt;1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;user&quot;&gt;
+      &lt;img src=&quot;images/avatar2.jpg&quot; alt=&quot;Avatar&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<ul>
+<li>Os cartões têm uma classe <code>draggable="true"</code> para permitir o drag and drop.</li>
+<li>A badge indica a prioridade.</li>
+<li>Há uma área com ícones e avatar para ilustrar funcionalidades extras 
+  (comentários, anexos e responsável pela tarefa).</li>
+</ul>
+<h3 id="parte-5-repeticao-de-estrutura">🔄 Parte 5 – Repetição de estrutura</h3>
+<p>Como as colunas são todas parecidas, apenas reptimos o mesmo HTML para as 
+colunas:</p>
+<ul>
+<li>Backlog</li>
+<li>Priorizado</li>
+<li>Desenvolvimento</li>
+<li>Teste</li>
+<li>Finalizado</li>
+</ul>
+<p>E o JavaScript vai permitir manipular essas colunas dinamicamente.</p>
+<h3 id="parte-6-inclusao-de-recursos-externos">🔗 Parte 6 – Inclusão de recursos externos</h3>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/...font-awesome.min.css&quot; /&gt;
+</code></pre>
+<ul>
+<li>O CSS customizado fica no arquivo <code>styles.css</code>.</li>
+<li>O Font Awesome é usado para ícones, como o botão de adicionar.</li>
+</ul>
+<h2 id="javascript">Javascript</h2>
+<h3 id="parte-1-tornando-os-cartoes-arrastaveis-drag-and-drop">🔄 Parte 1 – Tornando os cartões arrastáveis (drag and drop)</h3>
+<h4 id="11-selecao-dos-cartoes-e-eventos-de-arrastar">1.1 Seleção dos cartões e eventos de arrastar</h4>
+<pre><code class="language-js">document.querySelectorAll(&quot;.kanban-card&quot;).forEach((card) =&gt; {
+  card.addEventListener(&quot;dragstart&quot;, (e) =&gt; {
+    e.currentTarget.classList.add(&quot;dragging&quot;);
+  });
+
+  card.addEventListener(&quot;dragend&quot;, (e) =&gt; {
+    e.currentTarget.classList.remove(&quot;dragging&quot;);
+  });
+});
+</code></pre>
+<ul>
+<li>Aqui estamos ativando o <code>drag and drop</code> adicionando <code>eventListeners</code> a cada 
+  cartão já existente.</li>
+<li><code>dragstart</code>: adiciona uma classe <code>.dragging</code> que serve para identificá-lo ao 
+  soltá-lo depois.</li>
+<li><code>dragend</code>: remove essa classe quando o usuário solta o cartão.</li>
+</ul>
+<h4 id="12-permitir-que-as-colunas-recebam-os-cartoes">1.2 Permitir que as colunas recebam os cartões</h4>
+<pre><code class="language-js">document.querySelectorAll(&quot;.kanban-cards&quot;).forEach((column) =&gt; {
+  column.addEventListener(&quot;dragover&quot;, (e) =&gt; {
+    e.preventDefault(); // Permite o drop
+    e.currentTarget.classList.add(&quot;cards-hover&quot;);
+  });
+
+  column.addEventListener(&quot;dragleave&quot;, (e) =&gt; {
+    e.currentTarget.classList.remove(&quot;cards-hover&quot;);
+  });
+
+  column.addEventListener(&quot;drop&quot;, (e) =&gt; {
+    e.currentTarget.classList.remove(&quot;cards-hover&quot;);
+    const dragCard = document.querySelector(&quot;.kanban-card.dragging&quot;);
+    e.currentTarget.appendChild(dragCard);
+  });
+});
+</code></pre>
+<ul>
+<li>O <code>dragover</code> permite que um cartão seja solto em uma coluna.</li>
+<li>O <code>drop</code> identifica o cartão com a classe <code>.dragging</code> e o adiciona à nova 
+  coluna.</li>
+<li>A classe <code>.cards-hover</code> pode ser usada no CSS para dar um feedback visual 
+  durante o arraste.</li>
+</ul>
+<h3 id="parte-2-adicionando-novas-tarefas">➕ Parte 2 – Adicionando novas tarefas</h3>
+<h4 id="21-capturando-os-dados-e-validando">2.1 Capturando os dados e validando</h4>
+<pre><code class="language-js">document.getElementById(&quot;addTaskBtn&quot;).addEventListener(&quot;click&quot;, () =&gt; {
+  const title = document.getElementById(&quot;taskTitle&quot;).value.trim();
+  const columnId = document.getElementById(&quot;taskColumn&quot;).value;
+
+  if (!title) {
+    alert(&quot;Digite o título da tarefa.&quot;);
+    return;
+  }
+
+  // ...
+});
+</code></pre>
+<ul>
+<li>Quando o botão "Adicionar" é clicado, o título da tarefa e a coluna 
+  selecionada são capturados.</li>
+<li>Se o título estiver vazio, uma mensagem de erro aparece.</li>
+</ul>
+<h4 id="22-criando-o-html-da-tarefa-dinamicamente">2.2 Criando o HTML da tarefa dinamicamente</h4>
+<pre><code class="language-js">const card = document.createElement(&quot;div&quot;);
+card.classList.add(&quot;kanban-card&quot;);
+card.setAttribute(&quot;draggable&quot;, &quot;true&quot;);
+card.innerHTML = `
+  &lt;div class=&quot;badge low&quot;&gt;&lt;span&gt; Nova tarefa &lt;/span&gt;&lt;/div&gt;
+  &lt;p class=&quot;card-title&quot;&gt;${title}&lt;/p&gt;
+  &lt;div class=&quot;card-infos&quot;&gt;
+    &lt;div class=&quot;card-icons&quot;&gt;
+      &lt;p&gt;&lt;i class=&quot;fa-regular fa-comment&quot;&gt;&lt;/i&gt; 0&lt;/p&gt;
+      &lt;p&gt;&lt;i class=&quot;fa-solid fa-paperclip&quot;&gt;&lt;/i&gt; 0&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;user&quot;&gt;
+      &lt;img src=&quot;images/avatar.jpg&quot; alt=&quot;Avatar&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+`;
+</code></pre>
+<ul>
+<li>Criamos um novo elemento <code>div</code> para representar a tarefa.</li>
+<li>O conteúdo HTML é inserido diretamente com <code>innerHTML</code>.</li>
+<li>Definimos <code>draggable="true"</code> para que ela possa ser arrastada depois.</li>
+</ul>
+<h4 id="23-tornando-o-novo-cartao-arrastavel">2.3 Tornando o novo cartão arrastável</h4>
+<pre><code class="language-js">card.addEventListener(&quot;dragstart&quot;, (e) =&gt; {
+  e.currentTarget.classList.add(&quot;dragging&quot;);
+});
+card.addEventListener(&quot;dragend&quot;, (e) =&gt; {
+  e.currentTarget.classList.remove(&quot;dragging&quot;);
+});
+</code></pre>
+<ul>
+<li>Assim como os cartões fixos, os novos também precisam dos eventos de 
+  <code>dragstart</code> e <code>dragend</code> para o drag and drop funcionar corretamente.</li>
+</ul>
+<h4 id="24-adicionando-o-cartao-a-coluna">2.4 Adicionando o cartão à coluna</h4>
+<pre><code class="language-js">const targetColumn = document.querySelector(
+  `.kanban-column[data-id=&quot;${columnId}&quot;] .kanban-cards`
+);
+targetColumn.appendChild(card);
+</code></pre>
+<ul>
+<li>Usamos o <code>data-id</code> das colunas para saber onde colocar o novo cartão.</li>
+<li>O cartão é adicionado diretamente dentro da <code>div.kanban-cards</code>.</li>
+</ul>
+<h4 id="25-limpando-o-input">2.5 Limpando o input</h4>
+<pre><code class="language-js">document.getElementById(&quot;taskTitle&quot;).value = &quot;&quot;;
+</code></pre>
+<ul>
+<li>Após adicionar a tarefa, limpamos o campo de texto para facilitar a entrada da próxima.</li>
+</ul>
+<h2 id="css">🎨 CSS</h2>
+<h3 id="reset-global-e-fonte">📦 Reset global e fonte</h3>
+<pre><code class="language-css">@import url(&quot;https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap&quot;);
+</code></pre>
+<ul>
+<li><strong>@import</strong>: Carrega a fonte Poppins do Google Fonts.</li>
+<li>Os pesos (<code>300</code>, <code>400</code>, etc.) definem as variações de negrito disponíveis.</li>
+</ul>
+<pre><code class="language-css">* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: &quot;Poppins&quot;, sans-serif;
+}
+</code></pre>
+<ul>
+<li><code>margin</code> e <code>padding</code> em 0: Remove espaçamentos padrão dos elementos.</li>
+<li><code>box-sizing: border-box</code>: Inclui padding e borda dentro do tamanho total do 
+  elemento (essencial para layout previsível).</li>
+<li><code>font-family</code>: Define Poppins como fonte principal e uma fonte genérica 
+  <code>sans-serif</code> como fallback.</li>
+</ul>
+<h3 id="estilo-do-corpo-e-container-principal">🧱 Estilo do corpo e container principal</h3>
+<pre><code class="language-css">body {
+  min-height: 100vh;
+  background: linear-gradient(90deg, #e0f2fe, #e0e7ff);
+  padding: 20px;
+}
+</code></pre>
+<ul>
+<li><code>min-height: 100vh</code>: Garante que o fundo ocupe pelo menos toda a altura da 
+  tela.</li>
+<li><code>background</code>: Um degradê azul-claro moderno, da esquerda para a direita.</li>
+<li><code>padding</code>: Espaço interno geral ao redor do conteúdo.</li>
+</ul>
+<pre><code class="language-css">.app {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+</code></pre>
+<ul>
+<li><code>display: flex</code>: Torna o container flexível.</li>
+<li><code>flex-direction: column</code>: Os filhos ficam em coluna (um embaixo do outro).</li>
+<li><code>max-width</code>: Impede que o layout fique largo demais em telas grandes.</li>
+<li><code>margin: 0 auto</code>: Centraliza horizontalmente.</li>
+</ul>
+<h3 id="area-principal-do-kanban">📋 Área principal do Kanban</h3>
+<pre><code class="language-css">.kanban {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 16px;
+  height: 85vh;
+}
+</code></pre>
+<ul>
+<li><code>display: flex</code>: Organiza as colunas lado a lado.</li>
+<li><code>gap</code>: Espaço entre colunas.</li>
+<li><code>overflow-x: auto</code>: Permite rolar horizontalmente se houver muitas colunas.</li>
+<li><code>overflow-y: hidden</code>: Evita scroll vertical.</li>
+<li><code>height</code>: Define uma altura padrão para a área (85% da altura da tela).</li>
+<li><code>padding</code>: Espaço interno para não grudar nas bordas.</li>
+</ul>
+<h3 id="colunas-do-kanban">🧊 Colunas do Kanban</h3>
+<pre><code class="language-css">.kanban-column {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+</code></pre>
+<ul>
+<li><code>flex: 1</code>: A coluna tenta ocupar o mesmo espaço que as outras.</li>
+<li><code>min-width</code>: Impede que a coluna fique estreita demais.</li>
+<li><code>background-color</code>: Cor de fundo clara.</li>
+<li><code>border-radius</code>: Arredonda os cantos.</li>
+<li><code>box-shadow</code>: Dá profundidade com uma leve sombra.</li>
+<li><code>position: relative</code>: Necessário para usar <code>::after</code> posicionado.</li>
+</ul>
+<h4 id="faixa-de-cor-no-topo-das-colunas">🔸 Faixa de cor no topo das colunas</h4>
+<pre><code class="language-css">.kanban-column::after {
+  content: &quot;&quot;;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+</code></pre>
+<ul>
+<li><code>::after</code>: Cria uma pseudo-faixa no topo da coluna.</li>
+<li><code>position: absolute</code>: Posiciona no canto superior.</li>
+<li><code>border-radius</code>: Arredonda os cantos superiores da faixa.</li>
+</ul>
+<p>Lembrando que o <code>::after</code> cria um elemento virtual no CSS que aparece 
+visualmente após o conteúdo real do elemento, sem precisar estar no HTML.</p>
+<pre><code class="language-css">.kanban-column[data-id=&quot;1&quot;]::after {
+  background-color: #fca5a5;
+}
+</code></pre>
+<ul>
+<li>Colore cada coluna com uma cor diferente usando <code>data-id</code>.</li>
+</ul>
+<h3 id="cabecalho-da-coluna">📝 Cabeçalho da coluna</h3>
+<pre><code class="language-css">.kanban-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</code></pre>
+<ul>
+<li>Organiza o título e botão de adicionar horizontalmente.</li>
+</ul>
+<pre><code class="language-css">.kanban-title h2 {
+  font-size: 18px;
+  color: #334155;
+  font-weight: 600;
+}
+</code></pre>
+<h3 id="botao-de-adicionar-tarefa">➕ Botão de adicionar tarefa</h3>
+<pre><code class="language-css">.add-card {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #64748b;
+  cursor: pointer;
+}
+</code></pre>
+<ul>
+<li>Remove estilos padrão de botão e dá um visual minimalista.</li>
+</ul>
+<h3 id="lista-de-tarefas-dentro-da-coluna">🧾 Lista de tarefas dentro da coluna</h3>
+<pre><code class="language-css">.kanban-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 4px;
+}
+</code></pre>
+<ul>
+<li>Organiza os cards de forma vertical, com scroll vertical se necessário.</li>
+</ul>
+<h3 id="cartoes-cards">🃏 Cartões (cards)</h3>
+<pre><code class="language-css">.kanban-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: grab;
+}
+</code></pre>
+<ul>
+<li>Visual limpo, com sombra suave e aparência de “cartão físico”.</li>
+<li><code>cursor: grab</code>: Indica que o elemento pode ser arrastado.</li>
+</ul>
+<pre><code class="language-css">.dragging {
+  opacity: 0.5;
+}
+
+.cards-hover {
+  background-color: #e2e8f0;
+  border-radius: 8px;
+}
+</code></pre>
+<ul>
+<li>Fornece feedback visual durante o <code>drag and drop</code>.</li>
+</ul>
+<h3 id="badge-de-prioridade">🏷️ Badge de prioridade</h3>
+<pre><code class="language-css">.badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: white;
+}
+</code></pre>
+<ul>
+<li>Um marcador colorido com texto dentro.</li>
+</ul>
+<pre><code class="language-css">.badge.low    { background-color: #3b82f6; }
+.badge.medium { background-color: #f97316; }
+.badge.high   { background-color: #ef4444; }
+</code></pre>
+<h3 id="informacoes-adicionais-no-card">👤 Informações adicionais no card</h3>
+<pre><code class="language-css">.card-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</code></pre>
+<pre><code class="language-css">.card-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.card-icons i {
+  color: #9ca3af;
+}
+
+.user img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+</code></pre>
+<h3 id="campo-de-adicionar-tarefa">🧾 Campo de adicionar tarefa</h3>
+<pre><code class="language-css">.task-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  gap: 12px;
+}
+</code></pre>
+<ul>
+<li>Estilização moderna com <code>box-shadow</code> e <code>flex-wrap</code> para adaptação em telas 
+  menores.</li>
+</ul>
+<pre><code class="language-css">.task-input-fields input,
+.task-input-fields select {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+</code></pre>
+<pre><code class="language-css">#addTaskBtn {
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#addTaskBtn:hover {
+  background: #2563eb;
+}
+</code></pre>
+<h3 id="scrollbar-personalizada">🖱️ Scrollbar personalizada</h3>
+<pre><code class="language-css">*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+*::-webkit-scrollbar-track {
+  background-color: #f1f5f9;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 20px;
+}
+</code></pre>
+<ul>
+<li>Estiliza a barra de rolagem apenas no Chrome/WebKit.</li>
+<li>Dá um toque mais moderno e suave ao scroll.</li>
+</ul></div>
+</main>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/prism.js"></script>
+<script>
+  Prism.plugins.NormalizeWhitespace.setDefaults({
+    "remove-trailing": true,
+    "remove-indent": true,
+    "left-trim": true,
+    "right-trim": true,
+    /*'break-lines': 80,
+    'indent': 2,
+    'remove-initial-line-feed': false,
+    'tabs-to-spaces': 4,
+    'spaces-to-tabs': 4*/
+  });
+</script>  
+</body>
+</html>
