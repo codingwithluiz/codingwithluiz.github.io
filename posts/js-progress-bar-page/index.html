@@ -1,0 +1,244 @@
+<html>
+  <head>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/doc.css" />
+  </head>
+  <body>
+  <div class="responsive-wrapper">
+    <aside>
+      <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
+      <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
+      <p><strong>🗓 Publicado:</strong><br />July 08, 2025</p>
+      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+      <p><strong>📁 Categoria:</strong><br />Frontend</p>
+      <p><strong>🛠 Tecnologias:</strong><br />HTML, Javascript, CSS</p>
+      <p><strong>🔗 Links:</strong></p>
+      <p><a target="_blank" href="https://www.youtube.com/watch?v=NJeUXcB-WKY&t=18s&pp=0gcJCcEJAYcqIYzv"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+</svg> YouTube</a></p>
+      <p><a target="_blank" href="https://github.com/codingwithluiz/js-progress-bar-page"><img src="../../images/github.png" style="margin:0;display: inline;" width="32"> GitHub</a></p>
+      <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
+    </aside>
+    <main>
+<h2 id="tutorial-barra-de-progresso-de-scroll-no-topo-da-pagina-html-css-e-javascript">Tutorial: Barra de Progresso de Scroll no Topo da Página (HTML, CSS e JavaScript)</h2>
+<p>Neste tutorial, vamos criar uma barra de progresso simples e eficaz que fica no 
+topo da sua página, preenchendo-se à medida que o usuário rola para baixo. 
+Perfeito para indicar o progresso da leitura ou a quantidade de conteúdo já 
+visualizada!</p>
+<h3 id="estrutura-html-indexhtml">Estrutura HTML (index.html)</h3>
+<p>Primeiro, vamos configurar a estrutura básica da nossa página e adicionar a 
+barra de progresso. A barra será uma <code>&lt;div&gt;</code> vazia que preencheremos com CSS e 
+manipularemos com JavaScript.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Barra de Progresso de Scroll&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+    &lt;style&gt;
+        /* Estilos para o corpo da página e conteúdo, apenas para demonstração */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        /* Adicionando bastante conteúdo para testar o scroll */
+        .long-text {
+            height: 1500px; /* Altere este valor para mais ou menos conteúdo */
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            overflow-y: scroll; /* Para simular conteúdo interno rolagem */
+            resize: vertical;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;progressBarContainer&quot;&gt;
+        &lt;div id=&quot;progressBar&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;h1&gt;Bem-vindo ao Nosso Conteúdo Extenso!&lt;/h1&gt;
+        &lt;p&gt;Este é um exemplo de página com bastante texto para demonstrar o funcionamento da barra de progresso de scroll no topo. Role para baixo e veja a mágica acontecer!&lt;/p&gt;
+
+        &lt;h2&gt;Seção 1: Introdução&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+        &lt;h2&gt;Seção 2: Desenvolvimento&lt;/h2&gt;
+        &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.&lt;/p&gt;
+
+        &lt;h3&gt;Subseção 2.1: Detalhes Técnicos&lt;/h3&gt;
+        &lt;p&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.&lt;/p&gt;
+
+        &lt;h2&gt;Seção 3: Conclusão&lt;/h2&gt;
+        &lt;p&gt;Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.&lt;/p&gt;
+
+        &lt;p&gt;Para garantir que temos conteúdo suficiente para testar, vamos adicionar mais alguns parágrafos aleatórios.&lt;/p&gt;
+        &lt;p&gt;Et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;
+        &lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+        &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt;
+        &lt;p&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.&lt;/p&gt;
+        &lt;p&gt;Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quibusdam!&lt;/p&gt;
+        &lt;p&gt;Este é o final da página. A barra de progresso deve estar 100% preenchida agora!&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="estilizacao-css-stylecss">Estilização CSS (style.css)</h3>
+<p>Agora, vamos estilizar nossa barra de progresso para que ela apareça no topo da 
+página e tenha um visual agradável.</p>
+<pre><code class="language-css">/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f4f7f6;
+}
+
+/* Container da barra de progresso */
+#progressBarContainer {
+    position: fixed; /* Fixa a barra no topo da janela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Altura da barra */
+    background-color: #e0e0e0; /* Cor de fundo da barra vazia */
+    z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+}
+
+/* A barra de progresso em si */
+#progressBar {
+    height: 100%; /* Ocupa toda a altura do container */
+    width: 0%; /* Começa com 0% e será preenchida com JS */
+    background-color: #4CAF50; /* Cor da barra de progresso */
+    transition: width 0.1s linear; /* Animação suave para o preenchimento */
+}
+
+/* Estilos para o conteúdo da página (opcional, apenas para demonstração) */
+.content {
+    max-width: 800px;
+    margin: 50px auto 20px auto; /* Adicione margem superior para não cobrir a barra */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
+    margin-bottom: 1em;
+    color: #555;
+}
+</code></pre>
+<p><strong>Explicação do CSS:</strong></p>
+<ul>
+<li><strong><code>#progressBarContainer</code></strong>:<ul>
+<li><code>position: fixed;</code>: Essencial para que a barra permaneça visível no topo enquanto o usuário rola.</li>
+<li><code>top: 0; left: 0;</code>: Posiciona a barra no canto superior esquerdo.</li>
+<li><code>width: 100%;</code>: Ocupa toda a largura da viewport.</li>
+<li><code>height: 5px;</code>: Define a altura da barra.</li>
+<li><code>z-index: 1000;</code>: Garante que a barra fique sobreposta a outros elementos da página.</li>
+</ul>
+</li>
+<li><strong><code>#progressBar</code></strong>:<ul>
+<li><code>width: 0%;</code>: Inicia a barra sem preenchimento.</li>
+<li><code>background-color: #4CAF50;</code>: A cor verde que preencherá a barra.</li>
+<li><code>transition: width 0.1s linear;</code>: Adiciona uma transição suave quando a largura da barra é alterada, tornando o movimento mais agradável.</li>
+</ul>
+</li>
+</ul>
+<h3 id="logica-javascript-scriptjs">Lógica JavaScript (script.js)</h3>
+<p>Agora vem a parte mais importante: o JavaScript que calculará a posição do 
+scroll e atualizará a largura da barra de progresso.</p>
+<pre><code class="language-javascript">// Obtém o elemento da barra de progresso
+const progressBar = document.getElementById('progressBar');
+
+// Adiciona um listener de evento para o scroll da janela
+window.addEventListener('scroll', () =&gt; {
+    // Calcula a altura total da página que pode ser rolada
+    // document.documentElement.scrollHeight: altura total do conteúdo da página
+    // window.innerHeight: altura da janela de visualização (viewport)
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    // Calcula a quantidade de scroll atual
+    // window.scrollY (ou window.pageYOffset): posição vertical atual do scroll
+    const scrolled = window.scrollY;
+
+    // Calcula a porcentagem de scroll
+    // Se scrollHeight for 0 (página sem scroll), a porcentagem é 0 para evitar divisão por zero
+    const scrollPercentage = (scrollHeight &gt; 0) ? (scrolled / scrollHeight) * 100 : 0;
+
+    // Atualiza a largura da barra de progresso
+    progressBar.style.width = scrollPercentage + '%';
+});
+</code></pre>
+<p><strong>Explicação do JavaScript:</strong></p>
+<ol>
+<li><strong><code>const progressBar = document.getElementById('progressBar');</code></strong>: Seleciona o elemento HTML da barra de progresso pelo seu ID.</li>
+<li><strong><code>window.addEventListener('scroll', () =&gt; { ... });</code></strong>: Adiciona um "ouvinte de evento" ao objeto <code>window</code>. Sempre que o usuário rolar a página, a função dentro deste <code>addEventListener</code> será executada.</li>
+<li><strong><code>const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;</code></strong>:<ul>
+<li><code>document.documentElement.scrollHeight</code>: Retorna a altura total do conteúdo da página (incluindo a parte que não está visível).</li>
+<li><code>window.innerHeight</code>: Retorna a altura da janela de visualização (o que o usuário vê na tela).</li>
+<li>Subtraímos <code>window.innerHeight</code> porque, quando a barra de rolagem atinge o final, a parte inferior do conteúdo se alinha com a parte inferior da janela de visualização, não com a parte inferior do documento. A "altura rolável" é a altura total menos a altura da janela.</li>
+</ul>
+</li>
+<li><strong><code>const scrolled = window.scrollY;</code></strong>: Retorna o número de pixels que o documento foi rolado verticalmente a partir do canto superior esquerdo.</li>
+<li><strong><code>const scrollPercentage = (scrollHeight &gt; 0) ? (scrolled / scrollHeight) * 100 : 0;</code></strong>:<ul>
+<li>Calcula a porcentagem de rolagem.</li>
+<li>A condição <code>(scrollHeight &gt; 0) ? ... : 0;</code> é para evitar a divisão por zero caso a página não tenha conteúdo suficiente para rolar (ou seja, <code>scrollHeight</code> seja 0). Se não há rolagem, a porcentagem é 0.</li>
+</ul>
+</li>
+<li><strong><code>progressBar.style.width = scrollPercentage + '%';</code></strong>: Atualiza a propriedade <code>width</code> do estilo da barra de progresso com a porcentagem calculada. O CSS se encarrega da transição suave.</li>
+</ol>
+<h3 id="como-usar">Como Usar</h3>
+<ol>
+<li>Crie três arquivos: <code>index.html</code>, <code>style.css</code> e <code>script.js</code> na mesma pasta.</li>
+<li>Copie e cole o código correspondente em cada arquivo.</li>
+<li>Abra o arquivo <code>index.html</code> no seu navegador.</li>
+<li>Role a página para cima e para baixo para ver a barra de progresso em ação!</li>
+</ol></div>
+</main>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/prism.js"></script>
+<script>
+  Prism.plugins.NormalizeWhitespace.setDefaults({
+    "remove-trailing": true,
+    "remove-indent": true,
+    "left-trim": true,
+    "right-trim": true,
+    /*'break-lines': 80,
+    'indent': 2,
+    'remove-initial-line-feed': false,
+    'tabs-to-spaces': 4,
+    'spaces-to-tabs': 4*/
+  });
+</script>  
+</body>
+</html>

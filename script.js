@@ -1,5 +1,13 @@
 const posts = [
   {
+    id: 26,
+    title: "Barra de Progresso de Leitura",
+    image: "posts/js-progress-bar-page/images/js-progress-bar-page.webp",
+    date: "08-Jul-2025",
+    description: "Barra de Progresso para indicar percentual da página já lida",
+    link: "posts/js-progress-bar-page/index.html",
+  },
+  {
     id: 25,
     title: "Kanban com Drag & Drop",
     image: "posts/js-kanban-dragdrop/images/kanban.webp",
