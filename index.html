@@ -4,43 +4,211 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CodingWithLuiz</title>
+    <meta
+      name="description"
+      content="Tutoriais e projetos de desenvolvimento web: posts escritos que acompanham meus vídeos no YouTube, trilhas de aprendizado e recursos."
+    />
+    <meta property="og:title" content="CodingWithLuiz" />
+    <meta
+      property="og:description"
+      content="Tutoriais e projetos de desenvolvimento web: posts escritos, trilhas e recursos."
+    />
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="channel-header">
-      <div class="profile-info">
-        <img src="images/youtube/profile.jpg" alt="Profile Picture" class="profile-pic" />
-        <div class="profile-text">
-          <h1>CodingWithLuiz</h1>
-          <p>Desenvolvimento Web | Tutoriais | Dicas de Código</p>
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-          <button id="darkModeToggle" class="dark-toggle">🌙</button>
-        </div>
+    <header class="site-header">
+      <div class="wrap">
+        <nav class="top-nav" aria-label="Primary">
+          <a class="brand" href="./">
+            <img class="brand-avatar" src="images/youtube/profile.jpg" alt="CodingWithLuiz" />
+            <span class="brand-name">CodingWithLuiz</span>
+          </a>
+
+          <div class="nav-links">
+            <a href="./paths/">Trilhas</a>
+            <a href="./courses/">Cursos</a>
+            <a href="./resources/">Recursos</a>
+            <a href="./about/">Sobre</a>
+            <a class="nav-cta" href="#posts">Ver posts</a>
+          </div>
+
+          <div class="nav-actions">
+            <a class="icon-link" href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">
+              YouTube
+            </a>
+            <a class="icon-link" href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
+            <button id="darkModeToggle" class="dark-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+          </div>
+        </nav>
       </div>
     </header>
 
-    <div class="container">
-      <main>
-        <section class="intro">
-          <h2>Bem-vindo ao meu blog de desenvolvimento!</h2>
-          <p>
-            Aqui você encontrará análises escritas de todos os meus vídeos do YouTube - ideal para quem prefere ler ou
-            quer acompanhar exemplos de código, recursos e atualizações.
-          </p>
-          <input type="text" id="search" autocomplete="off" placeholder="Pesquise postagens..." />
-        </section>
+    <main>
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="badge">Tutoriais práticos • Frontend • Projetos</p>
+            <h1>Referências escritas para acompanhar meus vídeos.</h1>
+            <p class="lede">
+              Posts com exemplos, links, screenshots e explicações — ideal para estudar no seu ritmo, revisar conceitos e
+              copiar trechos de código.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#posts">Explorar posts</a>
+              <a class="btn" href="./paths/">Ver trilhas</a>
+              <a class="btn ghost" href="./newsletter/">Newsletter</a>
+            </div>
+            <div class="quick-stats" id="quick-stats" aria-label="Stats">
+              <div class="stat">
+                <div class="stat-value" id="stat-posts">—</div>
+                <div class="stat-label">posts</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value" id="stat-paths">—</div>
+                <div class="stat-label">trilhas</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value" id="stat-courses">—</div>
+                <div class="stat-label">cursos</div>
+              </div>
+            </div>
+          </div>
 
-        <div id="posts-container"></div>
-        <div class="pagination" id="pagination"></div>
-      </main>
-    </div>
+          <div class="hero-card">
+            <div class="card">
+              <h2 class="card-title">Comece por aqui</h2>
+              <p class="card-muted">Alguns caminhos rápidos dependendo do que você quer aprender.</p>
+              <div class="card-grid" id="hero-picks">
+                <a class="mini-card" href="./paths/#javascript">
+                  <div class="mini-card-title">JavaScript</div>
+                  <div class="mini-card-muted">Fundamentos → Projetos</div>
+                </a>
+                <a class="mini-card" href="./paths/#html-css">
+                  <div class="mini-card-title">HTML + CSS</div>
+                  <div class="mini-card-muted">UI moderna e acessível</div>
+                </a>
+                <a class="mini-card" href="./courses/">
+                  <div class="mini-card-title">Cursos</div>
+                  <div class="mini-card-muted">Conteúdos organizados</div>
+                </a>
+                <a class="mini-card" href="./resources/">
+                  <div class="mini-card-title">Recursos</div>
+                  <div class="mini-card-muted">Repos, templates e links</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <footer>
-      <p>© 2025 codingwithluiz</p>
+      <section class="section" id="posts">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <h2>Posts e tutoriais</h2>
+              <p class="muted">Pesquise por título/descrição e encontre rapidamente o tutorial certo.</p>
+            </div>
+            <div class="searchbar">
+              <label class="sr-only" for="search">Pesquisar postagens</label>
+              <input type="text" id="search" autocomplete="off" placeholder="Pesquise postagens..." />
+            </div>
+          </div>
+
+          <div class="filters" id="filters" aria-label="Post filters"></div>
+
+          <div id="posts-container"></div>
+          <div class="pagination" id="pagination"></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="paths">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <h2>Trilhas de aprendizado</h2>
+              <p class="muted">Roadmaps curtos pra você não ficar perdido no que estudar.</p>
+            </div>
+            <a class="btn" href="./paths/">Ver todas</a>
+          </div>
+          <div class="cards" id="paths-container"></div>
+        </div>
+      </section>
+
+      <section class="section" id="courses">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <h2>Cursos</h2>
+              <p class="muted">Conteúdos organizados em formato de catálogo.</p>
+            </div>
+            <a class="btn" href="./courses/">Abrir catálogo</a>
+          </div>
+          <div class="cards" id="courses-container"></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="newsletter">
+        <div class="wrap newsletter">
+          <div>
+            <h2>Newsletter</h2>
+            <p class="muted">Receba novidades de vídeos, posts e templates. (Sem spam.)</p>
+          </div>
+          <div class="newsletter-actions">
+            <a class="btn primary" href="./newsletter/">Inscrever</a>
+            <a class="btn ghost" href="./newsletter/#archive">Ver edições</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sponsors">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <h2>Sponsors</h2>
+              <p class="muted">Apoie o canal e ajude a manter os conteúdos gratuitos.</p>
+            </div>
+            <a class="btn" href="./sponsors/">Como apoiar</a>
+          </div>
+          <div class="cards" id="sponsors-container"></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="resources">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <h2>Recursos</h2>
+              <p class="muted">Links úteis: repositórios, ferramentas e materiais.</p>
+            </div>
+            <a class="btn" href="./resources/">Ver recursos</a>
+          </div>
+          <div class="cards" id="resources-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <div class="footer-brand">CodingWithLuiz</div>
+          <p class="muted">Desenvolvimento Web • Tutoriais • Dicas de Código</p>
+        </div>
+        <div class="footer-links" aria-label="Footer">
+          <a href="./paths/">Trilhas</a>
+          <a href="./courses/">Cursos</a>
+          <a href="./resources/">Recursos</a>
+          <a href="./about/">Sobre</a>
+          <a href="./sponsors/">Sponsors</a>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">YouTube</a>
+          <a href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <p>© <span id="year"></span> codingwithluiz</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
