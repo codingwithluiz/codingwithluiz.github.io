@@ -15,6 +15,7 @@
   --brand2: #5bd6ff;
   --link: rgba(255, 255, 255, 0.92);
   --link-hover: rgba(255, 255, 255, 1);
+  --section-alt-bg: rgba(255, 255, 255, 0.035);
 
   --radius: 16px;
   --radius2: 12px;
@@ -36,6 +37,7 @@ body:not(.dark-mode) {
   --link: #0f172a;
   --link-hover: #000;
   --focus: 0 0 0 4px rgba(124, 92, 255, 0.25);
+  --section-alt-bg: rgba(15, 23, 42, 0.045);
 }
 
 * {
@@ -364,6 +366,10 @@ body:not(.dark-mode) .mini-card {
 
 .section {
   padding: 34px 0;
+}
+
+main > .section:nth-of-type(even) {
+  background: var(--section-alt-bg);
 }
 
 .section-head {
