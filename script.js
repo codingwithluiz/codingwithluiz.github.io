@@ -1,236 +1,59 @@
-const posts = [
-  {
-    id: 26,
-    title: "Barra de Progresso de Leitura",
-    image: "posts/js-progress-bar-page/images/js-progress-bar-page.webp",
-    date: "08-Jul-2025",
-    description: "Barra de Progresso para indicar percentual da página já lida",
-    link: "posts/js-progress-bar-page/index.html",
-  },
-  {
-    id: 25,
-    title: "Kanban com Drag & Drop",
-    image: "posts/js-kanban-dragdrop/images/kanban.webp",
-    date: "22-Mai-2025",
-    description: "Como Criar um Quadro Kanban com Drag & Drop Usando Apenas HTML, CSS e JavaScript",
-    link: "posts/js-kanban-dragdrop/index.html",
-  },
-  {
-    id: 24,
-    title: "Ajuste o Brilho de Imagens com HTML, CSS e JavaScript!",
-    image: "posts/js-css-image-brightness/images/cover.jpg",
-    date: "18-Mai-2025",
-    description: "Aprenda como criar um controle de brilho para imagens usando apenas HTML, CSS e JavaScript!",
-    link: "posts/js-css-image-brightness/index.html",
-  },
-  {
-    id: 23,
-    title: "Implemente o Tema Dark Mode em suas Páginas",
-    image: "posts/dark-mode/images/cover.jpg",
-    date: "24-Abr-2025",
-    description: "Utilize Javascript e CSS para alternar entre temas escuro e claro.",
-    link: "posts/dark-mode/index.html",
-  },
-  {
-    id: 1,
-    title: "Visualizador de Imagens com a API do Unsplash",
-    image: "images/youtube/unsplash-api.jpg",
-    date: "15-Abr-2025",
-    description: "Aprenda a utilizar a API do Unsplash com Javascript.",
-    link: "posts/unsplash-api/index.html",
-  },
-  {
-    id: 2,
-    title: "Jogo da Cobrinha com JavaScript, HTML e CSS (Sem Canvas!)",
-    image: "images/youtube/snake-game.jpg",
-    date: "07-Abr-2025",
-    description:
-      "Vamos recriar esse incrível jogo usando apenas JavaScript, HTML e CSS, sem usar canvas — tudo feito com divs!",
-    link: "posts/js-snake-div/index.html",
-  },
-  {
-    id: 3,
-    title: "App de Clima com JavaScript e OpenWeatherMap",
-    image: "images/youtube/weather-app.jpg",
-    date: "30-Mar-2025",
-    description: "Aprenda a utilizar a API OpenWeatherMap e construa um app para mostrar o clima das cidades.",
-    link: "posts/js-openweather-api/index.html",
-  },
-  {
-    id: 4,
-    title: "Relógio Digital com JavaScript, CSS e HTML",
-    image: "images/youtube/digital-clock.jpg",
-    date: "17-Mar-2025",
-    description: "Com o Javascript podemos criar um relógio digital!",
-    link: "posts/js-digital-clock/index.html",
-  },
-  {
-    id: 5,
-    title: "Clone do Google Docs",
-    image: "images/youtube/google-docs-clone.jpg",
-    date: "09-Mar-2025",
-    description: "Implemente o Google Docs com React 19, Node.js, MongoDB, Socket.io e Quill.js",
-    link: "posts/react-google-docs-clone/index.html",
-  },
-  {
-    id: 6,
-    title: "Efeito Hover em Imagens",
-    image: "images/youtube/image-hover.webp",
-    date: "08-Mar-2025",
-    description: "Aprenda esse efeito do CSS e coloque as imagens em destaque!",
-    link: "/posts/css-image-hover/index.html",
-  },
-  /*
-  {
-    id: 7,
-    title: "Human Benchmark bot",
-    image: "images/youtube/human-benchmark.jpg",
-    date: "28-Fev-2025",
-    description: "Crie um bot para o site Human Benchmark e bata todos os recordes!",
-    link: "post.html?id=7",
-  },
-  {
-    id: 8,
-    title: "Automatizando Traduções no Google Translator",
-    image: "images/youtube/translator.jpg",
-    date: "20-Fev-2025",
-    description: "Com Python e Selenium podemos traduzir textos inteiros em poucos minutos.",
-    link: "post.html?id=8",
-  },
-  */
-  {
-    id: 9,
-    title: "Quiz com HTML, CSS e JavaScript",
-    image: "images/youtube/quiz.jpg",
-    date: "12-Fev-2025",
-    description: "Crie um Quiz com diversas perguntas para desafiar seus amigos!",
-    link: "posts/js-quiz/index.html",
-  },
-
-  {
-    id: 10,
-    title: "10 Tags HTML Essenciais",
-    image: "images/youtube/html-10-tags.jpg",
-    date: "29-Jan-2025",
-    description: "Você precisa conhecer essas 10 tags do HTML para facilitar o seu dia-a-dia na programação frontend",
-    link: "posts/html-10-tags/index.html",
-  },
-
-  {
-    id: 11,
-    title: "Popups com Popover API",
-    image: "images/youtube/popover-api.webp",
-    date: "2025-04-11",
-    description: "Crie popups sem utilizar o Javascript com o Popover API",
-    link: "posts/html-popover-api/index.html",
-  },
-
-  {
-    id: 12,
-    title: "API ViaCEP usando JavaScript e Async/Await",
-    image: "images/youtube/viacep.webp",
-    date: "13-Jan-2025",
-    description: "Aprenda a usar funções assíncronas no Javascript consultando a API ViaCEP",
-    link: "posts/js-api-viacep/index.html",
-  },
-  /*
-  {
-    id: 13,
-    title: "CSS Grid: Fácil e descomplicado",
-    image: "images/youtube/css-grid.jpg",
-    date: "05-Jan-2025",
-    description: "O básico do CSS Grid, explicado de forma prática e direta.",
-    link: "post.html?id=13",
-  },
-  {
-    id: 14,
-    title: "CSS Flexbox: Crie Layouts Modernos com Facilidade!",
-    image: "images/youtube/css-flexbox.jpg",
-    date: "28-Dez-2024",
-    description: "Guia rápido e prático",
-    link: "post.html?id=14",
-  },
-  {
-    id: 15,
-    title: "Automatize o Teste de um Site de ecommerce",
-    image: "images/youtube/selenium.jpg",
-    date: "21-Dez-2024",
-    description: "Crie testes automatizados usando Python e Selenium",
-    link: "post.html?id=15",
-  },
-  {
-    id: 16,
-    title: "Aprenda Python em 21 Minutos",
-    image: "images/youtube/python-21-minutos.jpg",
-    date: "14-Dez-2024",
-    description: "Introdução a linguagem Python de forma rápida e prática",
-    link: "post.html?id=16",
-  },
-  */
-  {
-    id: 17,
-    title: "Popups com HTML, CSS e JavaScript",
-    image: "images/youtube/popup-js.jpg",
-    date: "06-Dez-2024",
-    description: "Aprenda a criar uma popup simples e funcional usando HTML, CSS e JavaScript! ",
-    link: "posts/js-modal-popup/index.html",
-  },
-  /*
-  {
-    id: 18,
-    title: "Visual Studio Code - Domine esse editor",
-    image: "images/youtube/vscode.webp",
-    date: "28-Nov-2024",
-    description:
-      "Vamos aprender a instalar e configurar o Visual Studio Code para facilitar o seu dia-a-dia de programador",
-    link: "post.html?id=18",
-  },
-  */
-  {
-    id: 19,
-    title: "Lista de Convidados com LocalStorage",
-    image: "images/youtube/guestlist-ls.jpg",
-    date: "18-Nov-2024",
-    description: "Aprenda a usar o LocalStorage para armazenar dados diretamente no navegador",
-    link: "posts/js-guest-list-local-storage/index.html",
-  },
-
-  {
-    id: 20,
-    title: "Calculadora em Javascript, HTML e CSS",
-    image: "images/youtube/calculator.jpg",
-    date: "07-Nov-2024",
-    description: "Como Criar uma Calculadora Simples com HTML, CSS e JavaScript.",
-    link: "posts/js-calculator/index.html",
-  },
-
-  {
-    id: 21,
-    title: "Criar Contagem Regressiva",
-    image: "images/youtube/countdown-js.jpg",
-    date: "04-Nov-2024",
-    description: "Aprenda como criar uma contagem regressiva para qualquer data que desejar.",
-    link: "posts/js-countdown/index.html",
-  },
-  {
-    id: 22,
-    title: "Jogo da Forca com HTML, CSS e JavaScript",
-    image: "images/youtube/forca.webp",
-    date: "28-Out-2024",
-    description:
-      "Vamos fazer o velho e bom jogo da forca, aprenda a lógica de programação desenvolvendo um jogo simples.",
-    link: "posts/js-hangman/index.html",
-  },
-];
-
-const postsPerPage = 8;
+const basePostsPerPage = 8;
 let currentPage = 1;
-let filteredPosts = posts;
+let posts = [];
+let filteredPosts = [];
+let activeTag = "All";
+
+function getPostsColumns() {
+  const container = document.getElementById("posts-container");
+  if (!container) return 1;
+  const style = window.getComputedStyle(container);
+  const cols = style.gridTemplateColumns ? style.gridTemplateColumns.split(" ").filter(Boolean).length : 1;
+  return Math.max(1, cols || 1);
+}
+
+function getPostsPerPage() {
+  const cols = getPostsColumns();
+  return Math.ceil(basePostsPerPage / cols) * cols;
+}
+
+function adjustPageForPerPageChange(prevPerPage, nextPerPage) {
+  if (!prevPerPage || prevPerPage === nextPerPage) return;
+  const firstIndex = (currentPage - 1) * prevPerPage;
+  currentPage = Math.floor(firstIndex / nextPerPage) + 1;
+}
+
+function normalizeTag(tag) {
+  return String(tag || "").trim();
+}
+
+async function loadJson(path) {
+  const res = await fetch(path, { cache: "no-cache" });
+  if (!res.ok) throw new Error(`Failed to load ${path}`);
+  return await res.json();
+}
+
+function isHome() {
+  return Boolean(document.getElementById("posts-container"));
+}
+
+function setText(id, value) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = String(value);
+}
+
+function uniqueTags(items) {
+  const set = new Set();
+  items.forEach((p) => (p.tags || []).forEach((t) => set.add(normalizeTag(t))));
+  return Array.from(set).filter(Boolean).sort((a, b) => a.localeCompare(b, "pt-BR"));
+}
 
 function renderPosts() {
   const container = document.getElementById("posts-container");
+  if (!container) return;
   container.innerHTML = "";
 
+  const postsPerPage = getPostsPerPage();
   const start = (currentPage - 1) * postsPerPage;
   const end = start + postsPerPage;
   const pagePosts = filteredPosts.slice(start, end);
@@ -238,11 +61,21 @@ function renderPosts() {
   pagePosts.forEach((post) => {
     const el = document.createElement("div");
     el.className = "post";
+    const tags = Array.isArray(post.tags) ? post.tags : [];
+    const badgesHtml = tags
+      .slice(0, 4)
+      .map((t) => `<span class="badge-pill">${t}</span>`)
+      .join("");
+    const duration = post.duration ? String(post.duration) : null;
     el.innerHTML = `
       <img src="${post.image}" alt="${post.title}">
       <div class="post-content">
         <h2>${post.title}</h2>
-        <p class="date">${post.date}</p>
+        <div class="post-sub">
+          <p class="date">${post.date}</p>
+          ${duration ? `<p class="duration">Carga horária: <strong>${duration}</strong></p>` : ""}
+        </div>
+        ${badgesHtml ? `<div class="badges">${badgesHtml}</div>` : ""}
         <p>${post.description}</p>
         <a class="read-more" href="${post.link}">Leia mais</a>
       </div>
@@ -252,13 +85,14 @@ function renderPosts() {
   });
 
   renderPagination();
-  renderLatestPosts();
 }
 
 function renderPagination() {
   const pagination = document.getElementById("pagination");
+  if (!pagination) return;
   pagination.innerHTML = "";
 
+  const postsPerPage = getPostsPerPage();
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
   if (totalPages <= 1) return;
 
@@ -268,8 +102,16 @@ function renderPagination() {
     if (i === currentPage) btn.classList.add("active");
     btn.addEventListener("click", () => {
       currentPage = i;
-      window.scrollTo({ top: 0, behavior: "smooth" }); // <-- this line
       renderPosts();
+
+      const postsSection = document.getElementById("posts");
+      const header = document.querySelector(".site-header");
+      const headerOffset = header ? header.offsetHeight : 0;
+
+      if (postsSection) {
+        const top = postsSection.getBoundingClientRect().top + window.pageYOffset - headerOffset - 12;
+        window.scrollTo({ top: Math.max(0, top), left: 0, behavior: "smooth" });
+      }
     });
     pagination.appendChild(btn);
   }
@@ -277,49 +119,150 @@ function renderPagination() {
 
 function setupSearch() {
   const searchInput = document.getElementById("search");
+  if (!searchInput) return;
   searchInput.addEventListener("input", (e) => {
     const query = e.target.value.toLowerCase();
-    filteredPosts = posts.filter(
-      (post) => post.title.toLowerCase().includes(query) || post.description.toLowerCase().includes(query)
-    );
+    applyFilters(query);
     currentPage = 1;
     renderPosts();
   });
 }
 
-function renderLatestPosts() {
-  const latestList = document.getElementById("latest-list");
-  if (!latestList) return;
-
-  const latest = posts.slice(0, 5);
-  latestList.innerHTML = latest
-    .map(
-      (p) => `
-    <li><a href="${p.link}">${p.title}</a></li>
-  `
-    )
-    .join("");
-}
-
-const toggle = document.getElementById("darkModeToggle");
-
-function setDarkMode(enabled) {
-  document.body.classList.toggle("dark-mode", enabled);
-  toggle.textContent = enabled ? "🌞" : "🌙";
-  localStorage.setItem("darkMode", enabled ? "true" : "false");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const darkPref = localStorage.getItem("darkMode") === "true";
-  setDarkMode(darkPref);
-
-  toggle.addEventListener("click", () => {
-    const isDark = document.body.classList.contains("dark-mode");
-    setDarkMode(!isDark);
+function applyFilters(query) {
+  const q = String(query || "").toLowerCase();
+  filteredPosts = posts.filter((post) => {
+    const matchesQuery = post.title.toLowerCase().includes(q) || post.description.toLowerCase().includes(q);
+    const matchesTag = activeTag === "All" ? true : (post.tags || []).includes(activeTag);
+    return matchesQuery && matchesTag;
   });
-});
+}
+
+function renderTagFilters() {
+  const wrap = document.getElementById("filters");
+  if (!wrap) return;
+
+  const tags = uniqueTags(posts);
+  if (tags.length === 0) {
+    wrap.innerHTML = "";
+    return;
+  }
+
+  const allTags = ["All", ...tags];
+  wrap.innerHTML = "";
+
+  allTags.forEach((tag) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "chip";
+    btn.textContent = tag === "All" ? "Todos" : tag;
+    if (tag === activeTag) btn.classList.add("active");
+    btn.addEventListener("click", () => {
+      activeTag = tag;
+      const searchInput = document.getElementById("search");
+      const q = searchInput ? searchInput.value : "";
+      applyFilters(q);
+      currentPage = 1;
+      renderTagFilters();
+      renderPosts();
+    });
+    wrap.appendChild(btn);
+  });
+}
+
+function renderCards(targetId, items, mapItem) {
+  const el = document.getElementById(targetId);
+  if (!el) return;
+  el.innerHTML = "";
+
+  items.slice(0, 6).forEach((item) => {
+    el.appendChild(mapItem(item));
+  });
+}
+
+function cardLink(item) {
+  const a = document.createElement("a");
+  a.className = "card-item";
+  a.href = item.link || "#";
+  if (String(item.link || "").startsWith("http")) {
+    a.target = "_blank";
+    a.rel = "noreferrer";
+  }
+
+  a.innerHTML = `
+    <div class="card-item-title">${item.title}</div>
+    <p class="card-item-desc">${item.description || ""}</p>
+    ${item.meta ? `<div class="card-item-meta">${item.meta}</div>` : ""}
+  `;
+
+  return a;
+}
+
+function pathCard(item) {
+  const a = cardLink({
+    title: item.title,
+    description: item.description,
+    meta: item.level,
+    link: `./paths/index.html#${item.id}`,
+  });
+  return a;
+}
+
+function courseCard(item) {
+  return cardLink({
+    title: item.title,
+    description: item.description,
+    meta: item.hours,
+    link: item.link || "./courses/index.html",
+  });
+}
+
+function statCounts(paths, courses) {
+  setText("stat-posts", posts.length);
+  setText("stat-paths", paths.length);
+  setText("stat-courses", courses.length);
+}
+
+async function initHome() {
+  if (!isHome()) return;
+
+  const [postsData, pathsData, coursesData, resourcesData, sponsorsData] = await Promise.all([
+    loadJson("./data/posts.json"),
+    loadJson("./data/paths.json"),
+    loadJson("./data/courses.json"),
+    loadJson("./data/resources.json"),
+    loadJson("./data/sponsors.json"),
+  ]);
+
+  posts = postsData;
+  filteredPosts = postsData.slice();
+
+  setupSearch();
+  renderTagFilters();
+  renderPosts();
+
+  renderCards("paths-container", pathsData, pathCard);
+  renderCards("courses-container", coursesData, courseCard);
+  renderCards("resources-container", resourcesData, (i) => cardLink(i));
+  renderCards("sponsors-container", sponsorsData, (i) => cardLink(i));
+
+  statCounts(pathsData, coursesData);
+
+  let prevPerPage = getPostsPerPage();
+  let resizeTimer = null;
+  window.addEventListener("resize", () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => {
+      const nextPerPage = getPostsPerPage();
+      adjustPageForPerPageChange(prevPerPage, nextPerPage);
+      prevPerPage = nextPerPage;
+      renderPosts();
+    }, 100);
+  });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
-  setupSearch();
-  renderPosts();
+  initHome().catch((err) => {
+    // Fail silently on the page; console helps during dev.
+    console.error(err);
+  });
 });

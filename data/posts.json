@@ -1,0 +1,193 @@
+[
+  {
+    "id": 26,
+    "title": "Barra de Progresso de Leitura",
+    "image": "posts/js-progress-bar-page/images/js-progress-bar-page.webp",
+    "date": "08-Jul-2025",
+    "description": "Barra de Progresso para indicar percentual da página já lida",
+    "link": "posts/js-progress-bar-page/index.html",
+    "tags": ["JavaScript", "UI"],
+    "duration": "1h"
+  },
+  {
+    "id": 25,
+    "title": "Kanban com Drag & Drop",
+    "image": "posts/js-kanban-dragdrop/images/kanban.webp",
+    "date": "22-Mai-2025",
+    "description": "Como Criar um Quadro Kanban com Drag & Drop Usando Apenas HTML, CSS e JavaScript",
+    "link": "posts/js-kanban-dragdrop/index.html",
+    "tags": ["JavaScript", "UI"],
+    "duration": "1h"
+  },
+  {
+    "id": 24,
+    "title": "Ajuste o Brilho de Imagens com HTML, CSS e JavaScript!",
+    "image": "posts/js-css-image-brightness/images/cover.jpg",
+    "date": "18-Mai-2025",
+    "description": "Aprenda como criar um controle de brilho para imagens usando apenas HTML, CSS e JavaScript!",
+    "link": "posts/js-css-image-brightness/index.html",
+    "tags": ["JavaScript", "CSS"],
+    "duration": "45min"
+  },
+  {
+    "id": 23,
+    "title": "Implemente o Tema Dark Mode em suas Páginas",
+    "image": "posts/dark-mode/images/cover.jpg",
+    "date": "24-Abr-2025",
+    "description": "Utilize Javascript e CSS para alternar entre temas escuro e claro.",
+    "link": "posts/dark-mode/index.html",
+    "tags": ["JavaScript", "CSS"],
+    "duration": "40min"
+  },
+  {
+    "id": 1,
+    "title": "Visualizador de Imagens com a API do Unsplash",
+    "image": "images/youtube/unsplash-api.jpg",
+    "date": "15-Abr-2025",
+    "description": "Aprenda a utilizar a API do Unsplash com Javascript.",
+    "link": "posts/unsplash-api/index.html",
+    "tags": ["JavaScript", "API"],
+    "duration": "1h"
+  },
+  {
+    "id": 2,
+    "title": "Jogo da Cobrinha com JavaScript, HTML e CSS (Sem Canvas!)",
+    "image": "images/youtube/snake-game.jpg",
+    "date": "07-Abr-2025",
+    "description": "Vamos recriar esse incrível jogo usando apenas JavaScript, HTML e CSS, sem usar canvas — tudo feito com divs!",
+    "link": "posts/js-snake-div/index.html",
+    "tags": ["JavaScript", "Game"],
+    "duration": "1h"
+  },
+  {
+    "id": 3,
+    "title": "App de Clima com JavaScript e OpenWeatherMap",
+    "image": "images/youtube/weather-app.jpg",
+    "date": "30-Mar-2025",
+    "description": "Aprenda a utilizar a API OpenWeatherMap e construa um app para mostrar o clima das cidades.",
+    "link": "posts/js-openweather-api/index.html",
+    "tags": ["JavaScript", "API"],
+    "duration": "1h"
+  },
+  {
+    "id": 4,
+    "title": "Relógio Digital com JavaScript, CSS e HTML",
+    "image": "images/youtube/digital-clock.jpg",
+    "date": "17-Mar-2025",
+    "description": "Com o Javascript podemos criar um relógio digital!",
+    "link": "posts/js-digital-clock/index.html",
+    "tags": ["JavaScript", "UI"],
+    "duration": "45min"
+  },
+  {
+    "id": 5,
+    "title": "Clone do Google Docs",
+    "image": "images/youtube/google-docs-clone.jpg",
+    "date": "09-Mar-2025",
+    "description": "Implemente o Google Docs com React 19, Node.js, MongoDB, Socket.io e Quill.js",
+    "link": "posts/react-google-docs-clone/index.html",
+    "tags": ["React", "Fullstack"],
+    "duration": "2h"
+  },
+  {
+    "id": 6,
+    "title": "Efeito Hover em Imagens",
+    "image": "images/youtube/image-hover.webp",
+    "date": "08-Mar-2025",
+    "description": "Aprenda esse efeito do CSS e coloque as imagens em destaque!",
+    "link": "posts/css-image-hover/index.html",
+    "tags": ["CSS", "UI"],
+    "duration": "25min"
+  },
+  {
+    "id": 9,
+    "title": "Quiz com HTML, CSS e JavaScript",
+    "image": "images/youtube/quiz.jpg",
+    "date": "12-Fev-2025",
+    "description": "Crie um Quiz com diversas perguntas para desafiar seus amigos!",
+    "link": "posts/js-quiz/index.html",
+    "tags": ["JavaScript", "Project"],
+    "duration": "1h"
+  },
+  {
+    "id": 10,
+    "title": "10 Tags HTML Essenciais",
+    "image": "images/youtube/html-10-tags.jpg",
+    "date": "29-Jan-2025",
+    "description": "Você precisa conhecer essas 10 tags do HTML para facilitar o seu dia-a-dia na programação frontend",
+    "link": "posts/html-10-tags/index.html",
+    "tags": ["HTML", "Fundamentos"],
+    "duration": "40min"
+  },
+  {
+    "id": 11,
+    "title": "Popups com Popover API",
+    "image": "images/youtube/popover-api.webp",
+    "date": "2025-04-11",
+    "description": "Crie popups sem utilizar o Javascript com o Popover API",
+    "link": "posts/html-popover-api/index.html",
+    "tags": ["HTML", "UI"],
+    "duration": "30min"
+  },
+  {
+    "id": 12,
+    "title": "API ViaCEP usando JavaScript e Async/Await",
+    "image": "images/youtube/viacep.webp",
+    "date": "13-Jan-2025",
+    "description": "Aprenda a usar funções assíncronas no Javascript consultando a API ViaCEP",
+    "link": "posts/js-api-viacep/index.html",
+    "tags": ["JavaScript", "API"],
+    "duration": "50min"
+  },
+  {
+    "id": 17,
+    "title": "Popups com HTML, CSS e JavaScript",
+    "image": "images/youtube/popup-js.jpg",
+    "date": "06-Dez-2024",
+    "description": "Aprenda a criar uma popup simples e funcional usando HTML, CSS e JavaScript! ",
+    "link": "posts/js-modal-popup/index.html",
+    "tags": ["JavaScript", "UI"],
+    "duration": "45min"
+  },
+  {
+    "id": 19,
+    "title": "Lista de Convidados com LocalStorage",
+    "image": "images/youtube/guestlist-ls.jpg",
+    "date": "18-Nov-2024",
+    "description": "Aprenda a usar o LocalStorage para armazenar dados diretamente no navegador",
+    "link": "posts/js-guest-list-local-storage/index.html",
+    "tags": ["JavaScript", "Browser"],
+    "duration": "50min"
+  },
+  {
+    "id": 20,
+    "title": "Calculadora em Javascript, HTML e CSS",
+    "image": "images/youtube/calculator.jpg",
+    "date": "07-Nov-2024",
+    "description": "Como Criar uma Calculadora Simples com HTML, CSS e JavaScript.",
+    "link": "posts/js-calculator/index.html",
+    "tags": ["JavaScript", "Project"],
+    "duration": "45min"
+  },
+  {
+    "id": 21,
+    "title": "Criar Contagem Regressiva",
+    "image": "images/youtube/countdown-js.jpg",
+    "date": "04-Nov-2024",
+    "description": "Aprenda como criar uma contagem regressiva para qualquer data que desejar.",
+    "link": "posts/js-countdown/index.html",
+    "tags": ["JavaScript", "Project"],
+    "duration": "45min"
+  },
+  {
+    "id": 22,
+    "title": "Jogo da Forca com HTML, CSS e JavaScript",
+    "image": "images/youtube/forca.webp",
+    "date": "28-Out-2024",
+    "description": "Vamos fazer o velho e bom jogo da forca, aprenda a lógica de programação desenvolvendo um jogo simples.",
+    "link": "posts/js-hangman/index.html",
+    "tags": ["JavaScript", "Game"],
+    "duration": "1h"
+  }
+]
+

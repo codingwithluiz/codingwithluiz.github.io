@@ -1,0 +1,36 @@
+[
+  {
+    "id": "javascript",
+    "title": "Trilha JavaScript",
+    "description": "Fundamentos, DOM, async/await e projetos práticos para consolidar a base.",
+    "level": "Iniciante → Intermediário",
+    "items": [
+      { "title": "10 Tags HTML Essenciais", "link": "posts/html-10-tags/index.html" },
+      { "title": "API ViaCEP com Async/Await", "link": "posts/js-api-viacep/index.html" },
+      { "title": "App de Clima (OpenWeather)", "link": "posts/js-openweather-api/index.html" }
+    ]
+  },
+  {
+    "id": "html-css",
+    "title": "Trilha HTML + CSS",
+    "description": "Componentes de UI, efeitos e boas práticas de layout para páginas modernas.",
+    "level": "Iniciante",
+    "items": [
+      { "title": "Efeito Hover em Imagens", "link": "posts/css-image-hover/index.html" },
+      { "title": "Popups com Popover API", "link": "posts/html-popover-api/index.html" },
+      { "title": "Dark Mode em Páginas", "link": "posts/dark-mode/index.html" }
+    ]
+  },
+  {
+    "id": "projects",
+    "title": "Trilha Projetos",
+    "description": "Projetos para praticar lógica, UI e integração com APIs.",
+    "level": "Intermediário",
+    "items": [
+      { "title": "Kanban Drag & Drop", "link": "posts/js-kanban-dragdrop/index.html" },
+      { "title": "Quiz com HTML/CSS/JS", "link": "posts/js-quiz/index.html" },
+      { "title": "Jogo da Cobrinha (sem canvas)", "link": "posts/js-snake-div/index.html" }
+    ]
+  }
+]
+

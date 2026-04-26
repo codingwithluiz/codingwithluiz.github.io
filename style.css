@@ -366,14 +366,6 @@ body:not(.dark-mode) .mini-card {
   padding: 34px 0;
 }
 
-.section.alt {
-  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.03), transparent);
-}
-
-body:not(.dark-mode) .section.alt {
-  background: linear-gradient(180deg, transparent, rgba(2, 6, 23, 0.03), transparent);
-}
-
 .section-head {
   display: flex;
   align-items: flex-end;
@@ -489,6 +481,45 @@ body:not(.dark-mode) .post {
   font-size: 0.9rem;
   color: var(--muted2);
   font-weight: 700;
+}
+
+.post-sub {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.post-content p.duration {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: var(--muted2);
+  font-weight: 700;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 2px 0 12px;
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: -0.01em;
+}
+
+body:not(.dark-mode) .badge-pill {
+  background: rgba(2, 6, 23, 0.02);
 }
 
 .post-content p {

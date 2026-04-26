@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trilhas • CodingWithLuiz</title>
+    <meta name="description" content="Trilhas/roadmaps para estudar com ordem e consistência." />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <nav class="top-nav" aria-label="Primary">
+          <a class="brand" href="../">
+            <img class="brand-avatar" src="../images/youtube/profile.jpg" alt="CodingWithLuiz" />
+            <span class="brand-name">CodingWithLuiz</span>
+          </a>
+
+          <div class="nav-links">
+            <a href="./">Trilhas</a>
+            <a href="../courses/index.html">Cursos</a>
+            <a href="../resources/index.html">Recursos</a>
+            <a href="../about/index.html">Sobre</a>
+            <a class="nav-cta" href="../#posts">Ver posts</a>
+          </div>
+
+          <div class="nav-actions">
+            <a class="icon-link" href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">
+              YouTube
+            </a>
+            <a class="icon-link" href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
+            <button id="darkModeToggle" class="dark-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="badge">Trilhas</p>
+          <h1>Estude na ordem certa.</h1>
+          <p class="lede">Roadmaps curtos para você avançar sem ficar pulando entre tutoriais aleatórios.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="../#posts">Explorar posts</a>
+            <a class="btn" href="../courses/index.html">Ver cursos</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="wrap">
+          <div class="cards" id="paths-page"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <div class="footer-brand">CodingWithLuiz</div>
+          <p class="muted">Desenvolvimento Web • Tutoriais • Dicas de Código</p>
+        </div>
+        <div class="footer-links" aria-label="Footer">
+          <a href="./">Trilhas</a>
+          <a href="../courses/index.html">Cursos</a>
+          <a href="../resources/index.html">Recursos</a>
+          <a href="../about/index.html">Sobre</a>
+          <a href="../sponsors/index.html">Sponsors</a>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">YouTube</a>
+          <a href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <p>© <span id="year"></span> codingwithluiz</p>
+      </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script>
+      async function loadJson(path) {
+        const res = await fetch(path, { cache: "no-cache" });
+        if (!res.ok) throw new Error("Failed to load " + path);
+        return await res.json();
+      }
+
+      function card(item) {
+        const a = document.createElement("a");
+        a.className = "card-item";
+        a.href = `#${item.id}`;
+        a.innerHTML = `
+          <div class="card-item-title" id="${item.id}">${item.title}</div>
+          <p class="card-item-desc">${item.description || ""}</p>
+          ${item.level ? `<div class="card-item-meta">${item.level}</div>` : ""}
+        `;
+        return a;
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadJson("../data/paths.json")
+          .then((paths) => {
+            const wrap = document.getElementById("paths-page");
+            wrap.innerHTML = "";
+            paths.forEach((p) => wrap.appendChild(card(p)));
+          })
+          .catch((e) => console.error(e));
+      });
+    </script>
+  </body>
+</html>
+

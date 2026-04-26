@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recursos • CodingWithLuiz</title>
+    <meta name="description" content="Links úteis, repositórios e recursos do CodingWithLuiz." />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <nav class="top-nav" aria-label="Primary">
+          <a class="brand" href="../">
+            <img class="brand-avatar" src="../images/youtube/profile.jpg" alt="CodingWithLuiz" />
+            <span class="brand-name">CodingWithLuiz</span>
+          </a>
+
+          <div class="nav-links">
+            <a href="../paths/index.html">Trilhas</a>
+            <a href="../courses/index.html">Cursos</a>
+            <a href="./">Recursos</a>
+            <a href="../about/index.html">Sobre</a>
+            <a class="nav-cta" href="../#posts">Ver posts</a>
+          </div>
+
+          <div class="nav-actions">
+            <a class="icon-link" href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">
+              YouTube
+            </a>
+            <a class="icon-link" href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
+            <button id="darkModeToggle" class="dark-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="badge">Recursos</p>
+          <h1>Links úteis para estudar e construir.</h1>
+          <p class="lede">Repositórios, páginas e atalhos oficiais.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn" href="../#posts">Explorar posts</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="wrap">
+          <div class="cards" id="resources-page"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <div class="footer-brand">CodingWithLuiz</div>
+          <p class="muted">Desenvolvimento Web • Tutoriais • Dicas de Código</p>
+        </div>
+        <div class="footer-links" aria-label="Footer">
+          <a href="../paths/index.html">Trilhas</a>
+          <a href="../courses/index.html">Cursos</a>
+          <a href="./">Recursos</a>
+          <a href="../about/index.html">Sobre</a>
+          <a href="../sponsors/index.html">Sponsors</a>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">YouTube</a>
+          <a href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <p>© <span id="year"></span> codingwithluiz</p>
+      </div>
+    </footer>
+
+    <script src="../site.js"></script>
+    <script>
+      async function loadJson(path) {
+        const res = await fetch(path, { cache: "no-cache" });
+        if (!res.ok) throw new Error("Failed to load " + path);
+        return await res.json();
+      }
+
+      function card(item) {
+        const a = document.createElement("a");
+        a.className = "card-item";
+        a.href = item.link || "#";
+        if (String(item.link || "").startsWith("http")) {
+          a.target = "_blank";
+          a.rel = "noreferrer";
+        }
+        a.innerHTML = `
+          <div class="card-item-title">${item.title}</div>
+          <p class="card-item-desc">${item.description || ""}</p>
+          ${item.meta ? `<div class="card-item-meta">${item.meta}</div>` : ""}
+        `;
+        return a;
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadJson("../data/resources.json")
+          .then((resources) => {
+            const wrap = document.getElementById("resources-page");
+            wrap.innerHTML = "";
+            resources.forEach((r) => wrap.appendChild(card(r)));
+          })
+          .catch((e) => console.error(e));
+      });
+    </script>
+  </body>
+</html>
+

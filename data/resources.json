@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Canal no YouTube",
+    "description": "Vídeos completos com passo a passo e projetos.",
+    "meta": "@CodingWithLuiz",
+    "link": "https://www.youtube.com/@CodingWithLuiz"
+  },
+  {
+    "title": "GitHub",
+    "description": "Repositórios com código e exemplos dos tutoriais.",
+    "meta": "@codingwithluiz",
+    "link": "https://github.com/codingwithluiz"
+  },
+  {
+    "title": "Posts (arquivo)",
+    "description": "Veja todos os posts e pesquise por tema.",
+    "meta": "Home",
+    "link": "./#posts"
+  }
+]
+

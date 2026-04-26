@@ -1,0 +1,24 @@
+[
+  {
+    "id": "js-fundamentos",
+    "title": "JavaScript para Iniciantes",
+    "description": "Sintaxe, variáveis, funções, condicionais e projetos curtos.",
+    "hours": "1–3h",
+    "link": "paths/index.html#javascript"
+  },
+  {
+    "id": "dom-pratico",
+    "title": "DOM na prática",
+    "description": "Manipulação de DOM com exemplos reais (UI, eventos, componentes).",
+    "hours": "1–2h",
+    "link": "paths/index.html#projects"
+  },
+  {
+    "id": "apis",
+    "title": "APIs com JavaScript",
+    "description": "Fetch, async/await, erros e integração com APIs públicas.",
+    "hours": "1–2h",
+    "link": "paths/index.html#javascript"
+  }
+]
+
