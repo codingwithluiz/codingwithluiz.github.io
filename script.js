@@ -68,7 +68,7 @@ function renderPosts() {
       .join("");
     const duration = post.duration ? String(post.duration) : null;
     el.innerHTML = `
-      <img src="${post.image}" alt="${post.title}">
+      <img src="${post.image}" alt="${post.title}" loading="lazy">
       <div class="post-content">
         <h2>${post.title}</h2>
         <div class="post-sub">
@@ -242,7 +242,6 @@ async function initHome() {
 
   renderCards("paths-container", pathsData, pathCard);
   renderCards("courses-container", coursesData, courseCard);
-  renderCards("resources-container", resourcesData, (i) => cardLink(i));
   renderCards("sponsors-container", sponsorsData, (i) => cardLink(i));
 
   statCounts(pathsData, coursesData);

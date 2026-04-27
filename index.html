@@ -14,6 +14,12 @@
       content="Tutoriais e projetos de desenvolvimento web: posts escritos, trilhas e recursos."
     />
     <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,7 +31,7 @@
             <span class="brand-name">CodingWithLuiz</span>
           </a>
 
-          <div class="nav-links">
+          <div class="nav-links" id="nav-links-desktop">
             <a href="./paths/index.html">Trilhas</a>
             <a href="./courses/index.html">Cursos</a>
             <a href="./resources/index.html">Recursos</a>
@@ -34,21 +40,38 @@
           </div>
 
           <div class="nav-actions">
-            <a class="icon-link" href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">
-              YouTube
-            </a>
+            <a class="icon-link" href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">YouTube</a>
             <a class="icon-link" href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
             <button id="darkModeToggle" class="dark-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+            <button id="hamburgerBtn" class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </nav>
       </div>
     </header>
 
+    <!-- Mobile drawer -->
+    <nav id="nav-drawer" class="nav-drawer" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="./paths/index.html">Trilhas</a>
+      <a href="./courses/index.html">Cursos</a>
+      <a href="./resources/index.html">Recursos</a>
+      <a href="./about/index.html">Sobre</a>
+      <a href="#posts">Ver posts</a>
+      <div class="drawer-divider"></div>
+      <div class="drawer-social">
+        <a href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">YouTube</a>
+        <a href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </nav>
+
     <main>
       <section class="hero">
-        <div class="wrap hero-grid">
+        <div class="wrap">
           <div class="hero-copy">
-            <p class="badge">Tutoriais práticos • Frontend • Projetos</p>
+            <p class="badge">Tutoriais práticos &bull; Frontend &bull; Projetos</p>
             <h1>Referências escritas para acompanhar meus vídeos.</h1>
             <p class="lede">
               Posts com exemplos, links, screenshots e explicações — ideal para estudar no seu ritmo, revisar conceitos e
@@ -58,6 +81,22 @@
               <a class="btn primary" href="#posts">Explorar posts</a>
               <a class="btn" href="./paths/index.html">Ver trilhas</a>
               <a class="btn ghost" href="./newsletter/index.html">Newsletter</a>
+            </div>
+
+            <div class="hero-social">
+              <span class="hero-social-label">Me encontre em</span>
+              <a class="hero-social-link" href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                YouTube
+              </a>
+              <a class="hero-social-link" href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                GitHub
+              </a>
             </div>
             <div class="quick-stats" id="quick-stats" aria-label="Stats">
               <div class="stat">
@@ -71,31 +110,6 @@
               <div class="stat">
                 <div class="stat-value" id="stat-courses">—</div>
                 <div class="stat-label">cursos</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-card">
-            <div class="card">
-              <h2 class="card-title">Comece por aqui</h2>
-              <p class="card-muted">Alguns caminhos rápidos dependendo do que você quer aprender.</p>
-              <div class="card-grid" id="hero-picks">
-                <a class="mini-card" href="./paths/index.html#javascript">
-                  <div class="mini-card-title">JavaScript</div>
-                  <div class="mini-card-muted">Fundamentos → Projetos</div>
-                </a>
-                <a class="mini-card" href="./paths/index.html#html-css">
-                  <div class="mini-card-title">HTML + CSS</div>
-                  <div class="mini-card-muted">UI moderna e acessível</div>
-                </a>
-                <a class="mini-card" href="./courses/index.html">
-                  <div class="mini-card-title">Cursos</div>
-                  <div class="mini-card-muted">Conteúdos organizados</div>
-                </a>
-                <a class="mini-card" href="./resources/index.html">
-                  <div class="mini-card-title">Recursos</div>
-                  <div class="mini-card-muted">Repos, templates e links</div>
-                </a>
               </div>
             </div>
           </div>
@@ -148,66 +162,81 @@
         </div>
       </section>
 
-      <section class="section" id="newsletter">
-        <div class="wrap newsletter">
-          <div>
-            <h2>Newsletter</h2>
-            <p class="muted">Receba novidades de vídeos, posts e templates. (Sem spam.)</p>
-          </div>
-          <div class="newsletter-actions">
-            <a class="btn primary" href="./newsletter/index.html">Inscrever</a>
-            <a class="btn ghost" href="./newsletter/index.html#archive">Ver edições</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="sponsors">
-        <div class="wrap">
-          <div class="section-head">
-            <div>
-              <h2>Sponsors</h2>
-              <p class="muted">Apoie o canal e ajude a manter os conteúdos gratuitos.</p>
+      <aside class="right-rail" aria-label="Conteúdo complementar">
+        <section class="section rail-section" id="start-here">
+          <div class="wrap">
+            <h2 class="card-title">Comece por aqui</h2>
+            <p class="card-muted">Alguns caminhos rápidos dependendo do que você quer aprender.</p>
+            <div class="card-grid">
+              <a class="mini-card" href="./paths/index.html#javascript">
+                <div class="mini-card-title">JavaScript</div>
+                <div class="mini-card-muted">Fundamentos → Projetos</div>
+              </a>
+              <a class="mini-card" href="./paths/index.html#html-css">
+                <div class="mini-card-title">HTML + CSS</div>
+                <div class="mini-card-muted">UI moderna e acessível</div>
+              </a>
+              <a class="mini-card" href="./courses/index.html">
+                <div class="mini-card-title">Cursos</div>
+                <div class="mini-card-muted">Conteúdos organizados</div>
+              </a>
+              <a class="mini-card" href="./resources/index.html">
+                <div class="mini-card-title">Recursos</div>
+                <div class="mini-card-muted">Repos, templates e links</div>
+              </a>
             </div>
-            <a class="btn" href="./sponsors/index.html">Como apoiar</a>
           </div>
-          <div class="cards" id="sponsors-container"></div>
-        </div>
-      </section>
+        </section>
 
-      <section class="section" id="resources">
-        <div class="wrap">
-          <div class="section-head">
+        <section class="section rail-section" id="newsletter">
+          <div class="wrap newsletter">
             <div>
-              <h2>Recursos</h2>
-              <p class="muted">Links úteis: repositórios, ferramentas e materiais.</p>
+              <h2>Newsletter</h2>
+              <p class="muted">Receba novidades de vídeos, posts e templates. (Sem spam.)</p>
             </div>
-            <a class="btn" href="./resources/index.html">Ver recursos</a>
+            <div class="newsletter-actions">
+              <a class="btn primary" href="./newsletter/index.html">Inscrever</a>
+              <a class="btn ghost" href="./newsletter/index.html#archive">Ver edições</a>
+            </div>
           </div>
-          <div class="cards" id="resources-container"></div>
-        </div>
-      </section>
+        </section>
+
+        <section class="section rail-section" id="sponsors">
+          <div class="wrap">
+            <div class="section-head">
+              <div>
+                <h2>Sponsors</h2>
+                <p class="muted">Apoie o canal e ajude a manter os conteúdos gratuitos.</p>
+              </div>
+              <a class="btn" href="./sponsors/index.html">Como apoiar</a>
+            </div>
+            <div class="cards" id="sponsors-container"></div>
+          </div>
+        </section>
+
+
+      </aside>
     </main>
 
     <footer class="site-footer">
-      <div class="wrap footer-grid">
-        <div>
+      <div class="wrap footer-inner">
+        <div class="footer-top">
           <div class="footer-brand">CodingWithLuiz</div>
-          <p class="muted">Desenvolvimento Web • Tutoriais • Dicas de Código</p>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="./paths/index.html">Trilhas</a>
+            <a href="./courses/index.html">Cursos</a>
+            <a href="./resources/index.html">Recursos</a>
+            <a href="./about/index.html">Sobre</a>
+            <a href="./sponsors/index.html">Sponsors</a>
+          </nav>
         </div>
-        <div class="footer-links" aria-label="Footer">
-          <a href="./paths/index.html">Trilhas</a>
-          <a href="./courses/index.html">Cursos</a>
-          <a href="./resources/index.html">Recursos</a>
-          <a href="./about/index.html">Sobre</a>
-          <a href="./sponsors/index.html">Sponsors</a>
+        <div class="footer-bottom">
+          <p class="footer-copy">&copy; <span id="year"></span> CodingWithLuiz &mdash; Desenvolvimento Web &bull; Tutoriais</p>
+          <div class="footer-social">
+            <a href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">YouTube</a>
+            <a href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
         </div>
-        <div class="footer-links">
-          <a href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">YouTube</a>
-          <a href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
-      </div>
-      <div class="wrap footer-bottom">
-        <p>© <span id="year"></span> codingwithluiz</p>
       </div>
     </footer>
 
