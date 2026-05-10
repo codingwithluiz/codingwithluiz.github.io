@@ -1,113 +1,298 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cursos • CodingWithLuiz</title>
-    <meta name="description" content="Catálogo simples de cursos e conteúdos organizados." />
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <header class="site-header">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cursos • CodingWithLuiz</title>
+  <meta name="description"
+    content="Catálogo completo de cursos de programação: Python, JavaScript, TypeScript, SQL, Git, Robot Framework e muito mais." />
+  <meta property="og:title" content="Cursos • CodingWithLuiz" />
+  <meta property="og:description" content="Catálogo completo de cursos práticos de desenvolvimento web e automação." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* ── Courses page extras ── */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 640px) {
+      .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 960px) {
+      .courses-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .courses-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .course-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 56px rgba(0, 0, 0, 0.35);
+      border-color: rgba(124, 92, 255, 0.4);
+    }
+
+    .course-card-img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      background: var(--bg2);
+    }
+
+    .course-card-body {
+      padding: 18px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .course-card-title {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .course-card-desc {
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 14px;
+    }
+
+    .course-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .course-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(124, 92, 255, 0.1);
+      color: var(--brand);
+      font-weight: 700;
+      font-size: 0.73rem;
+      letter-spacing: 0.01em;
+    }
+
+    .course-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--brand2);
+      transition: opacity 0.15s;
+      margin-top: auto;
+    }
+
+    .course-cta:hover {
+      opacity: 0.75;
+    }
+
+    .course-cta i {
+      font-size: 0.8rem;
+    }
+
+    /* Hero sub-badge */
+    .courses-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(124, 92, 255, 0.18), rgba(91, 214, 255, 0.12));
+      font-weight: 600;
+      font-size: 0.83rem;
+      margin-bottom: 18px;
+      color: var(--muted);
+    }
+
+    /* Loading state */
+    .courses-loading {
+      text-align: center;
+      padding: 4rem 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .courses-loading i {
+      font-size: 2rem;
+      color: var(--brand);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    /* Section alt bg */
+    .section.alt {
+      background: var(--section-alt);
+    }
+
+    /* ── Page-level padding (all screen sizes) ── */
+    main>.hero {
+      padding-top: 56px;
+      padding-bottom: 48px;
+    }
+
+    main>.section {
+      padding-top: 40px;
+      padding-bottom: 56px;
+    }
+
+    main>.hero .wrap,
+    main>.section .wrap {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    /* Override the homepage grid at desktop — span full width (no right-rail) */
+    @media (min-width: 1100px) {
+      main>* {
+        grid-column: 1 / -1 !important;
+      }
+
+      /* Widen the wrap and keep it centered with generous side breathing room */
+      main>.hero .wrap,
+      main>.section .wrap {
+        max-width: 1400px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 56px !important;
+        padding-right: 56px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
       <div class="wrap">
-        <nav class="top-nav" aria-label="Primary">
-          <a class="brand" href="../">
-            <img class="brand-avatar" src="../images/youtube/profile.jpg" alt="CodingWithLuiz" />
-            <span class="brand-name">CodingWithLuiz</span>
-          </a>
-
-          <div class="nav-links">
-            <a href="../paths/index.html">Trilhas</a>
-            <a href="./">Cursos</a>
-            <a href="../resources/index.html">Recursos</a>
-            <a href="../about/index.html">Sobre</a>
-            <a class="nav-cta" href="../#posts">Ver posts</a>
-          </div>
-
-          <div class="nav-actions">
-            <a class="icon-link" href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">
-              YouTube
-            </a>
-            <a class="icon-link" href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
-            <button id="darkModeToggle" class="dark-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="wrap">
-          <p class="badge">Cursos</p>
-          <h1>Conteúdo organizado em formato de catálogo.</h1>
-          <p class="lede">Cards simples para você escolher uma direção e começar.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="../paths/index.html">Ver trilhas</a>
-            <a class="btn" href="../#posts">Explorar posts</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt">
-        <div class="wrap">
-          <div class="cards" id="courses-page"></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="wrap footer-grid">
-        <div>
-          <div class="footer-brand">CodingWithLuiz</div>
-          <p class="muted">Desenvolvimento Web • Tutoriais • Dicas de Código</p>
-        </div>
-        <div class="footer-links" aria-label="Footer">
-          <a href="../paths/index.html">Trilhas</a>
-          <a href="./">Cursos</a>
-          <a href="../resources/index.html">Recursos</a>
-          <a href="../about/index.html">Sobre</a>
-          <a href="../sponsors/index.html">Sponsors</a>
-        </div>
-        <div class="footer-links">
-          <a href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">YouTube</a>
-          <a href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
+        <p class="courses-hero-badge"><i class="fas fa-graduation-cap"></i> Cursos com Matrículas Abertas!</p>
+        <h1>Catálogo de Cursos</h1>
+        <p class="lede">Uma lista completa dos cursos de programação e automação disponíveis. Escolha um e
+          comece hoje.</p>
+        <div class="hero-actions">
+          <a class="btn" href="../">← Voltar ao início</a>
         </div>
       </div>
-      <div class="wrap footer-bottom">
-        <p>© <span id="year"></span> codingwithluiz</p>
-      </div>
-    </footer>
+    </section>
 
-    <script src="../site.js"></script>
-    <script>
-      async function loadJson(path) {
-        const res = await fetch(path, { cache: "no-cache" });
-        if (!res.ok) throw new Error("Failed to load " + path);
-        return await res.json();
+    <!-- Courses grid -->
+    <section class="section alt" id="all-courses">
+      <div class="wrap">
+
+        <div class="courses-loading" id="courses-loading">
+          <i class="fas fa-spinner fa-spin"></i>
+          Carregando cursos...
+        </div>
+
+        <div class="courses-grid" id="courses-grid" style="display:none"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script src="../site.js?v=1.2"></script>
+  <script>
+    // BASE is always '../' since we are inside courses/
+    const BASE = '../';
+
+    function imgSrc(path) {
+      return (path && !path.startsWith('http')) ? BASE + path : (path || '');
+    }
+
+    function buildCourseCard(item) {
+      const tags = (item.technologies || [])
+        .map(t => `<span class="course-tag">${t}</span>`).join('');
+
+      const isLocal = item.courseUrl && !item.courseUrl.startsWith('http');
+      const href = isLocal ? BASE + item.courseUrl : (item.courseUrl || '#');
+      const target = isLocal ? '' : 'target="_blank" rel="noopener"';
+
+      const card = document.createElement('a');
+      card.className = 'course-card';
+      card.href = href;
+      if (!isLocal) {
+        card.target = '_blank';
+        card.rel = 'noopener';
       }
-
-      function card(item) {
-        const a = document.createElement("a");
-        a.className = "card-item";
-        a.href = item.link || "../paths/";
-        a.innerHTML = `
-          <div class="card-item-title">${item.title}</div>
-          <p class="card-item-desc">${item.description || ""}</p>
-          ${item.hours ? `<div class="card-item-meta">${item.hours}</div>` : ""}
+      card.innerHTML = `
+          <img class="course-card-img" src="${imgSrc(item.image)}" alt="${item.title}" loading="lazy" />
+          <div class="course-card-body">
+            <div class="course-card-title">${item.title}</div>
+            <p class="course-card-desc">${item.description || ''}</p>
+            ${tags ? `<div class="course-tags">${tags}</div>` : ''}
+            <span class="course-cta"><i class="fas fa-book-open"></i> Ver curso</span>
+          </div>
         `;
-        return a;
+      return card;
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const grid = document.getElementById('courses-grid');
+      const loading = document.getElementById('courses-loading');
+      try {
+        const res = await fetch(BASE + 'data/courses.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('Failed to load courses.json');
+        const courses = await res.json();
+
+        loading.style.display = 'none';
+        grid.style.display = 'grid';
+        courses.forEach(c => grid.appendChild(buildCourseCard(c)));
+      } catch (err) {
+        loading.innerHTML = `<p style="color:var(--muted)">Falha ao carregar os cursos.</p>`;
+        console.error(err);
       }
+    });
+  </script>
+</body>
 
-      document.addEventListener("DOMContentLoaded", () => {
-        loadJson("../data/courses.json")
-          .then((courses) => {
-            const wrap = document.getElementById("courses-page");
-            wrap.innerHTML = "";
-            courses.forEach((c) => wrap.appendChild(card(c)));
-          })
-          .catch((e) => console.error(e));
-      });
-    </script>
-  </body>
 </html>
-

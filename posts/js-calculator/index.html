@@ -1,30 +1,40 @@
 <html>
-  <head>
-    <link rel="icon" href="images/favicon.png" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/prism.css" />
-    <link rel="stylesheet" href="css/doc.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/prism.css" />
+  <link rel="stylesheet" href="css/doc.css" />
+</head>
+
+<body>
   <div class="responsive-wrapper">
     <aside>
       <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
       <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
       <p><strong>🗓 Publicado:</strong><br />November 7, 2024</p>
-      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a>
+      </p>
       <p><strong>📁 Categoria:</strong><br />Frontend</p>
       <p><strong>🛠 Tecnologias:</strong><br />HTML, CSS, Javascript</p>
       <p><strong>🔗 Links:</strong></p>
-      <p><a target="_blank" href="https://www.youtube.com/watch?v=hVPz-KJv0x4"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
-<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
-</svg> YouTube</a></p>
-      <p><a target="_blank" href="https://github.com/codingwithluiz/js-calculator"><img src="../../images/github.png" style="margin:0;display: inline;" width="32"> GitHub</a></p>
-      <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
+      <p><a target="_blank" href="https://www.youtube.com/watch?v=hVPz-KJv0x4"><svg xmlns="http://www.w3.org/2000/svg"
+            x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+            <path fill="#FF3D00"
+              d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z">
+            </path>
+            <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+          </svg> YouTube</a></p>
+      <p><a target="_blank" href="https://github.com/codingwithluiz/js-calculator"><img src="../../images/github.png"
+            style="margin:0;display: inline;" width="32"> GitHub</a></p>
+      <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;"
+            width="32"> CodingWithLuiz</a></p>
     </aside>
     <main>
-<h2 id="html-estrutura-da-calculadora">HTML (Estrutura da Calculadora)</h2>
-<p>Esta seção cria a estrutura básica da calculadora, definindo a aparência visual e os elementos necessários:</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+      <h2 id="html-estrutura-da-calculadora">HTML (Estrutura da Calculadora)</h2>
+      <p>Esta seção cria a estrutura básica da calculadora, definindo a aparência visual e os elementos necessários:</p>
+      <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -48,19 +58,21 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<p><strong>Explicação dos principais elementos:</strong></p>
-<ul>
-<li><code>&lt;!DOCTYPE html&gt;</code> define o documento como HTML5.</li>
-<li><code>&lt;html lang="en"&gt;</code> define o idioma como inglês.</li>
-<li><code>&lt;head&gt;</code> contém metadados como <code>&lt;title&gt;Calculator&lt;/title&gt;</code>, que define o nome da página.</li>
-<li><code>&lt;div id="calculator"&gt;</code> é o contêiner principal da calculadora.</li>
-<li><code>&lt;input id="display" type="text" readonly /&gt;</code> é o visor da calculadora.</li>
-<li><code>&lt;button&gt;</code> com <code>onclick="appendToDisplay('número ou operador')"</code> define cada botão com um valor que é adicionado ao visor ao ser pressionado.</li>
-</ul>
-<hr />
-<h2 id="css-estilizacao-da-calculadora">CSS (Estilização da Calculadora)</h2>
-<p>Nesta seção, damos estilo à calculadora, configurando cores, tamanhos e posições:</p>
-<pre><code class="language-css">&lt;style&gt;
+      <p><strong>Explicação dos principais elementos:</strong></p>
+      <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code> define o documento como HTML5.</li>
+        <li><code>&lt;html lang="en"&gt;</code> define o idioma como inglês.</li>
+        <li><code>&lt;head&gt;</code> contém metadados como <code>&lt;title&gt;Calculator&lt;/title&gt;</code>, que
+          define o nome da página.</li>
+        <li><code>&lt;div id="calculator"&gt;</code> é o contêiner principal da calculadora.</li>
+        <li><code>&lt;input id="display" type="text" readonly /&gt;</code> é o visor da calculadora.</li>
+        <li><code>&lt;button&gt;</code> com <code>onclick="appendToDisplay('número ou operador')"</code> define cada
+          botão com um valor que é adicionado ao visor ao ser pressionado.</li>
+      </ul>
+      <hr />
+      <h2 id="css-estilizacao-da-calculadora">CSS (Estilização da Calculadora)</h2>
+      <p>Nesta seção, damos estilo à calculadora, configurando cores, tamanhos e posições:</p>
+      <pre><code class="language-css">&lt;style&gt;
   /* Container da calculadora */
   #calculator {
     background-color: hsl(0, 0%, 15%);
@@ -132,18 +144,19 @@
   }
 &lt;/style&gt;
 </code></pre>
-<p><strong>Explicação dos principais estilos:</strong></p>
-<ul>
-<li><code>#calculator</code>: Define o contêiner com bordas arredondadas e uma cor de fundo.</li>
-<li><code>body</code>: Centraliza a calculadora vertical e horizontalmente.</li>
-<li><code>#display</code>: Define o estilo do visor, onde aparece a expressão matemática.</li>
-<li><code>button</code>: Define o tamanho, cor e estilo dos botões.</li>
-<li><code>.operator-btn</code>: Aplica um estilo especial aos botões de operadores, como "+", "-", "*", "/".</li>
-</ul>
-<hr />
-<h2 id="javascript-funcionalidade-da-calculadora">JavaScript (Funcionalidade da Calculadora)</h2>
-<p>O JavaScript implementa as ações que acontecem quando o usuário interage com a calculadora.</p>
-<pre><code class="language-javascript">&lt;script&gt;
+      <p><strong>Explicação dos principais estilos:</strong></p>
+      <ul>
+        <li><code>#calculator</code>: Define o contêiner com bordas arredondadas e uma cor de fundo.</li>
+        <li><code>body</code>: Centraliza a calculadora vertical e horizontalmente.</li>
+        <li><code>#display</code>: Define o estilo do visor, onde aparece a expressão matemática.</li>
+        <li><code>button</code>: Define o tamanho, cor e estilo dos botões.</li>
+        <li><code>.operator-btn</code>: Aplica um estilo especial aos botões de operadores, como "+", "-", "*", "/".
+        </li>
+      </ul>
+      <hr />
+      <h2 id="javascript-funcionalidade-da-calculadora">JavaScript (Funcionalidade da Calculadora)</h2>
+      <p>O JavaScript implementa as ações que acontecem quando o usuário interage com a calculadora.</p>
+      <pre><code class="language-javascript">&lt;script&gt;
   const display = document.getElementById(&quot;display&quot;);
 
   function appendToDisplay(input) {
@@ -163,38 +176,44 @@
   }
 &lt;/script&gt;
 </code></pre>
-<p><strong>Explicação das funções JavaScript:</strong></p>
-<ul>
-<li><code>appendToDisplay(input)</code>: Adiciona o valor de <code>input</code> (número ou operador) ao final do conteúdo atual do <code>display</code>.</li>
-<li><code>clearDisplay()</code>: Limpa o conteúdo do visor.</li>
-<li><code>calculate()</code>: Avalia a expressão matemática no <code>display</code> usando <code>eval()</code>. Caso haja um erro na expressão (como um operador isolado), a função exibe <code>"Error"</code> no visor.</li>
-</ul>
-<hr />
-<h2 id="sugestao-de-estrutura-para-a-videoaula">Sugestão de Estrutura para a Videoaula</h2>
-<ol>
-<li><strong>Introdução</strong> – Explique brevemente o objetivo (criar uma calculadora simples).</li>
-<li><strong>HTML</strong> – Comece com a estrutura HTML, explicando cada elemento.</li>
-<li><strong>CSS</strong> – Mostre o estilo e explique a importância de cada regra CSS.</li>
-<li><strong>JavaScript</strong> – Explicar cada função JavaScript e como elas trabalham juntas para criar a funcionalidade da calculadora.</li>
-<li><strong>Testes e Conclusão</strong> – Execute a calculadora, mostre exemplos práticos e encerre a videoaula.</li>
-</ol></div>
-</main>
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/prism.js"></script>
-<script>
-  Prism.plugins.NormalizeWhitespace.setDefaults({
-    "remove-trailing": true,
-    "remove-indent": true,
-    "left-trim": true,
-    "right-trim": true,
-    /*'break-lines': 80,
-    'indent': 2,
-    'remove-initial-line-feed': false,
-    'tabs-to-spaces': 4,
-    'spaces-to-tabs': 4*/
-  });
-</script>  
+      <p><strong>Explicação das funções JavaScript:</strong></p>
+      <ul>
+        <li><code>appendToDisplay(input)</code>: Adiciona o valor de <code>input</code> (número ou operador) ao final do
+          conteúdo atual do <code>display</code>.</li>
+        <li><code>clearDisplay()</code>: Limpa o conteúdo do visor.</li>
+        <li><code>calculate()</code>: Avalia a expressão matemática no <code>display</code> usando <code>eval()</code>.
+          Caso haja um erro na expressão (como um operador isolado), a função exibe <code>"Error"</code> no visor.</li>
+      </ul>
+      <hr />
+      <h2 id="sugestao-de-estrutura-para-a-videoaula">Sugestão de Estrutura para a Videoaula</h2>
+      <ol>
+        <li><strong>Introdução</strong> – Explique brevemente o objetivo (criar uma calculadora simples).</li>
+        <li><strong>HTML</strong> – Comece com a estrutura HTML, explicando cada elemento.</li>
+        <li><strong>CSS</strong> – Mostre o estilo e explique a importância de cada regra CSS.</li>
+        <li><strong>JavaScript</strong> – Explicar cada função JavaScript e como elas trabalham juntas para criar a
+          funcionalidade da calculadora.</li>
+        <li><strong>Testes e Conclusão</strong> – Execute a calculadora, mostre exemplos práticos e encerre a videoaula.
+        </li>
+      </ol>
+  </div>
+  </main>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/prism.js"></script>
+  <script>
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+      "remove-trailing": true,
+      "remove-indent": true,
+      "left-trim": true,
+      "right-trim": true,
+      /*'break-lines': 80,
+      'indent': 2,
+      'remove-initial-line-feed': false,
+      'tabs-to-spaces': 4,
+      'spaces-to-tabs': 4*/
+    });
+  </script>
 </body>
+
 </html>

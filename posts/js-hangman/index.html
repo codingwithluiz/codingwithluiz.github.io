@@ -1,41 +1,62 @@
 <html>
-  <head>
-    <link rel="icon" href="images/favicon.png" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/prism.css" />
-    <link rel="stylesheet" href="css/doc.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/prism.css" />
+  <link rel="stylesheet" href="css/doc.css" />
+</head>
+
+<body>
   <div class="responsive-wrapper">
     <aside>
       <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
       <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
       <p><strong>🗓 Publicado:</strong><br />October 28, 2024</p>
-      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a>
+      </p>
       <p><strong>📁 Categoria:</strong><br />Frontend</p>
       <p><strong>🛠 Tecnologias:</strong><br />HTML, CSS, Javascript</p>
       <p><strong>🔗 Links:</strong></p>
-      <p><a target="_blank" href="https://www.youtube.com/watch?v=8fbWrvXqTuA"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
-<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
-</svg> YouTube</a></p>
-      <p><a target="_blank" href="https://github.com/codingwithluiz/js-hangman"><img src="../../images/github.png" style="margin:0;display: inline;" width="32"> GitHub</a> </p>
-      <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
+      <p><a target="_blank" href="https://www.youtube.com/watch?v=8fbWrvXqTuA"><svg xmlns="http://www.w3.org/2000/svg"
+            x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+            <path fill="#FF3D00"
+              d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z">
+            </path>
+            <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+          </svg> YouTube</a></p>
+      <p><a target="_blank" href="https://github.com/codingwithluiz/js-hangman"><img src="../../images/github.png"
+            style="margin:0;display: inline;" width="32"> GitHub</a> </p>
+      <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;"
+            width="32"> CodingWithLuiz</a></p>
     </aside>
     <main>
-<h2 id="jogo-da-forca">Jogo da Forca</h2>
-<h3 id="descricao">Descrição</h3>
-<p>O jogo da forca é um jogo de adivinhação de palavras em que um jogador tenta descobrir uma palavra secreta escolhendo letras. Cada erro adiciona uma parte do corpo em um desenho de uma forca. O objetivo é adivinhar a palavra antes que o desenho da forca seja completado.</p>
-<p>Vamos recriar este jogo utilizando Javascript.</p>
-<p><img src="images/screen.jpg"/></p>
-<h3 id="imagens">Imagens</h3>
-<p>As imagens que vamos utilizar nesse projeto estão na pasta <code>images</code>. São as imagens do jogador na forca e um gif animado para representar a vitória (quando adivinhamos a palavra antes do jogador ser enforcado) e para derrota.</p>
-<p>A imagem <code>hangman-0.svg</code> contém a forca no seu estado inicial, ou seja, quando o jogo está no início e ainda não foi feita nenhuma tentativa de acertar uma letra.</p>
-<p>Depois temos as demais imagens com o padrão de nome <code>hangman-x.svg</code> onde o <code>x</code> vai de 1 até 6. Cada uma dessas imagens vai representar as tentativas erradas de acertar a letra da palavra sorteada. Então o jogador tem direito a errar apenas 5 letras pois a sexta já vai ser fim de jogo, a imagem <code>hangman-6.svg</code> representa o jogar enforcado.</p>
-<h3 id="construcao-do-html">Construção do HTML</h3>
-<h4 id="estrutura-basica">Estrutura Básica</h4>
-<p>Vamos criar uma pasta para armazenar os arquivos do jogo. Crie uma pasta <code>jogo-da-forca</code> no Desktop ou em qualquer outro lugar no seu sistema de arquivos. O primeiro arquivo que vamos criar é o <code>index.html</code>. Salve esse arquivo dentro da pasta <code>jogo-da-forca</code>.</p>
-<p>No topo do seu arquivo <code>index.html</code>, temos a declaração do documento HTML5 e as primeiras tags que compõem a estrutura da página.</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+      <h2 id="jogo-da-forca">Jogo da Forca</h2>
+      <h3 id="descricao">Descrição</h3>
+      <p>O jogo da forca é um jogo de adivinhação de palavras em que um jogador tenta descobrir uma palavra secreta
+        escolhendo letras. Cada erro adiciona uma parte do corpo em um desenho de uma forca. O objetivo é adivinhar a
+        palavra antes que o desenho da forca seja completado.</p>
+      <p>Vamos recriar este jogo utilizando Javascript.</p>
+      <p><img src="images/screen.jpg" /></p>
+      <h3 id="imagens">Imagens</h3>
+      <p>As imagens que vamos utilizar nesse projeto estão na pasta <code>images</code>. São as imagens do jogador na
+        forca e um gif animado para representar a vitória (quando adivinhamos a palavra antes do jogador ser enforcado)
+        e para derrota.</p>
+      <p>A imagem <code>hangman-0.svg</code> contém a forca no seu estado inicial, ou seja, quando o jogo está no início
+        e ainda não foi feita nenhuma tentativa de acertar uma letra.</p>
+      <p>Depois temos as demais imagens com o padrão de nome <code>hangman-x.svg</code> onde o <code>x</code> vai de 1
+        até 6. Cada uma dessas imagens vai representar as tentativas erradas de acertar a letra da palavra sorteada.
+        Então o jogador tem direito a errar apenas 5 letras pois a sexta já vai ser fim de jogo, a imagem
+        <code>hangman-6.svg</code> representa o jogar enforcado.</p>
+      <h3 id="construcao-do-html">Construção do HTML</h3>
+      <h4 id="estrutura-basica">Estrutura Básica</h4>
+      <p>Vamos criar uma pasta para armazenar os arquivos do jogo. Crie uma pasta <code>jogo-da-forca</code> no Desktop
+        ou em qualquer outro lugar no seu sistema de arquivos. O primeiro arquivo que vamos criar é o
+        <code>index.html</code>. Salve esse arquivo dentro da pasta <code>jogo-da-forca</code>.</p>
+      <p>No topo do seu arquivo <code>index.html</code>, temos a declaração do documento HTML5 e as primeiras tags que
+        compõem a estrutura da página.</p>
+      <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -54,15 +75,17 @@
   &lt;body&gt;&lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<p>Aqui temos o básico:</p>
-<ul>
-<li><strong>UTF-8</strong> é o conjunto de caracteres mais comum e permite suportar a maioria dos idiomas.</li>
-<li>O <strong>meta viewport</strong> faz com que o layout se adapte em dispositivos móveis.</li>
-<li>Os <strong>scripts</strong> são carregados com o atributo <code>defer</code>, que garante que eles sejam executados após o carregamento completo da página.</li>
-</ul>
-<h4 id="estrutura-do-jogo">Estrutura do Jogo</h4>
-<p>Agora, vejamos como o jogo é estruturado no corpo da página (<code>&lt;body&gt;</code>). Adicione o seguinte código entre as tags <code>&lt;body&gt;&lt;/body&gt;</code></p>
-<pre><code class="language-html">&lt;div class=&quot;game-modal&quot;&gt;
+      <p>Aqui temos o básico:</p>
+      <ul>
+        <li><strong>UTF-8</strong> é o conjunto de caracteres mais comum e permite suportar a maioria dos idiomas.</li>
+        <li>O <strong>meta viewport</strong> faz com que o layout se adapte em dispositivos móveis.</li>
+        <li>Os <strong>scripts</strong> são carregados com o atributo <code>defer</code>, que garante que eles sejam
+          executados após o carregamento completo da página.</li>
+      </ul>
+      <h4 id="estrutura-do-jogo">Estrutura do Jogo</h4>
+      <p>Agora, vejamos como o jogo é estruturado no corpo da página (<code>&lt;body&gt;</code>). Adicione o seguinte
+        código entre as tags <code>&lt;body&gt;&lt;/body&gt;</code></p>
+      <pre><code class="language-html">&lt;div class=&quot;game-modal&quot;&gt;
     &lt;div class=&quot;content&quot;&gt;
         &lt;img src=&quot;#&quot; alt=&quot;gif&quot;&gt; &lt;!-- Imagem para representar a condição do jogo --&gt;
         &lt;h4&gt;Fim de Jogo!&lt;/h4&gt; &lt;!-- Título de mensagem do jogo --&gt;
@@ -83,38 +106,43 @@
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<p>Aqui está a estrutura do jogo:</p>
-<ul>
-<li><strong><code>game-modal</code></strong>: Modal que aparece quando o jogo acaba.</li>
-<li><strong><code>container</code></strong>: Contém toda a interface do jogo.</li>
-<li><strong><code>hangman-box</code></strong>: Exibe a imagem do boneco da forca e o título.</li>
-<li><strong><code>game-box</code></strong>: Exibe a palavra oculta, a dica, o número de erros, e o teclado virtual.</li>
-</ul>
-<h3 id="estilos-com-css">Estilos com CSS</h3>
-<p>Agora que temos o HTML, vamos estilizar os elementos com CSS. Vamos criar a pasta <code>css</code> dentro da pasta <code>jogo-da-forca</code>. Dentro da pasta <code>css</code> crie o arquivo <code>style.css</code>.</p>
-<p>Aqui está uma explicação detalhada do CSS do jogo, dividido em partes para melhor compreensão:</p>
-<p>Aqui está a explicação detalhada do seu CSS atualizado, dividido em partes:</p>
-<h4 id="importacao-da-fonte">Importação da Fonte</h4>
-<pre><code class="language-css">@import url(&quot;https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;display=swap&quot;);
+      <p>Aqui está a estrutura do jogo:</p>
+      <ul>
+        <li><strong><code>game-modal</code></strong>: Modal que aparece quando o jogo acaba.</li>
+        <li><strong><code>container</code></strong>: Contém toda a interface do jogo.</li>
+        <li><strong><code>hangman-box</code></strong>: Exibe a imagem do boneco da forca e o título.</li>
+        <li><strong><code>game-box</code></strong>: Exibe a palavra oculta, a dica, o número de erros, e o teclado
+          virtual.</li>
+      </ul>
+      <h3 id="estilos-com-css">Estilos com CSS</h3>
+      <p>Agora que temos o HTML, vamos estilizar os elementos com CSS. Vamos criar a pasta <code>css</code> dentro da
+        pasta <code>jogo-da-forca</code>. Dentro da pasta <code>css</code> crie o arquivo <code>style.css</code>.</p>
+      <p>Aqui está uma explicação detalhada do CSS do jogo, dividido em partes para melhor compreensão:</p>
+      <p>Aqui está a explicação detalhada do seu CSS atualizado, dividido em partes:</p>
+      <h4 id="importacao-da-fonte">Importação da Fonte</h4>
+      <pre><code class="language-css">@import url(&quot;https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;display=swap&quot;);
 </code></pre>
-<ul>
-<li><strong>@import</strong>: Importa a fonte "Open Sans" do Google Fonts, que será usada em todo o design para garantir uma tipografia consistente e limpa.</li>
-</ul>
-<h4 id="estilos-globais">Estilos Globais</h4>
-<pre><code class="language-css">* {
+      <ul>
+        <li><strong>@import</strong>: Importa a fonte "Open Sans" do Google Fonts, que será usada em todo o design para
+          garantir uma tipografia consistente e limpa.</li>
+      </ul>
+      <h4 id="estilos-globais">Estilos Globais</h4>
+      <pre><code class="language-css">* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: &quot;Open Sans&quot;, sans-serif;
 }
 </code></pre>
-<ul>
-<li><strong>Reset de Estilos Globais</strong>: Remove margens e preenchimento padrão de todos os elementos para criar uma base de design consistente.</li>
-<li><strong>box-sizing</strong>: Faz com que o preenchimento (padding) e as bordas sejam incluídos na largura e altura total do elemento.</li>
-<li><strong>font-family</strong>: Define a "Open Sans" como fonte padrão para todos os elementos.</li>
-</ul>
-<h4 id="estilos-do-body">Estilos do Body</h4>
-<pre><code class="language-css">body {
+      <ul>
+        <li><strong>Reset de Estilos Globais</strong>: Remove margens e preenchimento padrão de todos os elementos para
+          criar uma base de design consistente.</li>
+        <li><strong>box-sizing</strong>: Faz com que o preenchimento (padding) e as bordas sejam incluídos na largura e
+          altura total do elemento.</li>
+        <li><strong>font-family</strong>: Define a "Open Sans" como fonte padrão para todos os elementos.</li>
+      </ul>
+      <h4 id="estilos-do-body">Estilos do Body</h4>
+      <pre><code class="language-css">body {
   display: flex;
   padding: 0 10px;
   align-items: center;
@@ -123,15 +151,18 @@
   background: #075053;
 }
 </code></pre>
-<ul>
-<li><strong>display: flex</strong>: Define um layout flexível, permitindo que os elementos filhos sejam centralizados.</li>
-<li><strong>padding</strong>: Adiciona preenchimento lateral.</li>
-<li><strong>align-items / justify-content</strong>: Centraliza os itens vertical e horizontalmente na página.</li>
-<li><strong>min-height</strong>: Garante que o corpo ocupe pelo menos toda a altura da janela de visualização.</li>
-<li><strong>background</strong>: Define a cor de fundo em um tom verde escuro.</li>
-</ul>
-<h4 id="estilos-do-container">Estilos do Container</h4>
-<pre><code class="language-css">.container {
+      <ul>
+        <li><strong>display: flex</strong>: Define um layout flexível, permitindo que os elementos filhos sejam
+          centralizados.</li>
+        <li><strong>padding</strong>: Adiciona preenchimento lateral.</li>
+        <li><strong>align-items / justify-content</strong>: Centraliza os itens vertical e horizontalmente na página.
+        </li>
+        <li><strong>min-height</strong>: Garante que o corpo ocupe pelo menos toda a altura da janela de visualização.
+        </li>
+        <li><strong>background</strong>: Define a cor de fundo em um tom verde escuro.</li>
+      </ul>
+      <h4 id="estilos-do-container">Estilos do Container</h4>
+      <pre><code class="language-css">.container {
   display: flex;
   flex-direction: column;
   padding: 30px 15px;
@@ -144,28 +175,29 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 </code></pre>
-<ul>
-<li><strong>flex-direction: column</strong>: Organiza os elementos internos do container em uma coluna.</li>
-<li><strong>padding</strong>: Cria um espaçamento interno confortável ao redor do conteúdo.</li>
-<li><strong>align-items</strong>: Centraliza os itens horizontalmente dentro do container.</li>
-<li><strong>width</strong>: Define a largura fixa de 850px.</li>
-<li><strong>gap</strong>: Espaçamento entre os elementos dentro do container.</li>
-<li><strong>background</strong>: Cor de fundo branca.</li>
-<li><strong>border-radius</strong>: Bordas arredondadas para suavizar o design.</li>
-<li><strong>box-shadow</strong>: Adiciona uma sombra leve para dar profundidade ao container.</li>
-</ul>
-<h4 id="estilos-da-imagem-do-hangman">Estilos da Imagem do Hangman</h4>
-<pre><code class="language-css">.hangman-box img {
+      <ul>
+        <li><strong>flex-direction: column</strong>: Organiza os elementos internos do container em uma coluna.</li>
+        <li><strong>padding</strong>: Cria um espaçamento interno confortável ao redor do conteúdo.</li>
+        <li><strong>align-items</strong>: Centraliza os itens horizontalmente dentro do container.</li>
+        <li><strong>width</strong>: Define a largura fixa de 850px.</li>
+        <li><strong>gap</strong>: Espaçamento entre os elementos dentro do container.</li>
+        <li><strong>background</strong>: Cor de fundo branca.</li>
+        <li><strong>border-radius</strong>: Bordas arredondadas para suavizar o design.</li>
+        <li><strong>box-shadow</strong>: Adiciona uma sombra leve para dar profundidade ao container.</li>
+      </ul>
+      <h4 id="estilos-da-imagem-do-hangman">Estilos da Imagem do Hangman</h4>
+      <pre><code class="language-css">.hangman-box img {
   user-select: none;
   max-width: 200px;
 }
 </code></pre>
-<ul>
-<li><strong>user-select: none</strong>: Impede que o usuário selecione a imagem.</li>
-<li><strong>max-width</strong>: Limita a largura máxima da imagem para 200px, garantindo que se encaixe bem no layout.</li>
-</ul>
-<h4 id="estilos-da-palavra-word-display">Estilos da Palavra (Word Display)</h4>
-<pre><code class="language-css">.game-box .word-display {
+      <ul>
+        <li><strong>user-select: none</strong>: Impede que o usuário selecione a imagem.</li>
+        <li><strong>max-width</strong>: Limita a largura máxima da imagem para 200px, garantindo que se encaixe bem no
+          layout.</li>
+      </ul>
+      <h4 id="estilos-da-palavra-word-display">Estilos da Palavra (Word Display)</h4>
+      <pre><code class="language-css">.game-box .word-display {
   gap: 10px;
   list-style: none;
   display: flex;
@@ -187,13 +219,15 @@
   margin: -35px 0 25px;
 }
 </code></pre>
-<ul>
-<li><strong>word-display</strong>: Organiza as letras em uma lista flexível que se ajusta dinamicamente, centralizando as letras no meio da tela.</li>
-<li><strong>letter</strong>: Define o estilo de cada letra oculta com borda inferior preta e texto em caixa alta.</li>
-<li><strong>letter.guessed</strong>: Remove a borda quando a letra for adivinhada corretamente.</li>
-</ul>
-<h4 id="estilos-do-texto-de-dicas-e-palpites">Estilos do Texto de Dicas e Palpites</h4>
-<pre><code class="language-css">.game-box h4 {
+      <ul>
+        <li><strong>word-display</strong>: Organiza as letras em uma lista flexível que se ajusta dinamicamente,
+          centralizando as letras no meio da tela.</li>
+        <li><strong>letter</strong>: Define o estilo de cada letra oculta com borda inferior preta e texto em caixa
+          alta.</li>
+        <li><strong>letter.guessed</strong>: Remove a borda quando a letra for adivinhada corretamente.</li>
+      </ul>
+      <h4 id="estilos-do-texto-de-dicas-e-palpites">Estilos do Texto de Dicas e Palpites</h4>
+      <pre><code class="language-css">.game-box h4 {
   text-align: center;
   font-weight: 500;
   margin-bottom: 15px;
@@ -206,12 +240,12 @@
   color: #ff0000;
 }
 </code></pre>
-<ul>
-<li><strong>h4</strong>: Texto centralizado, com peso intermediário e espaçamento inferior.</li>
-<li><strong>guesses-text b</strong>: Destaca os textos dos palpites com uma cor vermelha, dando ênfase.</li>
-</ul>
-<h4 id="estilos-do-teclado">Estilos do Teclado</h4>
-<pre><code class="language-css">.game-box .keyboard {
+      <ul>
+        <li><strong>h4</strong>: Texto centralizado, com peso intermediário e espaçamento inferior.</li>
+        <li><strong>guesses-text b</strong>: Destaca os textos dos palpites com uma cor vermelha, dando ênfase.</li>
+      </ul>
+      <h4 id="estilos-do-teclado">Estilos do Teclado</h4>
+      <pre><code class="language-css">.game-box .keyboard {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
@@ -241,13 +275,15 @@
   background: #0aa5ab;
 }
 </code></pre>
-<ul>
-<li><strong>keyboard</strong>: Estilos aplicados ao teclado, organizando os botões em uma estrutura flexível e ajustável.</li>
-<li><strong>button</strong>: Os botões têm cores vivas, bordas arredondadas, texto em caixa alta e efeitos de hover, tornando a interação visualmente atraente.</li>
-<li><strong>button[disabled]</strong>: Define um estilo visualmente mais claro para botões desativados.</li>
-</ul>
-<h4 id="estilos-do-modal-do-jogo">Estilos do Modal do Jogo</h4>
-<pre><code class="language-css">.game-modal {
+      <ul>
+        <li><strong>keyboard</strong>: Estilos aplicados ao teclado, organizando os botões em uma estrutura flexível e
+          ajustável.</li>
+        <li><strong>button</strong>: Os botões têm cores vivas, bordas arredondadas, texto em caixa alta e efeitos de
+          hover, tornando a interação visualmente atraente.</li>
+        <li><strong>button[disabled]</strong>: Define um estilo visualmente mais claro para botões desativados.</li>
+      </ul>
+      <h4 id="estilos-do-modal-do-jogo">Estilos do Modal do Jogo</h4>
+      <pre><code class="language-css">.game-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -300,17 +336,25 @@
   padding: 10px 18px;
 }
 </code></pre>
-<ul>
-<li><strong>game-modal</strong>: Estilo para o modal que aparece no final do jogo, ocupando a tela inteira e com uma sobreposição semitransparente.</li>
-<li><strong>show</strong>: Define a transição suave para exibir o modal quando ativado.</li>
-<li><strong>content</strong>: Estiliza o conteúdo do modal, com bordas arredondadas, sombras e um layout centralizado.</li>
-<li><strong>img</strong>: Imagem no modal com tamanho ajustado e margens para espaço adequado.</li>
-</ul>
-<p>Esses estilos proporcionam uma interface moderna, clara e responsiva para o jogo da forca, garantindo boa usabilidade tanto em dispositivos maiores quanto em dispositivos móveis.</p>
-<h3 id="programando-o-jogo">Programando o Jogo</h3>
-<h4 id="lista-de-palavaras">Lista de Palavaras</h4>
-<p>Dentro da pasta <code>js</code> vamos criar o arquivo <code>word-list.js</code> que vai conter apenas uma constante <code>wordList</code> que é um array de objetos. Cada objeto tem duas chaves <code>word</code> para armazenar a palavra que o jogador tem que adivinhar e <code>hint</code> contendo uma dica para ajudar o jogador a adivinhar a palavra. A lista está fixa. Uma melhoria para o jogo seria aumentar o número de palavras e também utilizar alguma forma de agrupamento, por exemplo: animais, cores, etc. para deixar o jogo mais fácil ou difícil.</p>
-<pre><code class="language-js">const wordList = [
+      <ul>
+        <li><strong>game-modal</strong>: Estilo para o modal que aparece no final do jogo, ocupando a tela inteira e com
+          uma sobreposição semitransparente.</li>
+        <li><strong>show</strong>: Define a transição suave para exibir o modal quando ativado.</li>
+        <li><strong>content</strong>: Estiliza o conteúdo do modal, com bordas arredondadas, sombras e um layout
+          centralizado.</li>
+        <li><strong>img</strong>: Imagem no modal com tamanho ajustado e margens para espaço adequado.</li>
+      </ul>
+      <p>Esses estilos proporcionam uma interface moderna, clara e responsiva para o jogo da forca, garantindo boa
+        usabilidade tanto em dispositivos maiores quanto em dispositivos móveis.</p>
+      <h3 id="programando-o-jogo">Programando o Jogo</h3>
+      <h4 id="lista-de-palavaras">Lista de Palavaras</h4>
+      <p>Dentro da pasta <code>js</code> vamos criar o arquivo <code>word-list.js</code> que vai conter apenas uma
+        constante <code>wordList</code> que é um array de objetos. Cada objeto tem duas chaves <code>word</code> para
+        armazenar a palavra que o jogador tem que adivinhar e <code>hint</code> contendo uma dica para ajudar o jogador
+        a adivinhar a palavra. A lista está fixa. Uma melhoria para o jogo seria aumentar o número de palavras e também
+        utilizar alguma forma de agrupamento, por exemplo: animais, cores, etc. para deixar o jogo mais fácil ou
+        difícil.</p>
+      <pre><code class="language-js">const wordList = [
   {
     word: &quot;guitarra&quot;,
     hint: &quot;Um instrumento musical com cordas.&quot;,
@@ -322,38 +366,43 @@
   ...
 ];
 </code></pre>
-<h4 id="selecionando-elementos-html-com-javascript">Selecionando Elementos HTML com JavaScript</h4>
-<p>Nesta etapa, vamos aprender como capturar elementos do DOM (Document Object Model) usando JavaScript para manipulá-los dinamicamente no jogo.</p>
-<pre><code class="language-javascript">const wordDisplay = document.querySelector(&quot;.word-display&quot;);
+      <h4 id="selecionando-elementos-html-com-javascript">Selecionando Elementos HTML com JavaScript</h4>
+      <p>Nesta etapa, vamos aprender como capturar elementos do DOM (Document Object Model) usando JavaScript para
+        manipulá-los dinamicamente no jogo.</p>
+      <pre><code class="language-javascript">const wordDisplay = document.querySelector(&quot;.word-display&quot;);
 const guessesText = document.querySelector(&quot;.guesses-text b&quot;);
 const keyboardDiv = document.querySelector(&quot;.keyboard&quot;);
 const hangmanImage = document.querySelector(&quot;.hangman-box img&quot;);
 const gameModal = document.querySelector(&quot;.game-modal&quot;);
 const playAgainBtn = gameModal.querySelector(&quot;button&quot;);
 </code></pre>
-<ul>
-<li><strong><code>querySelector()</code></strong>: Esse método seleciona o primeiro elemento que corresponde ao seletor CSS fornecido. Aqui, ele está sendo usado para capturar elementos que exibem a palavra, o número de tentativas, o teclado virtual, a imagem do boneco enforcado e o modal de fim de jogo.</li>
-<li><strong><code>wordDisplay</code></strong>: É o local onde as letras da palavra serão exibidas.</li>
-<li><strong><code>guessesText</code></strong>: Exibe quantas tentativas erradas foram feitas.</li>
-<li><strong><code>keyboardDiv</code></strong>: É a área onde o teclado virtual aparecerá.</li>
-<li><strong><code>hangmanImage</code></strong>: Mostra a imagem do boneco conforme o progresso do jogo.</li>
-<li><strong><code>gameModal</code></strong>: Um modal (janela pop-up) que aparece quando o jogo termina.</li>
-<li><strong><code>playAgainBtn</code></strong>: Um botão para reiniciar o jogo.</li>
-</ul>
-<h4 id="variaveis-globais-e-inicializando-o-jogo">Variáveis Globais e Inicializando o Jogo</h4>
-<p>Aqui, vamos definir as variáveis globais necessárias para o funcionamento do jogo.</p>
-<pre><code class="language-javascript">let currentWord, correctLetters, wrongGuessCount;
+      <ul>
+        <li><strong><code>querySelector()</code></strong>: Esse método seleciona o primeiro elemento que corresponde ao
+          seletor CSS fornecido. Aqui, ele está sendo usado para capturar elementos que exibem a palavra, o número de
+          tentativas, o teclado virtual, a imagem do boneco enforcado e o modal de fim de jogo.</li>
+        <li><strong><code>wordDisplay</code></strong>: É o local onde as letras da palavra serão exibidas.</li>
+        <li><strong><code>guessesText</code></strong>: Exibe quantas tentativas erradas foram feitas.</li>
+        <li><strong><code>keyboardDiv</code></strong>: É a área onde o teclado virtual aparecerá.</li>
+        <li><strong><code>hangmanImage</code></strong>: Mostra a imagem do boneco conforme o progresso do jogo.</li>
+        <li><strong><code>gameModal</code></strong>: Um modal (janela pop-up) que aparece quando o jogo termina.</li>
+        <li><strong><code>playAgainBtn</code></strong>: Um botão para reiniciar o jogo.</li>
+      </ul>
+      <h4 id="variaveis-globais-e-inicializando-o-jogo">Variáveis Globais e Inicializando o Jogo</h4>
+      <p>Aqui, vamos definir as variáveis globais necessárias para o funcionamento do jogo.</p>
+      <pre><code class="language-javascript">let currentWord, correctLetters, wrongGuessCount;
 const maxGuesses = 6;
 </code></pre>
-<ul>
-<li><strong><code>currentWord</code></strong>: Armazena a palavra atual que o jogador deve adivinhar.</li>
-<li><strong><code>correctLetters</code></strong>: É um array que conterá as letras corretas que o jogador adivinhou.</li>
-<li><strong><code>wrongGuessCount</code></strong>: Conta o número de palpites errados que o jogador fez.</li>
-<li><strong><code>maxGuesses</code></strong>: O número máximo de tentativas permitidas antes que o jogador perca o jogo.</li>
-</ul>
-<h4 id="funcao-de-reiniciar-o-jogo">Função de Reiniciar o Jogo</h4>
-<p>Vamos criar uma função que reinicia o estado do jogo sempre que ele for iniciado ou reiniciado.</p>
-<pre><code class="language-javascript">const resetGame = () =&gt; {
+      <ul>
+        <li><strong><code>currentWord</code></strong>: Armazena a palavra atual que o jogador deve adivinhar.</li>
+        <li><strong><code>correctLetters</code></strong>: É um array que conterá as letras corretas que o jogador
+          adivinhou.</li>
+        <li><strong><code>wrongGuessCount</code></strong>: Conta o número de palpites errados que o jogador fez.</li>
+        <li><strong><code>maxGuesses</code></strong>: O número máximo de tentativas permitidas antes que o jogador perca
+          o jogo.</li>
+      </ul>
+      <h4 id="funcao-de-reiniciar-o-jogo">Função de Reiniciar o Jogo</h4>
+      <p>Vamos criar uma função que reinicia o estado do jogo sempre que ele for iniciado ou reiniciado.</p>
+      <pre><code class="language-javascript">const resetGame = () =&gt; {
     correctLetters = [];
     wrongGuessCount = 0;
     hangmanImage.src = &quot;images/hangman-0.svg&quot;;
@@ -363,37 +412,46 @@ const maxGuesses = 6;
     gameModal.classList.remove(&quot;show&quot;);
 }
 </code></pre>
-<ul>
-<li><strong><code>correctLetters = []</code></strong>: Reinicializa o array que armazena as letras corretas.</li>
-<li><strong><code>wrongGuessCount = 0</code></strong>: Zera a contagem de tentativas erradas.</li>
-<li><strong><code>hangmanImage.src</code></strong>: Define a imagem inicial do boneco da forca.</li>
-<li><strong><code>wordDisplay.innerHTML</code></strong>: Gera os espaços em branco para cada letra da palavra.</li>
-<li><strong><code>keyboardDiv.querySelectorAll("button").forEach(...)</code></strong>: Habilita todos os botões do teclado virtual para novos palpites.</li>
-<li><strong><code>gameModal.classList.remove("show")</code></strong>: Oculta o modal de fim de jogo, caso ele esteja visível.</li>
-</ul>
-<h4 id="escolhendo-uma-palavra-aleatoria">Escolhendo uma Palavra Aleatória</h4>
-<p>Agora, vamos adicionar a lógica para selecionar uma palavra aleatória da lista de palavras e começar o jogo.</p>
-<pre><code class="language-javascript">const getRandomWord = () =&gt; {
+      <ul>
+        <li><strong><code>correctLetters = []</code></strong>: Reinicializa o array que armazena as letras corretas.
+        </li>
+        <li><strong><code>wrongGuessCount = 0</code></strong>: Zera a contagem de tentativas erradas.</li>
+        <li><strong><code>hangmanImage.src</code></strong>: Define a imagem inicial do boneco da forca.</li>
+        <li><strong><code>wordDisplay.innerHTML</code></strong>: Gera os espaços em branco para cada letra da palavra.
+        </li>
+        <li><strong><code>keyboardDiv.querySelectorAll("button").forEach(...)</code></strong>: Habilita todos os botões
+          do teclado virtual para novos palpites.</li>
+        <li><strong><code>gameModal.classList.remove("show")</code></strong>: Oculta o modal de fim de jogo, caso ele
+          esteja visível.</li>
+      </ul>
+      <h4 id="escolhendo-uma-palavra-aleatoria">Escolhendo uma Palavra Aleatória</h4>
+      <p>Agora, vamos adicionar a lógica para selecionar uma palavra aleatória da lista de palavras e começar o jogo.
+      </p>
+      <pre><code class="language-javascript">const getRandomWord = () =&gt; {
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
     currentWord = word;
     document.querySelector(&quot;.hint-text b&quot;).innerText = hint;
     resetGame();
 }
 </code></pre>
-<ul>
-<li><strong><code>wordList</code></strong>: É uma lista contendo palavras e dicas, da qual escolhemos uma palavra aleatória.</li>
-<li><strong><code>Math.random()</code></strong>: Gera um número aleatório entre 0 e o tamanho da lista de palavras.</li>
-<li><strong><code>resetGame()</code></strong>: Reinicia o jogo após selecionar a palavra.</li>
-<li><strong><code>hint</code></strong>: Exibe a dica correspondente à palavra escolhida.</li>
-</ul>
-<p>Para testar coloque ao final do arquivo <code>script.js</code> uma chamada para a função <code>getRandomWord()</code></p>
-<pre><code class="language-js">...
+      <ul>
+        <li><strong><code>wordList</code></strong>: É uma lista contendo palavras e dicas, da qual escolhemos uma
+          palavra aleatória.</li>
+        <li><strong><code>Math.random()</code></strong>: Gera um número aleatório entre 0 e o tamanho da lista de
+          palavras.</li>
+        <li><strong><code>resetGame()</code></strong>: Reinicia o jogo após selecionar a palavra.</li>
+        <li><strong><code>hint</code></strong>: Exibe a dica correspondente à palavra escolhida.</li>
+      </ul>
+      <p>Para testar coloque ao final do arquivo <code>script.js</code> uma chamada para a função
+        <code>getRandomWord()</code></p>
+      <pre><code class="language-js">...
 getRandomWord()
 </code></pre>
-<p>Vemos que a modal de final de jogo foi escondida e foi sorteada uma palavra aleatória para o jogador tentar adivinhar.</p>
-<h4 id="logica-de-fim-de-jogo">Lógica de Fim de Jogo</h4>
-<p>Agora vamos criar a lógica que decide se o jogador ganhou ou perdeu e exibe uma mensagem correspondente.</p>
-<pre><code class="language-javascript">const gameOver = (isVictory) =&gt; {
+      <p>Vemos que a modal de final de jogo foi escondida e foi sorteada uma palavra aleatória para o jogador tentar
+        adivinhar.</p>
+      <h4 id="logica-de-fim-de-jogo">Lógica de Fim de Jogo</h4>
+      <p>Agora vamos criar a lógica que decide se o jogador ganhou ou perdeu e exibe uma mensagem correspondente.</p>
+      <pre><code class="language-javascript">const gameOver = (isVictory) =&gt; {
     const modalText = isVictory ? `Você descobriu a palavra:` : 'A palavra correta era:';
     gameModal.querySelector(&quot;img&quot;).src = `images/${isVictory ? 'victory' : 'lost'}.gif`;
     gameModal.querySelector(&quot;h4&quot;).innerText = isVictory ? 'Parabéns!' : 'Game Over!';
@@ -401,13 +459,15 @@ getRandomWord()
     gameModal.classList.add(&quot;show&quot;);
 }
 </code></pre>
-<ul>
-<li><strong><code>isVictory</code></strong>: Um parâmetro que indica se o jogador venceu ou perdeu.</li>
-<li><strong><code>gameModal</code></strong>: Exibe uma mensagem e uma imagem apropriada (vitória ou derrota) e mostra o modal de fim de jogo.</li>
-</ul>
-<h4 id="iniciando-o-jogo-com-o-teclado-virtual">Iniciando o Jogo com o Teclado Virtual</h4>
-<p>Agora, vamos adicionar a função que será chamada toda vez que o jogador clicar em uma letra no teclado virtual.</p>
-<pre><code class="language-javascript">const initGame = (button, clickedLetter) =&gt; {
+      <ul>
+        <li><strong><code>isVictory</code></strong>: Um parâmetro que indica se o jogador venceu ou perdeu.</li>
+        <li><strong><code>gameModal</code></strong>: Exibe uma mensagem e uma imagem apropriada (vitória ou derrota) e
+          mostra o modal de fim de jogo.</li>
+      </ul>
+      <h4 id="iniciando-o-jogo-com-o-teclado-virtual">Iniciando o Jogo com o Teclado Virtual</h4>
+      <p>Agora, vamos adicionar a função que será chamada toda vez que o jogador clicar em uma letra no teclado virtual.
+      </p>
+      <pre><code class="language-javascript">const initGame = (button, clickedLetter) =&gt; {
     if(currentWord.includes(clickedLetter)) {
         [...currentWord].forEach((letter, index) =&gt; {
             if(letter === clickedLetter) {
@@ -427,49 +487,57 @@ getRandomWord()
     if(correctLetters.length === currentWord.length) return gameOver(true);
 }
 </code></pre>
-<ul>
-<li><strong>Verifica se a letra clicada existe na palavra</strong>: Se a letra existe, ela é exibida na posição correta. Caso contrário, o número de erros aumenta.</li>
-<li><strong>Desabilitar o botão clicado</strong>: Para evitar que o jogador clique na mesma letra várias vezes, o botão é desabilitado após ser clicado.</li>
-</ul>
-<h4 id="criando-o-teclado-virtual">Criando o Teclado Virtual</h4>
-<p>Finalmente, vamos criar o teclado virtual e adicionar os eventos de clique para cada botão.</p>
-<pre><code class="language-javascript">for (let i = 97; i &lt;= 122; i++) {
+      <ul>
+        <li><strong>Verifica se a letra clicada existe na palavra</strong>: Se a letra existe, ela é exibida na posição
+          correta. Caso contrário, o número de erros aumenta.</li>
+        <li><strong>Desabilitar o botão clicado</strong>: Para evitar que o jogador clique na mesma letra várias vezes,
+          o botão é desabilitado após ser clicado.</li>
+      </ul>
+      <h4 id="criando-o-teclado-virtual">Criando o Teclado Virtual</h4>
+      <p>Finalmente, vamos criar o teclado virtual e adicionar os eventos de clique para cada botão.</p>
+      <pre><code class="language-javascript">for (let i = 97; i &lt;= 122; i++) {
     const button = document.createElement(&quot;button&quot;);
     button.innerText = String.fromCharCode(i);
     keyboardDiv.appendChild(button);
     button.addEventListener(&quot;click&quot;, (e) =&gt; initGame(e.target, String.fromCharCode(i)));
 }
 </code></pre>
-<ul>
-<li><strong>Cria os botões do teclado</strong>: Usamos o valor ASCII das letras minúsculas de <code>a</code> a <code>z</code> para criar os botões do teclado.</li>
-<li><strong><code>addEventListener()</code></strong>: Adiciona um evento de clique a cada botão para que, ao ser clicado, ele chame a função <code>initGame()</code>.</li>
-</ul>
-<h4 id="reiniciar-o-jogo">Reiniciar o Jogo</h4>
-<p>Por fim, adicionamos a funcionalidade para reiniciar o jogo ao clicar no botão "Play Again".</p>
-<pre><code class="language-javascript">getRandomWord();
+      <ul>
+        <li><strong>Cria os botões do teclado</strong>: Usamos o valor ASCII das letras minúsculas de <code>a</code> a
+          <code>z</code> para criar os botões do teclado.</li>
+        <li><strong><code>addEventListener()</code></strong>: Adiciona um evento de clique a cada botão para que, ao ser
+          clicado, ele chame a função <code>initGame()</code>.</li>
+      </ul>
+      <h4 id="reiniciar-o-jogo">Reiniciar o Jogo</h4>
+      <p>Por fim, adicionamos a funcionalidade para reiniciar o jogo ao clicar no botão "Play Again".</p>
+      <pre><code class="language-javascript">getRandomWord();
 playAgainBtn.addEventListener(&quot;click&quot;, getRandomWord);
 </code></pre>
-<ul>
-<li><strong><code>getRandomWord()</code></strong>: Chama a função que escolhe uma nova palavra e reinicia o jogo.</li>
-<li><strong><code>playAgainBtn.addEventListener()</code></strong>: Adiciona um evento ao botão de reiniciar o jogo.</li>
-</ul></div>
-</main>
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/prism.js"></script>
-<script>
-  Prism.plugins.NormalizeWhitespace.setDefaults({
-    "remove-trailing": true,
-    "remove-indent": true,
-    "left-trim": true,
-    "right-trim": true,
-    /*'break-lines': 80,
-    'indent': 2,
-    'remove-initial-line-feed': false,
-    'tabs-to-spaces': 4,
-    'spaces-to-tabs': 4*/
-  });
-</script>  
+      <ul>
+        <li><strong><code>getRandomWord()</code></strong>: Chama a função que escolhe uma nova palavra e reinicia o
+          jogo.</li>
+        <li><strong><code>playAgainBtn.addEventListener()</code></strong>: Adiciona um evento ao botão de reiniciar o
+          jogo.</li>
+      </ul>
+  </div>
+  </main>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/prism.js"></script>
+  <script>
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+      "remove-trailing": true,
+      "remove-indent": true,
+      "left-trim": true,
+      "right-trim": true,
+      /*'break-lines': 80,
+      'indent': 2,
+      'remove-initial-line-feed': false,
+      'tabs-to-spaces': 4,
+      'spaces-to-tabs': 4*/
+    });
+  </script>
 </body>
+
 </html>

@@ -1,3 +1,5 @@
+console.log("site.js: initializing...");
+
 function initYear() {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -76,7 +78,69 @@ function initHamburger() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+async function loadComponents() {
+  // Infer BASE by looking at the script tag for site.js
+  let base = './';
+  
+  // Try to find the site.js script tag to determine relative path
+  const scriptTag = document.querySelector('script[src*="site.js"]');
+  if (scriptTag) {
+    let src = scriptTag.getAttribute('src');
+    // Strip query string (e.g. ?v=1.1)
+    src = src.split('?')[0];
+    base = src.replace('site.js', '');
+  }
+
+  console.log("site.js: base path inferred as:", base);
+
+  // Fetch Header
+  const headerPlaceholder = document.getElementById('header-placeholder');
+  if (headerPlaceholder) {
+    try {
+      const res = await fetch(base + 'header.html');
+      if (res.ok) {
+        let html = await res.text();
+        html = html.replace(/\{\{BASE\}\}/g, base);
+        headerPlaceholder.outerHTML = html;
+      }
+    } catch (e) {
+      console.error('Failed to load header:', e);
+    }
+  }
+
+  // Fetch Footer
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+  if (footerPlaceholder) {
+    try {
+      const res = await fetch(base + 'footer.html');
+      if (res.ok) {
+        let html = await res.text();
+        html = html.replace(/\{\{BASE\}\}/g, base);
+        footerPlaceholder.outerHTML = html;
+      }
+    } catch (e) {
+      console.error('Failed to load footer:', e);
+    }
+  }
+
+  // Set active link in nav
+  document.querySelectorAll('.nav-links a, .nav-drawer a, .footer-nav a').forEach(link => {
+    // If link href matches the current URL (ignoring hash)
+    if (link.href.split('#')[0] === window.location.href.split('#')[0] && window.location.pathname !== '/') {
+      link.setAttribute('aria-current', 'page');
+    } else if (window.location.pathname.endsWith('/') && link.href.endsWith('/')) {
+      // Special check for root path
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  console.log("site.js: DOMContentLoaded - loading components...");
+  await loadComponents();
+  console.log("site.js: components loaded - initializing features...");
   initYear();
   initDarkMode();
   initHamburger();

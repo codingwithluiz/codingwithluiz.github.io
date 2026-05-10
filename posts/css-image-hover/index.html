@@ -1,33 +1,48 @@
 <html>
-  <head>
+
+<head>
+    <meta charset="UTF-8">
     <link rel="icon" href="images/favicon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/prism.css" />
     <link rel="stylesheet" href="css/doc.css" />
-  </head>
-  <body>
-  <div class="responsive-wrapper">
-    <aside>
-      <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
-      <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
-      <p><strong>🗓 Publicado:</strong><br />July 14, 2023</p>
-      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
-      <p><strong>📁 Categoria:</strong><br />Frontend</p>
-      <p><strong>🛠 Tecnologias:</strong><br />HTML, CSS, Javascript</p>
-      <p><strong>🔗 Links:</strong></p>
-      <p><a target="_blank" href="https://www.youtube.com/watch?v=ZgQwrx9_MZw"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
-<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
-</svg> YouTube</a></p>
-      <p><a target="_blank" href="https://github.com/codingwithluiz/css-image-hover"><img src="../../images/github.png" style="margin:0;display: inline;" width="32"> GitHub</a></p>
-      <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
-    </aside>
-    <main>
-<h2 id="como-criar-um-efeito-de-hover-em-imagens-com-css">Como Criar um Efeito de Hover em Imagens com CSS</h2>
-<p>Criar efeitos visuais atrativos em sites é uma excelente forma de melhorar a experiência do usuário. Neste tutorial, você aprenderá a construir um efeito de "image hover" usando HTML e CSS, onde as imagens aumentam de tamanho ao passar o mouse sobre elas. Vamos analisar o código em partes para entender sua estrutura e funcionamento.</p>
-<h3 id="estruturando-o-html">Estruturando o HTML</h3>
-<p>Nosso código HTML define a estrutura básica da página e a organização das imagens dentro de um contêiner.</p>
-<h4 id="1-estrutura-inicial-do-documento">1. Estrutura Inicial do Documento</h4>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+</head>
+
+<body>
+    <div class="responsive-wrapper">
+        <aside>
+            <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
+            <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
+            <p><strong>🗓 Publicado:</strong><br />July 14, 2023</p>
+            <p><strong>✍️ Autor:</strong><br /><a target="_blank"
+                    href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+            <p><strong>📁 Categoria:</strong><br />Frontend</p>
+            <p><strong>🛠 Tecnologias:</strong><br />HTML, CSS, Javascript</p>
+            <p><strong>🔗 Links:</strong></p>
+            <p><a target="_blank" href="https://www.youtube.com/watch?v=ZgQwrx9_MZw"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+                        <path fill="#FF3D00"
+                            d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z">
+                        </path>
+                        <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+                    </svg> YouTube</a></p>
+            <p><a target="_blank" href="https://github.com/codingwithluiz/css-image-hover"><img
+                        src="../../images/github.png" style="margin:0;display: inline;" width="32"> GitHub</a></p>
+            <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;"
+                        width="32"> CodingWithLuiz</a></p>
+        </aside>
+        <main>
+            <h2 id="como-criar-um-efeito-de-hover-em-imagens-com-css">Como Criar um Efeito de Hover em Imagens com CSS
+            </h2>
+            <p>Criar efeitos visuais atrativos em sites é uma excelente forma de melhorar a experiência do usuário.
+                Neste tutorial, você aprenderá a construir um efeito de "image hover" usando HTML e CSS, onde as imagens
+                aumentam de tamanho ao passar o mouse sobre elas. Vamos analisar o código em partes para entender sua
+                estrutura e funcionamento.</p>
+            <h3 id="estruturando-o-html">Estruturando o HTML</h3>
+            <p>Nosso código HTML define a estrutura básica da página e a organização das imagens dentro de um contêiner.
+            </p>
+            <h4 id="1-estrutura-inicial-do-documento">1. Estrutura Inicial do Documento</h4>
+            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -38,16 +53,18 @@
 &lt;/head&gt;
 &lt;body&gt;
 </code></pre>
-<ul>
-<li><code>&lt;!DOCTYPE html&gt;</code>: Define o tipo de documento como HTML5.</li>
-<li><code>&lt;html lang="en"&gt;</code>: Especifica o idioma da página (inglês, neste caso).</li>
-<li><code>&lt;meta charset="UTF-8"&gt;</code>: Garante compatibilidade com caracteres especiais.</li>
-<li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>: Ajusta a escala da página para dispositivos móveis.</li>
-<li><code>&lt;title&gt;Image Hover&lt;/title&gt;</code>: Define o título da página.</li>
-<li><code>&lt;link rel="stylesheet" href="./styles.css"&gt;</code>: Importa o arquivo de estilos CSS.</li>
-</ul>
-<h4 id="2-criando-o-conteiner-das-imagens">2. Criando o Contêiner das Imagens</h4>
-<pre><code class="language-html">    &lt;div class=&quot;container&quot;&gt;
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code>: Define o tipo de documento como HTML5.</li>
+                <li><code>&lt;html lang="en"&gt;</code>: Especifica o idioma da página (inglês, neste caso).</li>
+                <li><code>&lt;meta charset="UTF-8"&gt;</code>: Garante compatibilidade com caracteres especiais.</li>
+                <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>: Ajusta a
+                    escala da página para dispositivos móveis.</li>
+                <li><code>&lt;title&gt;Image Hover&lt;/title&gt;</code>: Define o título da página.</li>
+                <li><code>&lt;link rel="stylesheet" href="./styles.css"&gt;</code>: Importa o arquivo de estilos CSS.
+                </li>
+            </ul>
+            <h4 id="2-criando-o-conteiner-das-imagens">2. Criando o Contêiner das Imagens</h4>
+            <pre><code class="language-html">    &lt;div class=&quot;container&quot;&gt;
         &lt;div class=&quot;box&quot;&gt;
             &lt;img src=&quot;./Images/bird-4051412_1920.jpg&quot; alt=&quot;&quot;&gt;
         &lt;/div&gt;
@@ -67,22 +84,23 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<ul>
-<li>Criamos um <code>div</code> com a classe <code>container</code> para agrupar todas as imagens.</li>
-<li>Cada imagem está dentro de um <code>div</code> com a classe <code>box</code>, que será estilizada para o efeito de hover.</li>
-</ul>
-<h3 id="estilizando-com-css">Estilizando com CSS</h3>
-<p>Agora, vamos estilizar nossa página e aplicar o efeito de hover.</p>
-<h4 id="1-definindo-o-fundo-da-pagina">1. Definindo o Fundo da Página</h4>
-<pre><code class="language-css">body{
+            <ul>
+                <li>Criamos um <code>div</code> com a classe <code>container</code> para agrupar todas as imagens.</li>
+                <li>Cada imagem está dentro de um <code>div</code> com a classe <code>box</code>, que será estilizada
+                    para o efeito de hover.</li>
+            </ul>
+            <h3 id="estilizando-com-css">Estilizando com CSS</h3>
+            <p>Agora, vamos estilizar nossa página e aplicar o efeito de hover.</p>
+            <h4 id="1-definindo-o-fundo-da-pagina">1. Definindo o Fundo da Página</h4>
+            <pre><code class="language-css">body{
     background: #000;
 }
 </code></pre>
-<ul>
-<li>Define um fundo preto para a página, destacando as imagens.</li>
-</ul>
-<h4 id="2-configurando-o-conteiner">2. Configurando o Contêiner</h4>
-<pre><code class="language-css">.container{
+            <ul>
+                <li>Define um fundo preto para a página, destacando as imagens.</li>
+            </ul>
+            <h4 id="2-configurando-o-conteiner">2. Configurando o Contêiner</h4>
+            <pre><code class="language-css">.container{
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -91,70 +109,78 @@
     justify-content: center;
 }
 </code></pre>
-<ul>
-<li><code>width: 90%</code>: O contêiner ocupa 90% da largura da tela.</li>
-<li><code>display: flex;</code>: Ativa o Flexbox para alinhar as imagens.</li>
-<li><code>flex-direction: row;</code>: Mantém os elementos na horizontal.</li>
-<li><code>padding: 20px;</code>: Adiciona um espaçamento interno.</li>
-<li><code>margin: 100px auto;</code>: Centraliza o contêiner na tela.</li>
-<li><code>justify-content: center;</code>: Garante que os itens fiquem centralizados.</li>
-</ul>
-<h4 id="3-estilizando-as-caixas-das-imagens">3. Estilizando as Caixas das Imagens</h4>
-<pre><code class="language-css">.box{
+            <ul>
+                <li><code>width: 90%</code>: O contêiner ocupa 90% da largura da tela.</li>
+                <li><code>display: flex;</code>: Ativa o Flexbox para alinhar as imagens.</li>
+                <li><code>flex-direction: row;</code>: Mantém os elementos na horizontal.</li>
+                <li><code>padding: 20px;</code>: Adiciona um espaçamento interno.</li>
+                <li><code>margin: 100px auto;</code>: Centraliza o contêiner na tela.</li>
+                <li><code>justify-content: center;</code>: Garante que os itens fiquem centralizados.</li>
+            </ul>
+            <h4 id="3-estilizando-as-caixas-das-imagens">3. Estilizando as Caixas das Imagens</h4>
+            <pre><code class="language-css">.box{
     width: 250px;
     margin: 0 10px;
     box-shadow: 0 0 20px rgba(243, 243, 243, 0.6);
     transition: 1s;
 }
 </code></pre>
-<ul>
-<li><code>width: 250px;</code>: Define um tamanho fixo para cada imagem.</li>
-<li><code>margin: 0 10px;</code>: Adiciona espaçamento entre as imagens.</li>
-<li><code>box-shadow: 0 0 20px rgba(243, 243, 243, 0.6);</code>: Adiciona uma sombra branca ao redor das imagens.</li>
-<li><code>transition: 1s;</code>: Adiciona uma transição suave ao efeito de hover.</li>
-</ul>
-<h4 id="4-ajustando-as-imagens">4. Ajustando as Imagens</h4>
-<pre><code class="language-css">.box img{
+            <ul>
+                <li><code>width: 250px;</code>: Define um tamanho fixo para cada imagem.</li>
+                <li><code>margin: 0 10px;</code>: Adiciona espaçamento entre as imagens.</li>
+                <li><code>box-shadow: 0 0 20px rgba(243, 243, 243, 0.6);</code>: Adiciona uma sombra branca ao redor das
+                    imagens.</li>
+                <li><code>transition: 1s;</code>: Adiciona uma transição suave ao efeito de hover.</li>
+            </ul>
+            <h4 id="4-ajustando-as-imagens">4. Ajustando as Imagens</h4>
+            <pre><code class="language-css">.box img{
     display: block;
     width: 100%;
     border-radius: 5px;
 }
 </code></pre>
-<ul>
-<li><code>display: block;</code>: Remove espaçamentos indesejados.</li>
-<li><code>width: 100%;</code>: Faz a imagem ocupar toda a largura da <code>box</code>.</li>
-<li><code>border-radius: 5px;</code>: Adiciona cantos arredondados às imagens.</li>
-</ul>
-<h4 id="5-aplicando-o-efeito-de-hover">5. Aplicando o Efeito de Hover</h4>
-<pre><code class="language-css">.box:hover{
+            <ul>
+                <li><code>display: block;</code>: Remove espaçamentos indesejados.</li>
+                <li><code>width: 100%;</code>: Faz a imagem ocupar toda a largura da <code>box</code>.</li>
+                <li><code>border-radius: 5px;</code>: Adiciona cantos arredondados às imagens.</li>
+            </ul>
+            <h4 id="5-aplicando-o-efeito-de-hover">5. Aplicando o Efeito de Hover</h4>
+            <pre><code class="language-css">.box:hover{
     transform: scale(1.3);
     z-index: 2;
 }
 </code></pre>
-<ul>
-<li><code>transform: scale(1.3);</code>: Ao passar o mouse, a imagem aumenta 30% do seu tamanho original.</li>
-<li><code>z-index: 2;</code>: Garante que a imagem ampliada fique sobre as outras.</li>
-</ul>
-<h3 id="conclusao">Conclusão</h3>
-<p>Com esse código, conseguimos criar um efeito visual atraente para nossas imagens. O CSS permite transições suaves e responsivas, melhorando a interação do usuário com a página. Esse efeito pode ser usado em galerias de imagens, portfólios e qualquer outro projeto web que precise de destaque visual.</p>
-<p>Agora é sua vez! Experimente modificar o código, ajustar tamanhos e sombras, e veja como pequenas mudanças podem criar efeitos incríveis.</p></div>
-</main>
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/prism.js"></script>
-<script>
-  Prism.plugins.NormalizeWhitespace.setDefaults({
-    "remove-trailing": true,
-    "remove-indent": true,
-    "left-trim": true,
-    "right-trim": true,
-    /*'break-lines': 80,
-    'indent': 2,
-    'remove-initial-line-feed': false,
-    'tabs-to-spaces': 4,
-    'spaces-to-tabs': 4*/
-  });
-</script>  
+            <ul>
+                <li><code>transform: scale(1.3);</code>: Ao passar o mouse, a imagem aumenta 30% do seu tamanho
+                    original.</li>
+                <li><code>z-index: 2;</code>: Garante que a imagem ampliada fique sobre as outras.</li>
+            </ul>
+            <h3 id="conclusao">Conclusão</h3>
+            <p>Com esse código, conseguimos criar um efeito visual atraente para nossas imagens. O CSS permite
+                transições suaves e responsivas, melhorando a interação do usuário com a página. Esse efeito pode ser
+                usado em galerias de imagens, portfólios e qualquer outro projeto web que precise de destaque visual.
+            </p>
+            <p>Agora é sua vez! Experimente modificar o código, ajustar tamanhos e sombras, e veja como pequenas
+                mudanças podem criar efeitos incríveis.</p>
+    </div>
+    </main>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            "remove-trailing": true,
+            "remove-indent": true,
+            "left-trim": true,
+            "right-trim": true,
+            /*'break-lines': 80,
+            'indent': 2,
+            'remove-initial-line-feed': false,
+            'tabs-to-spaces': 4,
+            'spaces-to-tabs': 4*/
+        });
+    </script>
 </body>
+
 </html>

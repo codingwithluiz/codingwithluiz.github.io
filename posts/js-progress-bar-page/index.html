@@ -1,37 +1,48 @@
 <html>
-  <head>
+
+<head>
+    <meta charset="UTF-8">
     <link rel="icon" href="images/favicon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/prism.css" />
     <link rel="stylesheet" href="css/doc.css" />
-  </head>
-  <body>
-  <div class="responsive-wrapper">
-    <aside>
-      <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
-      <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
-      <p><strong>🗓 Publicado:</strong><br />July 08, 2025</p>
-      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
-      <p><strong>📁 Categoria:</strong><br />Frontend</p>
-      <p><strong>🛠 Tecnologias:</strong><br />HTML, Javascript, CSS</p>
-      <p><strong>🔗 Links:</strong></p>
-      <p><a target="_blank" href="https://www.youtube.com/watch?v=NJeUXcB-WKY&t=18s&pp=0gcJCcEJAYcqIYzv"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
-<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
-</svg> YouTube</a></p>
-      <p><a target="_blank" href="https://github.com/codingwithluiz/js-progress-bar-page"><img src="../../images/github.png" style="margin:0;display: inline;" width="32"> GitHub</a></p>
-      <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
-    </aside>
-    <main>
-<h2 id="tutorial-barra-de-progresso-de-scroll-no-topo-da-pagina-html-css-e-javascript">Tutorial: Barra de Progresso de Scroll no Topo da Página (HTML, CSS e JavaScript)</h2>
-<p>Neste tutorial, vamos criar uma barra de progresso simples e eficaz que fica no 
-topo da sua página, preenchendo-se à medida que o usuário rola para baixo. 
-Perfeito para indicar o progresso da leitura ou a quantidade de conteúdo já 
-visualizada!</p>
-<h3 id="estrutura-html-indexhtml">Estrutura HTML (index.html)</h3>
-<p>Primeiro, vamos configurar a estrutura básica da nossa página e adicionar a 
-barra de progresso. A barra será uma <code>&lt;div&gt;</code> vazia que preencheremos com CSS e 
-manipularemos com JavaScript.</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+</head>
+
+<body>
+    <div class="responsive-wrapper">
+        <aside>
+            <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
+            <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
+            <p><strong>🗓 Publicado:</strong><br />July 08, 2025</p>
+            <p><strong>✍️ Autor:</strong><br /><a target="_blank"
+                    href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+            <p><strong>📁 Categoria:</strong><br />Frontend</p>
+            <p><strong>🛠 Tecnologias:</strong><br />HTML, Javascript, CSS</p>
+            <p><strong>🔗 Links:</strong></p>
+            <p><a target="_blank" href="https://www.youtube.com/watch?v=NJeUXcB-WKY&t=18s&pp=0gcJCcEJAYcqIYzv"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+                        <path fill="#FF3D00"
+                            d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z">
+                        </path>
+                        <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+                    </svg> YouTube</a></p>
+            <p><a target="_blank" href="https://github.com/codingwithluiz/js-progress-bar-page"><img
+                        src="../../images/github.png" style="margin:0;display: inline;" width="32"> GitHub</a></p>
+            <p><a href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;"
+                        width="32"> CodingWithLuiz</a></p>
+        </aside>
+        <main>
+            <h2 id="tutorial-barra-de-progresso-de-scroll-no-topo-da-pagina-html-css-e-javascript">Tutorial: Barra de
+                Progresso de Scroll no Topo da Página (HTML, CSS e JavaScript)</h2>
+            <p>Neste tutorial, vamos criar uma barra de progresso simples e eficaz que fica no
+                topo da sua página, preenchendo-se à medida que o usuário rola para baixo.
+                Perfeito para indicar o progresso da leitura ou a quantidade de conteúdo já
+                visualizada!</p>
+            <h3 id="estrutura-html-indexhtml">Estrutura HTML (index.html)</h3>
+            <p>Primeiro, vamos configurar a estrutura básica da nossa página e adicionar a
+                barra de progresso. A barra será uma <code>&lt;div&gt;</code> vazia que preencheremos com CSS e
+                manipularemos com JavaScript.</p>
+            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;pt-br&quot;&gt;
 &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -106,10 +117,10 @@ manipularemos com JavaScript.</p>
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<h3 id="estilizacao-css-stylecss">Estilização CSS (style.css)</h3>
-<p>Agora, vamos estilizar nossa barra de progresso para que ela apareça no topo da 
-página e tenha um visual agradável.</p>
-<pre><code class="language-css">/* Estilos gerais */
+            <h3 id="estilizacao-css-stylecss">Estilização CSS (style.css)</h3>
+            <p>Agora, vamos estilizar nossa barra de progresso para que ela apareça no topo da
+                página e tenha um visual agradável.</p>
+            <pre><code class="language-css">/* Estilos gerais */
 body {
     margin: 0;
     padding: 0;
@@ -155,27 +166,30 @@ p {
     color: #555;
 }
 </code></pre>
-<p><strong>Explicação do CSS:</strong></p>
-<ul>
-<li><strong><code>#progressBarContainer</code></strong>:<ul>
-<li><code>position: fixed;</code>: Essencial para que a barra permaneça visível no topo enquanto o usuário rola.</li>
-<li><code>top: 0; left: 0;</code>: Posiciona a barra no canto superior esquerdo.</li>
-<li><code>width: 100%;</code>: Ocupa toda a largura da viewport.</li>
-<li><code>height: 5px;</code>: Define a altura da barra.</li>
-<li><code>z-index: 1000;</code>: Garante que a barra fique sobreposta a outros elementos da página.</li>
-</ul>
-</li>
-<li><strong><code>#progressBar</code></strong>:<ul>
-<li><code>width: 0%;</code>: Inicia a barra sem preenchimento.</li>
-<li><code>background-color: #4CAF50;</code>: A cor verde que preencherá a barra.</li>
-<li><code>transition: width 0.1s linear;</code>: Adiciona uma transição suave quando a largura da barra é alterada, tornando o movimento mais agradável.</li>
-</ul>
-</li>
-</ul>
-<h3 id="logica-javascript-scriptjs">Lógica JavaScript (script.js)</h3>
-<p>Agora vem a parte mais importante: o JavaScript que calculará a posição do 
-scroll e atualizará a largura da barra de progresso.</p>
-<pre><code class="language-javascript">// Obtém o elemento da barra de progresso
+            <p><strong>Explicação do CSS:</strong></p>
+            <ul>
+                <li><strong><code>#progressBarContainer</code></strong>:<ul>
+                        <li><code>position: fixed;</code>: Essencial para que a barra permaneça visível no topo enquanto
+                            o usuário rola.</li>
+                        <li><code>top: 0; left: 0;</code>: Posiciona a barra no canto superior esquerdo.</li>
+                        <li><code>width: 100%;</code>: Ocupa toda a largura da viewport.</li>
+                        <li><code>height: 5px;</code>: Define a altura da barra.</li>
+                        <li><code>z-index: 1000;</code>: Garante que a barra fique sobreposta a outros elementos da
+                            página.</li>
+                    </ul>
+                </li>
+                <li><strong><code>#progressBar</code></strong>:<ul>
+                        <li><code>width: 0%;</code>: Inicia a barra sem preenchimento.</li>
+                        <li><code>background-color: #4CAF50;</code>: A cor verde que preencherá a barra.</li>
+                        <li><code>transition: width 0.1s linear;</code>: Adiciona uma transição suave quando a largura
+                            da barra é alterada, tornando o movimento mais agradável.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3 id="logica-javascript-scriptjs">Lógica JavaScript (script.js)</h3>
+            <p>Agora vem a parte mais importante: o JavaScript que calculará a posição do
+                scroll e atualizará a largura da barra de progresso.</p>
+            <pre><code class="language-javascript">// Obtém o elemento da barra de progresso
 const progressBar = document.getElementById('progressBar');
 
 // Adiciona um listener de evento para o scroll da janela
@@ -197,48 +211,66 @@ window.addEventListener('scroll', () =&gt; {
     progressBar.style.width = scrollPercentage + '%';
 });
 </code></pre>
-<p><strong>Explicação do JavaScript:</strong></p>
-<ol>
-<li><strong><code>const progressBar = document.getElementById('progressBar');</code></strong>: Seleciona o elemento HTML da barra de progresso pelo seu ID.</li>
-<li><strong><code>window.addEventListener('scroll', () =&gt; { ... });</code></strong>: Adiciona um "ouvinte de evento" ao objeto <code>window</code>. Sempre que o usuário rolar a página, a função dentro deste <code>addEventListener</code> será executada.</li>
-<li><strong><code>const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;</code></strong>:<ul>
-<li><code>document.documentElement.scrollHeight</code>: Retorna a altura total do conteúdo da página (incluindo a parte que não está visível).</li>
-<li><code>window.innerHeight</code>: Retorna a altura da janela de visualização (o que o usuário vê na tela).</li>
-<li>Subtraímos <code>window.innerHeight</code> porque, quando a barra de rolagem atinge o final, a parte inferior do conteúdo se alinha com a parte inferior da janela de visualização, não com a parte inferior do documento. A "altura rolável" é a altura total menos a altura da janela.</li>
-</ul>
-</li>
-<li><strong><code>const scrolled = window.scrollY;</code></strong>: Retorna o número de pixels que o documento foi rolado verticalmente a partir do canto superior esquerdo.</li>
-<li><strong><code>const scrollPercentage = (scrollHeight &gt; 0) ? (scrolled / scrollHeight) * 100 : 0;</code></strong>:<ul>
-<li>Calcula a porcentagem de rolagem.</li>
-<li>A condição <code>(scrollHeight &gt; 0) ? ... : 0;</code> é para evitar a divisão por zero caso a página não tenha conteúdo suficiente para rolar (ou seja, <code>scrollHeight</code> seja 0). Se não há rolagem, a porcentagem é 0.</li>
-</ul>
-</li>
-<li><strong><code>progressBar.style.width = scrollPercentage + '%';</code></strong>: Atualiza a propriedade <code>width</code> do estilo da barra de progresso com a porcentagem calculada. O CSS se encarrega da transição suave.</li>
-</ol>
-<h3 id="como-usar">Como Usar</h3>
-<ol>
-<li>Crie três arquivos: <code>index.html</code>, <code>style.css</code> e <code>script.js</code> na mesma pasta.</li>
-<li>Copie e cole o código correspondente em cada arquivo.</li>
-<li>Abra o arquivo <code>index.html</code> no seu navegador.</li>
-<li>Role a página para cima e para baixo para ver a barra de progresso em ação!</li>
-</ol></div>
-</main>
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/prism.js"></script>
-<script>
-  Prism.plugins.NormalizeWhitespace.setDefaults({
-    "remove-trailing": true,
-    "remove-indent": true,
-    "left-trim": true,
-    "right-trim": true,
-    /*'break-lines': 80,
-    'indent': 2,
-    'remove-initial-line-feed': false,
-    'tabs-to-spaces': 4,
-    'spaces-to-tabs': 4*/
-  });
-</script>  
+            <p><strong>Explicação do JavaScript:</strong></p>
+            <ol>
+                <li><strong><code>const progressBar = document.getElementById('progressBar');</code></strong>: Seleciona
+                    o elemento HTML da barra de progresso pelo seu ID.</li>
+                <li><strong><code>window.addEventListener('scroll', () =&gt; { ... });</code></strong>: Adiciona um
+                    "ouvinte de evento" ao objeto <code>window</code>. Sempre que o usuário rolar a página, a função
+                    dentro deste <code>addEventListener</code> será executada.</li>
+                <li><strong><code>const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;</code></strong>:
+                    <ul>
+                        <li><code>document.documentElement.scrollHeight</code>: Retorna a altura total do conteúdo da
+                            página (incluindo a parte que não está visível).</li>
+                        <li><code>window.innerHeight</code>: Retorna a altura da janela de visualização (o que o usuário
+                            vê na tela).</li>
+                        <li>Subtraímos <code>window.innerHeight</code> porque, quando a barra de rolagem atinge o final,
+                            a parte inferior do conteúdo se alinha com a parte inferior da janela de visualização, não
+                            com a parte inferior do documento. A "altura rolável" é a altura total menos a altura da
+                            janela.</li>
+                    </ul>
+                </li>
+                <li><strong><code>const scrolled = window.scrollY;</code></strong>: Retorna o número de pixels que o
+                    documento foi rolado verticalmente a partir do canto superior esquerdo.</li>
+                <li><strong><code>const scrollPercentage = (scrollHeight &gt; 0) ? (scrolled / scrollHeight) * 100 : 0;</code></strong>:
+                    <ul>
+                        <li>Calcula a porcentagem de rolagem.</li>
+                        <li>A condição <code>(scrollHeight &gt; 0) ? ... : 0;</code> é para evitar a divisão por zero
+                            caso a página não tenha conteúdo suficiente para rolar (ou seja, <code>scrollHeight</code>
+                            seja 0). Se não há rolagem, a porcentagem é 0.</li>
+                    </ul>
+                </li>
+                <li><strong><code>progressBar.style.width = scrollPercentage + '%';</code></strong>: Atualiza a
+                    propriedade <code>width</code> do estilo da barra de progresso com a porcentagem calculada. O CSS se
+                    encarrega da transição suave.</li>
+            </ol>
+            <h3 id="como-usar">Como Usar</h3>
+            <ol>
+                <li>Crie três arquivos: <code>index.html</code>, <code>style.css</code> e <code>script.js</code> na
+                    mesma pasta.</li>
+                <li>Copie e cole o código correspondente em cada arquivo.</li>
+                <li>Abra o arquivo <code>index.html</code> no seu navegador.</li>
+                <li>Role a página para cima e para baixo para ver a barra de progresso em ação!</li>
+            </ol>
+    </div>
+    </main>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            "remove-trailing": true,
+            "remove-indent": true,
+            "left-trim": true,
+            "right-trim": true,
+            /*'break-lines': 80,
+            'indent': 2,
+            'remove-initial-line-feed': false,
+            'tabs-to-spaces': 4,
+            'spaces-to-tabs': 4*/
+        });
+    </script>
 </body>
+
 </html>

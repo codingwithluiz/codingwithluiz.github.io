@@ -1,24 +1,82 @@
 [
   {
-    "id": "js-fundamentos",
-    "title": "JavaScript para Iniciantes",
-    "description": "Sintaxe, variáveis, funções, condicionais e projetos curtos.",
-    "hours": "1–3h",
-    "link": "paths/index.html#javascript"
+    "id": "python-do-zero-a-automacao",
+    "title": "Python do Zero à Automação",
+    "description": "Curso introdutório de Python voltado para iniciantes, que ensina do básico ao avançado com foco em automação de tarefas.",
+    "technologies": ["Python", "Selenium", "pyautogui"],
+    "courseUrl": "courses/course/?id=python-do-zero-a-automacao",
+    "image": "assets/img/python-zero-automacao.webp"
   },
   {
-    "id": "dom-pratico",
-    "title": "DOM na prática",
-    "description": "Manipulação de DOM com exemplos reais (UI, eventos, componentes).",
-    "hours": "1–2h",
-    "link": "paths/index.html#projects"
+    "id": "python-tkinter",
+    "title": "Crie Interfaces Gráficas com Python e Tkinter",
+    "description": "Curso prático de Python com Tkinter para criação de interfaces gráficas, ideal para iniciantes e intermediários.",
+    "technologies": ["Python", "tkinter"],
+    "courseUrl": "courses/course/?id=python-tkinter",
+    "image": "assets/img/python-tkinter.webp"
   },
   {
-    "id": "apis",
-    "title": "APIs com JavaScript",
-    "description": "Fetch, async/await, erros e integração com APIs públicas.",
-    "hours": "1–2h",
-    "link": "paths/index.html#javascript"
+    "id": "git-github-na-pratica",
+    "title": "Git e GitHub na Prática",
+    "description": "Curso prático de Git e GitHub que ensina controle de versões do básico ao avançado.",
+    "technologies": ["Git", "GitHub"],
+    "courseUrl": "courses/course/?id=git-github-na-pratica",
+    "image": "assets/img/git-github-na-pratica.webp"
+  },
+  {
+    "id": "introducao-typescript",
+    "title": "Introdução ao TypeScript",
+    "description": "Curso de introdução ao TypeScript focado em tipagem estática, qualidade de código e escalabilidade.",
+    "technologies": ["TypeScript"],
+    "courseUrl": "courses/course/?id=introducao-typescript",
+    "image": "assets/img/introducao-typescript.webp"
+  },
+  {
+    "id": "introducao-sql",
+    "title": "Introdução ao SQL",
+    "description": "Curso introdutório de SQL que ensina os fundamentos da linguagem de forma prática e universal.",
+    "technologies": ["SQL", "PostgreSQL"],
+    "courseUrl": "courses/course/?id=introducao-sql",
+    "image": "assets/img/introducao-sql.webp"
+  },
+  {
+    "id": "python-sqlite3",
+    "title": "Usando Banco de Dados SQLite3 em Python",
+    "description": "Curso de SQLite3 com Python que ensina como criar e gerenciar bancos de dados de forma simples e eficiente.",
+    "technologies": ["Python", "sqlite3"],
+    "courseUrl": "courses/course/?id=python-sqlite3",
+    "image": "assets/img/python-sqlite3.webp"
+  },
+  {
+    "id": "javascript-primeiros-passos",
+    "title": "Curso de Javascript - Primeiros Passos",
+    "description": "Curso introdutório de JavaScript ideal para iniciantes, cobrindo conceitos básicos como variáveis, funções e DOM.",
+    "technologies": ["Javascript"],
+    "courseUrl": "courses/course/?id=javascript-primeiros-passos",
+    "image": "assets/img/javascript-primeiros-passos.webp"
+  },
+  {
+    "id": "html-css-js",
+    "title": "Introdução ao HTML, CSS e Javascript",
+    "description": "Curso introdutório de desenvolvimento web que ensina HTML, CSS e JavaScript do zero.",
+    "technologies": ["HTML", "CSS", "Javascript"],
+    "courseUrl": "courses/course/?id=html-css-js",
+    "image": "assets/img/html-css-js.webp"
+  },
+  {
+    "id": "robot-framework-modulo1",
+    "title": "Testes Automatizados com Robot Framework – Módulo 1",
+    "description": "Curso introdutório de testes automatizados com Robot Framework, focado em automação simples e acessível.",
+    "technologies": ["Python", "RobotFramework"],
+    "courseUrl": "courses/course/?id=robot-framework-modulo1",
+    "image": "assets/img/robot-framework-modulo1.webp"
+  },
+  {
+    "id": "robot-framework-modulo2",
+    "title": "Testes Automatizados com Robot Framework – Módulo 2",
+    "description": "Curso avançado de Robot Framework que aprofunda a automação de testes com APIs, banco de dados e Data Driven Tests.",
+    "technologies": ["Python", "RobotFramework"],
+    "courseUrl": "courses/course/?id=robot-framework-modulo2",
+    "image": "assets/img/robot-framework-modulo2.webp"
   }
 ]
-

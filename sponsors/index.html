@@ -1,108 +1,166 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sponsors • CodingWithLuiz</title>
-    <meta name="description" content="Apoie o canal e mantenha os conteúdos gratuitos." />
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <header class="site-header">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sponsors • CodingWithLuiz</title>
+  <meta name="description" content="Apoie o canal e mantenha os conteúdos gratuitos." />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Span full grid row and center content (no right-rail on this page) */
+    @media (min-width: 1100px) {
+      main>section {
+        grid-column: 1 / -1 !important;
+      }
+
+      main>section>.wrap {
+        max-width: 960px !important;
+        margin: 0 auto !important;
+        padding: 0 40px !important;
+      }
+    }
+
+    /* Centre hero text + buttons */
+    .hero .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 720px !important;
+      margin: 0 auto !important;
+    }
+
+    .hero .hero-actions {
+      justify-content: center;
+    }
+
+    /* Info card layout */
+    .info-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .info-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+
+    .info-card:hover {
+      border-color: rgba(124, 92, 255, 0.35);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .info-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(124, 92, 255, 0.2), rgba(91, 214, 255, 0.12));
+      border: 1px solid rgba(124, 92, 255, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--brand);
+      flex-shrink: 0;
+    }
+
+    .info-card-title {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 0.97rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .info-card-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .info-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.83rem;
+      font-weight: 700;
+      color: var(--brand2);
+      text-decoration: none;
+      margin-top: 4px;
+      transition: opacity 0.15s;
+    }
+
+    .info-card-link:hover {
+      opacity: 0.75;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <section class="hero">
       <div class="wrap">
-        <nav class="top-nav" aria-label="Primary">
-          <a class="brand" href="../">
-            <img class="brand-avatar" src="../images/youtube/profile.jpg" alt="CodingWithLuiz" />
-            <span class="brand-name">CodingWithLuiz</span>
-          </a>
+        <p class="badge">Sponsors</p>
+        <h1>Apoie o canal.</h1>
+        <p class="lede">
+          Se você curte o conteúdo e quer ajudar a manter tudo gratuito, aqui é o espaço para parcerias e apoio.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://www.youtube.com/@CodingWithLuiz" target="_blank"
+            rel="noreferrer">Compartilhar o canal</a>
+        </div>
+      </div>
+    </section>
 
-          <div class="nav-links">
-            <a href="../paths/index.html">Trilhas</a>
-            <a href="../courses/index.html">Cursos</a>
-            <a href="../resources/index.html">Recursos</a>
-            <a href="../about/index.html">Sobre</a>
-            <a class="nav-cta" href="../#posts">Ver posts</a>
+    <section class="section alt">
+      <div class="wrap">
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-heart"></i></div>
+            <div class="info-card-title">Como ajudar</div>
+            <p class="info-card-desc">Inscreva-se no canal, deixe like, compartilhe e contribua com feedback.</p>
           </div>
-
-          <div class="nav-actions">
-            <a class="icon-link" href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">
-              YouTube
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-handshake"></i></div>
+            <div class="info-card-title">Parcerias</div>
+            <p class="info-card-desc">
+              Para parcerias, você pode abrir uma issue/reach-out pelo GitHub ou entrar em contato pelos links oficiais.
+            </p>
+            <a class="info-card-link" href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">
+              <i class="fab fa-github"></i> GitHub
             </a>
-            <a class="icon-link" href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
-            <button id="darkModeToggle" class="dark-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
           </div>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="wrap">
-          <p class="badge">Sponsors</p>
-          <h1>Apoie o canal.</h1>
-          <p class="lede">
-            Se você curte o conteúdo e quer ajudar a manter tudo gratuito, aqui é o espaço para parcerias e apoio.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer"
-              >Compartilhar o canal</a
-            >
-            <a class="btn" href="../resources/index.html">Ver recursos</a>
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-medal"></i></div>
+            <div class="info-card-title">Área de sponsors</div>
+            <p class="info-card-desc">
+              Esta seção pode listar logos e links de apoiadores (basta editar `data/sponsors.json`).
+            </p>
           </div>
         </div>
-      </section>
-
-      <section class="section alt">
-        <div class="wrap">
-          <div class="cards">
-            <div class="card-item" style="cursor: default">
-              <div class="card-item-title">Como ajudar</div>
-              <p class="card-item-desc">Inscreva-se no canal, deixe like, compartilhe e contribua com feedback.</p>
-            </div>
-            <div class="card-item" style="cursor: default">
-              <div class="card-item-title">Parcerias</div>
-              <p class="card-item-desc">
-                Para parcerias, você pode abrir uma issue/reach-out pelo GitHub ou entrar em contato pelos links oficiais.
-              </p>
-              <div class="card-item-meta">
-                <a href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-            <div class="card-item" style="cursor: default">
-              <div class="card-item-title">Área de sponsors</div>
-              <p class="card-item-desc">
-                Esta seção pode listar logos e links de apoiadores (basta editar `data/sponsors.json`).
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="wrap footer-grid">
-        <div>
-          <div class="footer-brand">CodingWithLuiz</div>
-          <p class="muted">Desenvolvimento Web • Tutoriais • Dicas de Código</p>
-        </div>
-        <div class="footer-links" aria-label="Footer">
-          <a href="../paths/index.html">Trilhas</a>
-          <a href="../courses/index.html">Cursos</a>
-          <a href="../resources/index.html">Recursos</a>
-          <a href="../about/index.html">Sobre</a>
-          <a href="./">Sponsors</a>
-        </div>
-        <div class="footer-links">
-          <a href="https://www.youtube.com/@CodingWithLuiz" target="_blank" rel="noreferrer">YouTube</a>
-          <a href="https://github.com/codingwithluiz" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
       </div>
-      <div class="wrap footer-bottom">
-        <p>© <span id="year"></span> codingwithluiz</p>
-      </div>
-    </footer>
+    </section>
+  </main>
 
-    <script src="../site.js"></script>
-  </body>
+  <div id="footer-placeholder"></div>
+
+  <script src="../site.js?v=1.2"></script>
+</body>
+
 </html>
-

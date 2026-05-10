@@ -1,54 +1,65 @@
 <html>
-  <head>
-    <link rel="icon" href="images/favicon.png" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/prism.css" />
-    <link rel="stylesheet" href="css/doc.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/prism.css" />
+  <link rel="stylesheet" href="css/doc.css" />
+</head>
+
+<body>
   <div class="responsive-wrapper">
     <aside>
       <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
       <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
       <p><strong>🗓 Publicado:</strong><br />April 15, 2024</p>
-      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a>
+      </p>
       <p><strong>📁 Categoria:</strong><br />Frontend</p>
       <p><strong>🛠 Tecnologias:</strong><br />HTML, Javascript</p>
       <p><strong>🔗 Links:</strong></p>
-      <p><a target="_blank" href="https://www.youtube.com/watch?v=37R_X4fNcmw"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
-<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
-</svg> YouTube</a></p>
-      <p><a target="_blank" href="https://github.com/codingwithluiz/js-unsplash-api"><img src="../../images/github.png" style="margin:0;display: inline;" width="32"> GitHub</a> </p>
-      <p><a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
+      <p><a target="_blank" href="https://www.youtube.com/watch?v=37R_X4fNcmw"><svg xmlns="http://www.w3.org/2000/svg"
+            x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+            <path fill="#FF3D00"
+              d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z">
+            </path>
+            <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+          </svg> YouTube</a></p>
+      <p><a target="_blank" href="https://github.com/codingwithluiz/js-unsplash-api"><img src="../../images/github.png"
+            style="margin:0;display: inline;" width="32"> GitHub</a> </p>
+      <p><a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"
+            style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
     </aside>
     <main>
-<h2 id="criando-um-visualizador-de-imagens-com-a-api-do-unsplash">Criando um Visualizador de Imagens com a API do Unsplash</h2>
-<p>Neste artigo, vamos construir do zero um visualizador de imagens usando a API do 
-Unsplash. Você aprenderá como integrar a API, montar a interface visual com HTML 
-e CSS, aplicar responsividade e implementar funcionalidades com JavaScript.</p>
-<h3 id="o-que-vamos-construir">O que vamos construir?</h3>
-<p>Um app web com os seguintes recursos:</p>
-<ul>
-<li>Campo de busca</li>
-<li>Imagens em proporção 16:9</li>
-<li>Descrição abaixo de cada imagem</li>
-<li>Layout responsivo (3 imagens por linha em desktop, 1 em mobile)</li>
-<li>Botão “Carregar mais” para buscar mais imagens</li>
-</ul>
-<h3 id="pre-requisitos">Pré-requisitos</h3>
-<ul>
-<li>Uma chave de API gratuita do Unsplash (registre-se em unsplash.com/developers)</li>
-</ul>
-<h3 id="estrutura-de-arquivos">Estrutura de Arquivos</h3>
-<p>Crie uma pasta chamada visualizador-imagens com os seguintes arquivos:</p>
-<pre><code class="language-bash">visualizador-imagens/
+      <h2 id="criando-um-visualizador-de-imagens-com-a-api-do-unsplash">Criando um Visualizador de Imagens com a API do
+        Unsplash</h2>
+      <p>Neste artigo, vamos construir do zero um visualizador de imagens usando a API do
+        Unsplash. Você aprenderá como integrar a API, montar a interface visual com HTML
+        e CSS, aplicar responsividade e implementar funcionalidades com JavaScript.</p>
+      <h3 id="o-que-vamos-construir">O que vamos construir?</h3>
+      <p>Um app web com os seguintes recursos:</p>
+      <ul>
+        <li>Campo de busca</li>
+        <li>Imagens em proporção 16:9</li>
+        <li>Descrição abaixo de cada imagem</li>
+        <li>Layout responsivo (3 imagens por linha em desktop, 1 em mobile)</li>
+        <li>Botão “Carregar mais” para buscar mais imagens</li>
+      </ul>
+      <h3 id="pre-requisitos">Pré-requisitos</h3>
+      <ul>
+        <li>Uma chave de API gratuita do Unsplash (registre-se em unsplash.com/developers)</li>
+      </ul>
+      <h3 id="estrutura-de-arquivos">Estrutura de Arquivos</h3>
+      <p>Crie uma pasta chamada visualizador-imagens com os seguintes arquivos:</p>
+      <pre><code class="language-bash">visualizador-imagens/
 ├── index.html
 ├── styles.css
 └── script.js
 </code></pre>
-<h3 id="criando-a-estrutura-html">Criando a Estrutura HTML</h3>
-<p>Abra o <code>index.html</code> e adicione:</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+      <h3 id="criando-a-estrutura-html">Criando a Estrutura HTML</h3>
+      <p>Abra o <code>index.html</code> e adicione:</p>
+      <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;pt-br&quot;&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -71,16 +82,17 @@ e CSS, aplicar responsividade e implementar funcionalidades com JavaScript.</p>
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<p><strong>O que está acontecendo aqui?</strong></p>
-<ul>
-<li>Criamos uma estrutura simples com um input de busca, um botão, a <code>div</code> da 
-galeria e um botão extra para carregar mais imagens.</li>
-<li>O botão "Buscar" chama a função <code>buscarImagens(true)</code>, e o "Carregar mais" chama 
-<code>buscarImagens(false)</code>.</li>
-</ul>
-<h3 id="estilizando-com-css">Estilizando com CSS</h3>
-<p>Edite o <code>styles.css</code> com o seguinte conteúdo:</p>
-<pre><code class="language-css">body {
+      <p><strong>O que está acontecendo aqui?</strong></p>
+      <ul>
+        <li>Criamos uma estrutura simples com um input de busca, um botão, a <code>div</code> da
+          galeria e um botão extra para carregar mais imagens.</li>
+        <li>O botão "Buscar" chama a função <code>buscarImagens(true)</code>, e o "Carregar mais" chama
+          <code>buscarImagens(false)</code>.
+        </li>
+      </ul>
+      <h3 id="estilizando-com-css">Estilizando com CSS</h3>
+      <p>Edite o <code>styles.css</code> com o seguinte conteúdo:</p>
+      <pre><code class="language-css">body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   text-align: center;
@@ -161,15 +173,16 @@ button {
   }
 }
 </code></pre>
-<p><strong>Explicações importantes:</strong></p>
-<ul>
-<li><code>.galeria</code> usa grid layout para exibir 3 colunas em desktop.</li>
-<li>Em telas pequenas (<code>max-width: 768px</code>), ajustamos para 1 coluna por linha com <code>grid-template-columns: 1fr</code>.</li>
-<li><code>.imagem-wrapper</code> com <code>aspect-ratio: 16 / 9</code> garante o formato widescreen.</li>
-</ul>
-<h3 id="programando-com-javascript">Programando com JavaScript</h3>
-<p>No <code>script.js</code>, adicione o código abaixo:</p>
-<pre><code class="language-javascript">const accessKey = &quot;SUA_CHAVE_DE_API_DO_UNSPLASH&quot;; // Substitua pela sua chave
+      <p><strong>Explicações importantes:</strong></p>
+      <ul>
+        <li><code>.galeria</code> usa grid layout para exibir 3 colunas em desktop.</li>
+        <li>Em telas pequenas (<code>max-width: 768px</code>), ajustamos para 1 coluna por linha com
+          <code>grid-template-columns: 1fr</code>.</li>
+        <li><code>.imagem-wrapper</code> com <code>aspect-ratio: 16 / 9</code> garante o formato widescreen.</li>
+      </ul>
+      <h3 id="programando-com-javascript">Programando com JavaScript</h3>
+      <p>No <code>script.js</code>, adicione o código abaixo:</p>
+      <pre><code class="language-javascript">const accessKey = &quot;SUA_CHAVE_DE_API_DO_UNSPLASH&quot;; // Substitua pela sua chave
 let paginaAtual = 1;
 let termoAtual = &quot;&quot;;
 
@@ -230,55 +243,57 @@ async function buscarImagens(novaBusca) {
   }
 }
 </code></pre>
-<p><strong>Detalhes do funcionamento:</strong></p>
-<ul>
-<li><code>novaBusca = true</code>: limpa resultados anteriores e começa na página 1.</li>
-<li>Se for <code>false</code>, incrementa <code>paginaAtual</code> para buscar a próxima página.</li>
-<li>A API do Unsplash retorna um array de imagens em <code>dados.results</code>.</li>
-<li>Para cada imagem:<ul>
-<li>Criamos um <code>.card</code> com a imagem e a descrição.</li>
-<li>Usamos <code>foto.urls.regular</code> para uma imagem com boa qualidade.</li>
-<li>A descrição vem de <code>foto.alt_description</code>.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Substituindo a chave da API</strong>
-Você precisa se registrar no site do Unsplash Developers e criar um app para 
-obter sua chave da API. Depois, substitua:</p>
-<pre><code class="language-javascript">const accessKey = &quot;SUA_CHAVE_DE_API_DO_UNSPLASH&quot;;
+      <p><strong>Detalhes do funcionamento:</strong></p>
+      <ul>
+        <li><code>novaBusca = true</code>: limpa resultados anteriores e começa na página 1.</li>
+        <li>Se for <code>false</code>, incrementa <code>paginaAtual</code> para buscar a próxima página.</li>
+        <li>A API do Unsplash retorna um array de imagens em <code>dados.results</code>.</li>
+        <li>Para cada imagem:<ul>
+            <li>Criamos um <code>.card</code> com a imagem e a descrição.</li>
+            <li>Usamos <code>foto.urls.regular</code> para uma imagem com boa qualidade.</li>
+            <li>A descrição vem de <code>foto.alt_description</code>.</li>
+          </ul>
+        </li>
+      </ul>
+      <p><strong>Substituindo a chave da API</strong>
+        Você precisa se registrar no site do Unsplash Developers e criar um app para
+        obter sua chave da API. Depois, substitua:</p>
+      <pre><code class="language-javascript">const accessKey = &quot;SUA_CHAVE_DE_API_DO_UNSPLASH&quot;;
 </code></pre>
-<h3 id="resultado-final">Resultado final</h3>
-<ul>
-<li>Busca imagens com base em palavras-chave.</li>
-<li>Exibe imagens no formato 16:9.</li>
-<li>Mostra a descrição abaixo da imagem.</li>
-<li>Layout responsivo para qualquer dispositivo.</li>
-<li>"Carregar mais" busca imagens da próxima página.</li>
-</ul>
-<h3 id="possiveis-melhorias-futuras">Possíveis melhorias futuras</h3>
-<ul>
-<li>Adicionar animações na transição de imagens</li>
-<li>Trocar o botão "Carregar mais" por scroll infinito</li>
-<li>Permitir filtros por cor ou orientação</li>
-<li>Exibir nome do fotógrafo e link para o Unsplash</li>
-</ul></div>
-</main>
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/prism.js"></script>
-<script>
-  Prism.plugins.NormalizeWhitespace.setDefaults({
-    "remove-trailing": true,
-    "remove-indent": true,
-    "left-trim": true,
-    "right-trim": true,
-    /*'break-lines': 80,
-    'indent': 2,
-    'remove-initial-line-feed': false,
-    'tabs-to-spaces': 4,
-    'spaces-to-tabs': 4*/
-  });
-</script>  
+      <h3 id="resultado-final">Resultado final</h3>
+      <ul>
+        <li>Busca imagens com base em palavras-chave.</li>
+        <li>Exibe imagens no formato 16:9.</li>
+        <li>Mostra a descrição abaixo da imagem.</li>
+        <li>Layout responsivo para qualquer dispositivo.</li>
+        <li>"Carregar mais" busca imagens da próxima página.</li>
+      </ul>
+      <h3 id="possiveis-melhorias-futuras">Possíveis melhorias futuras</h3>
+      <ul>
+        <li>Adicionar animações na transição de imagens</li>
+        <li>Trocar o botão "Carregar mais" por scroll infinito</li>
+        <li>Permitir filtros por cor ou orientação</li>
+        <li>Exibir nome do fotógrafo e link para o Unsplash</li>
+      </ul>
+  </div>
+  </main>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/prism.js"></script>
+  <script>
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+      "remove-trailing": true,
+      "remove-indent": true,
+      "left-trim": true,
+      "right-trim": true,
+      /*'break-lines': 80,
+      'indent': 2,
+      'remove-initial-line-feed': false,
+      'tabs-to-spaces': 4,
+      'spaces-to-tabs': 4*/
+    });
+  </script>
 </body>
+
 </html>

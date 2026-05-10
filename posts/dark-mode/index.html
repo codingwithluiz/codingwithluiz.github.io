@@ -1,39 +1,50 @@
 <html>
-  <head>
-    <link rel="icon" href="images/favicon.png" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/prism.css" />
-    <link rel="stylesheet" href="css/doc.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/prism.css" />
+  <link rel="stylesheet" href="css/doc.css" />
+</head>
+
+<body>
   <div class="responsive-wrapper">
     <aside>
       <a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"></a>
       <h4 style="margin-top: 0; margin-bottom: 20px">📌 Informações</h4>
       <p><strong>🗓 Publicado:</strong><br />April 23, 2025</p>
-      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a></p>
+      <p><strong>✍️ Autor:</strong><br /><a target="_blank" href="https://github.com/codingwithluiz">@codingwithluiz</a>
+      </p>
       <p><strong>📁 Categoria:</strong><br />Frontend</p>
       <p><strong>🛠 Tecnologias:</strong><br />HTML, Javascript, CSS</p>
       <p><strong>🔗 Links:</strong></p>
-      <p><a target="_blank" href="https://www.youtube.com/watch?v=dFGyWXXN_kQ"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
-<path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path><path fill="#FFF" d="M20 31L20 17 32 24z"></path>
-</svg> YouTube</a></p>
-      <p><a target="_blank" href="https://github.com/codingwithluiz/js-dark-mode"><img src="../../images/github.png" style="margin:0;display: inline;" width="32"> GitHub</a></p>
-      <p><a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png" style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
+      <p><a target="_blank" href="https://www.youtube.com/watch?v=dFGyWXXN_kQ"><svg xmlns="http://www.w3.org/2000/svg"
+            x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+            <path fill="#FF3D00"
+              d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z">
+            </path>
+            <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+          </svg> YouTube</a></p>
+      <p><a target="_blank" href="https://github.com/codingwithluiz/js-dark-mode"><img src="../../images/github.png"
+            style="margin:0;display: inline;" width="32"> GitHub</a></p>
+      <p><a target="_blank" href="https://codingwithluiz.github.io/"><img src="images/logo.png"
+            style="margin:0;display: inline;" width="32"> CodingWithLuiz</a></p>
     </aside>
     <main>
-<p><img src="images/cover.jpg"></p>
-<h2 id="como-criar-um-dark-mode-simples-com-css-javascript">Como Criar um Dark Mode Simples com CSS + JavaScript</h2>
-<h3 id="estrutura-de-arquivos">Estrutura de arquivos</h3>
-<pre><code>📦 projeto/
+      <p><img src="images/cover.jpg"></p>
+      <h2 id="como-criar-um-dark-mode-simples-com-css-javascript">Como Criar um Dark Mode Simples com CSS + JavaScript
+      </h2>
+      <h3 id="estrutura-de-arquivos">Estrutura de arquivos</h3>
+      <pre><code>📦 projeto/
  ┣ 📜 index.html
  ┣ 📜 style.css
  ┗ 📜 darkmode.js
 </code></pre>
-<h3 id="html-de-exemplo">HTML de Exemplo</h3>
-<p>Vamos utilizar um HTML simples para aplicar o modo escuro, mas essa técnica pode
-ser aplicada em qualquer outro documento HTML.</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+      <h3 id="html-de-exemplo">HTML de Exemplo</h3>
+      <p>Vamos utilizar um HTML simples para aplicar o modo escuro, mas essa técnica pode
+        ser aplicada em qualquer outro documento HTML.</p>
+      <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -64,10 +75,11 @@ ser aplicada em qualquer outro documento HTML.</p>
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<h3 id="definindo-cores-com-variaveis-css">Definindo Cores com Variáveis CSS</h3>
-<p>Vamos criar o arquivo <code>style.css</code>. Começamos definindo nossas cores como 
-<strong>CSS custom properties</strong> (variáveis) para facilitar a alteração entre temas:</p>
-<pre><code class="language-css">:root {
+      <h3 id="definindo-cores-com-variaveis-css">Definindo Cores com Variáveis CSS</h3>
+      <p>Vamos criar o arquivo <code>style.css</code>. Começamos definindo nossas cores como
+        <strong>CSS custom properties</strong> (variáveis) para facilitar a alteração entre temas:
+      </p>
+      <pre><code class="language-css">:root {
   --base-color: white;
   --base-variant: #e8e9ed;
   --text-color: #111528;
@@ -76,8 +88,8 @@ ser aplicada em qualquer outro documento HTML.</p>
   --accent-color: #0071ff;
 }
 </code></pre>
-<p>Depois criamos a versão <code>darkmode</code>:</p>
-<pre><code class="language-css">.darkmode {
+      <p>Depois criamos a versão <code>darkmode</code>:</p>
+      <pre><code class="language-css">.darkmode {
   --base-color: #070b1d;
   --base-variant: #101425;
   --text-color: #ffffff;
@@ -86,11 +98,11 @@ ser aplicada em qualquer outro documento HTML.</p>
   --accent-color: #0071ff;
 }
 </code></pre>
-<p>Assim, ao adicionar a classe <code>darkmode</code> no <code>body</code>, todas as cores são trocadas 
-automaticamente.</p>
-<p>Vamos aproveitar e estilizar os demais elementos da nossa página já utilizando
-as variáveis que definimos.</p>
-<pre><code class="language-css">* {
+      <p>Assim, ao adicionar a classe <code>darkmode</code> no <code>body</code>, todas as cores são trocadas
+        automaticamente.</p>
+      <p>Vamos aproveitar e estilizar os demais elementos da nossa página já utilizando
+        as variáveis que definimos.</p>
+      <pre><code class="language-css">* {
   margin: 0;
   padding: 0;
 }
@@ -128,19 +140,19 @@ button {
   background-color: var(--accent-color);
 }
 </code></pre>
-<p>E vamos colocar a referência ao arquivo de CSS no nosso arquivo <code>index.html</code></p>
-<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+      <p>E vamos colocar a referência ao arquivo de CSS no nosso arquivo <code>index.html</code></p>
+      <pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
 </code></pre>
-<h3 id="criando-o-botao-de-troca-de-tema">Criando o Botão de Troca de Tema</h3>
-<p>No <code>index.html</code> temos um botão com dois ícones (um para claro e outro para 
-escuro). Adicione esse código logo abaixo da tag <code>&lt;header&gt;</code>:</p>
-<pre><code class="language-html">&lt;button id=&quot;theme-switch&quot;&gt;
+      <h3 id="criando-o-botao-de-troca-de-tema">Criando o Botão de Troca de Tema</h3>
+      <p>No <code>index.html</code> temos um botão com dois ícones (um para claro e outro para
+        escuro). Adicione esse código logo abaixo da tag <code>&lt;header&gt;</code>:</p>
+      <pre><code class="language-html">&lt;button id=&quot;theme-switch&quot;&gt;
    &lt;span&gt;🌙&lt;/span&gt;
    &lt;span&gt;☀️&lt;/span&gt;
 &lt;/button&gt;
 </code></pre>
-<p><strong>No CSS</strong>, usamos:</p>
-<pre><code class="language-css">#theme-switch {
+      <p><strong>No CSS</strong>, usamos:</p>
+      <pre><code class="language-css">#theme-switch {
   height: 50px;
   width: 50px;
   padding: 0;
@@ -157,19 +169,19 @@ escuro). Adicione esse código logo abaixo da tag <code>&lt;header&gt;</code>:</
   display: none;
 }
 </code></pre>
-<p>Inicialmente nossa página vai ser no modo normal, sem o modo escuro e portanto
-vamos mostrar o ícone para mudar para o modo escuro e esconder o ícone para o
-modo não escuro.</p>
-<p>Quando a classe <code>darkmode</code> está no body, vamos trocar os ícones via CSS.</p>
-<p>Vamos adicionar um efeito <em>hover</em> ao passarmos o mouse sobre o ícone que muda
-os temas:</p>
-<pre><code class="language-css">#theme-switch:hover {
+      <p>Inicialmente nossa página vai ser no modo normal, sem o modo escuro e portanto
+        vamos mostrar o ícone para mudar para o modo escuro e esconder o ícone para o
+        modo não escuro.</p>
+      <p>Quando a classe <code>darkmode</code> está no body, vamos trocar os ícones via CSS.</p>
+      <p>Vamos adicionar um efeito <em>hover</em> ao passarmos o mouse sobre o ícone que muda
+        os temas:</p>
+      <pre><code class="language-css">#theme-switch:hover {
   background-color: var(--accent-color);
   transition: background-color 0.2s ease;
 }
 </code></pre>
-<p>E por fim temos que adicionar os estilos para quando estivermos no modo escuro:</p>
-<pre><code class="language-css">.darkmode #theme-switch span:first-child {
+      <p>E por fim temos que adicionar os estilos para quando estivermos no modo escuro:</p>
+      <pre><code class="language-css">.darkmode #theme-switch span:first-child {
   display: none;
 }
 .darkmode #theme-switch span:last-child {
@@ -180,11 +192,11 @@ os temas:</p>
   box-shadow: 0 0 12px rgba(0, 113, 255, 0.4);
 }
 </code></pre>
-<p>Basicamente estamos invertendo a exibição dos ícones. No modo escuro é mostrado
-o ícone do sol para mudar para o modo claro e escondemos a lua.</p>
-<h3 id="aplicando-o-tema-dinamicamente-com-javascript">Aplicando o Tema Dinamicamente com JavaScript</h3>
-<p>Vamos criar o arquivo <code>darkmode.js</code> com o seguinte conteúdo:</p>
-<pre><code class="language-javascript">let darkmode = localStorage.getItem('darkmode')
+      <p>Basicamente estamos invertendo a exibição dos ícones. No modo escuro é mostrado
+        o ícone do sol para mudar para o modo claro e escondemos a lua.</p>
+      <h3 id="aplicando-o-tema-dinamicamente-com-javascript">Aplicando o Tema Dinamicamente com JavaScript</h3>
+      <p>Vamos criar o arquivo <code>darkmode.js</code> com o seguinte conteúdo:</p>
+      <pre><code class="language-javascript">let darkmode = localStorage.getItem('darkmode')
 const themeSwitch = document.getElementById('theme-switch')
 
 // Ativar o darkmode
@@ -208,52 +220,52 @@ themeSwitch.addEventListener(&quot;click&quot;, () =&gt; {
   darkmode !== &quot;active&quot; ? enableDarkMode() : disableDarkMode()
 })
 </code></pre>
-<p>E vamos adicionar a referência a ele antes da tag <code>&lt;\head&gt;</code>:</p>
-<pre><code class="language-html"> &lt;script type=&quot;text/javascript&quot; src=&quot;darkmode.js&quot; defer&gt;&lt;/script&gt;
+      <p>E vamos adicionar a referência a ele antes da tag <code>&lt;\head&gt;</code>:</p>
+      <pre><code class="language-html"> &lt;script type=&quot;text/javascript&quot; src=&quot;darkmode.js&quot; defer&gt;&lt;/script&gt;
 </code></pre>
-<p><strong>O que esse JS faz:</strong></p>
-<ul>
-<li>Verifica no <code>localStorage</code> se o darkmode estava ativo.</li>
-<li>Aplica a classe <code>darkmode</code> no <code>body</code> se sim.</li>
-<li>Troca entre <code>add</code> e <code>remove</code> da classe no clique do botão.</li>
-<li>Salva a escolha no <code>localStorage</code> para manter ao recarregar.</li>
-</ul>
-<h3 id="adicionando-transicoes-suaves">Adicionando Transições Suaves</h3>
-<p>No CSS:</p>
-<pre><code class="language-css">body, button, header, section {
+      <p><strong>O que esse JS faz:</strong></p>
+      <ul>
+        <li>Verifica no <code>localStorage</code> se o darkmode estava ativo.</li>
+        <li>Aplica a classe <code>darkmode</code> no <code>body</code> se sim.</li>
+        <li>Troca entre <code>add</code> e <code>remove</code> da classe no clique do botão.</li>
+        <li>Salva a escolha no <code>localStorage</code> para manter ao recarregar.</li>
+      </ul>
+      <h3 id="adicionando-transicoes-suaves">Adicionando Transições Suaves</h3>
+      <p>No CSS:</p>
+      <pre><code class="language-css">body, button, header, section {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 </code></pre>
-<p>Assim o visual troca de cor suavemente, sem solavancos.</p>
-<h3 id="resultado">Resultado</h3>
-<ul>
-<li>Tema claro por padrão.</li>
-<li>Dark Mode com clique.</li>
-<li>Ícone muda conforme o tema.</li>
-<li>Tema salvo no <code>localStorage</code> e mantido no próximo acesso.</li>
-</ul>
-<h3 id="ajuste-final">Ajuste Final</h3>
-<p>Se deixar configurado o modo escuro e carregarmos a página, vamos perceber que
-ela fica piscando (para simular pressionar F5 várias vezes). Isso acontece pois
-o HTML é carregado com o tema padrão (claro) e somente depois o Javascript
-aplica o darkmode. É nesse intervalo que ocorre a piscada. Para resolver vamos
-adicionar esse script antes de carregar o arquivo de estilos e o javascript
-responsável por fazer o mudança de tema:</p>
-<pre><code class="language-html">&lt;script&gt;
+      <p>Assim o visual troca de cor suavemente, sem solavancos.</p>
+      <h3 id="resultado">Resultado</h3>
+      <ul>
+        <li>Tema claro por padrão.</li>
+        <li>Dark Mode com clique.</li>
+        <li>Ícone muda conforme o tema.</li>
+        <li>Tema salvo no <code>localStorage</code> e mantido no próximo acesso.</li>
+      </ul>
+      <h3 id="ajuste-final">Ajuste Final</h3>
+      <p>Se deixar configurado o modo escuro e carregarmos a página, vamos perceber que
+        ela fica piscando (para simular pressionar F5 várias vezes). Isso acontece pois
+        o HTML é carregado com o tema padrão (claro) e somente depois o Javascript
+        aplica o darkmode. É nesse intervalo que ocorre a piscada. Para resolver vamos
+        adicionar esse script antes de carregar o arquivo de estilos e o javascript
+        responsável por fazer o mudança de tema:</p>
+      <pre><code class="language-html">&lt;script&gt;
   if (localStorage.getItem(&quot;darkmode&quot;) === &quot;active&quot;) {
     document.documentElement.classList.add(&quot;darkmode&quot;);
   }
 &lt;/script&gt;
 </code></pre>
-<p>Vamos mudar o seletor que define as variáveis para o modo escuro:</p>
-<pre><code class="language-css">:root.darkmode {
+      <p>Vamos mudar o seletor que define as variáveis para o modo escuro:</p>
+      <pre><code class="language-css">:root.darkmode {
 ...
 }
 </code></pre>
-<p>Como adicionamos a classe <code>darkmode</code> no <code>documentElement</code> no início do nosso
-HTML temos que mudar também nas funções responsáveis para alterar entre os temas
-claro e escuro. Basta mudar o <code>document.body</code> para <code>document.documentElement</code>.</p>
-<pre><code class="language-js">const enableDarkMode = () =&gt; {
+      <p>Como adicionamos a classe <code>darkmode</code> no <code>documentElement</code> no início do nosso
+        HTML temos que mudar também nas funções responsáveis para alterar entre os temas
+        claro e escuro. Basta mudar o <code>document.body</code> para <code>document.documentElement</code>.</p>
+      <pre><code class="language-js">const enableDarkMode = () =&gt; {
   document.documentElement.classList.add(&quot;darkmode&quot;);
   localStorage.setItem(&quot;darkmode&quot;, &quot;active&quot;);
 };
@@ -264,25 +276,27 @@ const disableDarkMode = () =&gt; {
   localStorage.setItem(&quot;darkmode&quot;, null);
 };
 </code></pre>
-<p>Pronto, assim resolvemos o problema do pisca-pisca ao carregar a página quando
-configurada para o modo escuro.</p></div>
-</main>
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/prism.js"></script>
-<script>
-  Prism.plugins.NormalizeWhitespace.setDefaults({
-    "remove-trailing": true,
-    "remove-indent": true,
-    "left-trim": true,
-    "right-trim": true,
-    /*'break-lines': 80,
-    'indent': 2,
-    'remove-initial-line-feed': false,
-    'tabs-to-spaces': 4,
-    'spaces-to-tabs': 4*/
-  });
-</script>  
+      <p>Pronto, assim resolvemos o problema do pisca-pisca ao carregar a página quando
+        configurada para o modo escuro.</p>
+  </div>
+  </main>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/prism.js"></script>
+  <script>
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+      "remove-trailing": true,
+      "remove-indent": true,
+      "left-trim": true,
+      "right-trim": true,
+      /*'break-lines': 80,
+      'indent': 2,
+      'remove-initial-line-feed': false,
+      'tabs-to-spaces': 4,
+      'spaces-to-tabs': 4*/
+    });
+  </script>
 </body>
+
 </html>

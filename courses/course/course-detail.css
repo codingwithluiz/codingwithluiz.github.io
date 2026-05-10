@@ -1,0 +1,381 @@
+/* ── Course Detail Page — CodingWithLuiz styles ─────────────────────────── */
+/* Uses CodingWithLuiz design tokens from style.css                           */
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+.cd-hero {
+  padding: 80px 0 48px;
+  background:
+    radial-gradient(ellipse 800px 400px at 0% 0%, rgba(124,92,255,0.18), transparent 60%),
+    radial-gradient(ellipse 600px 300px at 100% 80%, rgba(91,214,255,0.12), transparent 55%);
+  border-bottom: 1px solid var(--border);
+}
+
+.cd-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .cd-hero-inner { grid-template-columns: 1fr; }
+  .cd-hero-img-wrap { order: -1; max-width: 380px; margin: 0 auto; }
+}
+
+/* Breadcrumb */
+.cd-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  transition: color 0.18s;
+}
+.cd-breadcrumb:hover { color: var(--text); }
+.cd-breadcrumb i { font-size: 0.8rem; }
+
+/* Hero title */
+.cd-hero h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.cd-subtitle {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+  line-height: 1.65;
+}
+
+/* Meta row (rating, students, etc.) */
+.cd-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  margin-bottom: 0.4rem;
+}
+
+.cd-rating-num {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  color: var(--brand2);
+  font-size: 0.95rem;
+}
+
+.cd-stars-inline { color: var(--brand2); letter-spacing: 1px; }
+.cd-muted        { color: var(--muted); }
+.cd-dot          { width: 4px; height: 4px; background: var(--muted2); border-radius: 50%; }
+
+/* Tech tags in hero */
+.cd-hero .cd-tech-tags { margin-top: 1rem; }
+.cd-hero .cd-tech-tags .course-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(124,92,255,0.12);
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 0.73rem;
+  margin: 0 4px 4px 0;
+}
+
+/* CTA row */
+.cd-hero-actions {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Video embed */
+.cd-hero-img-wrap { position: relative; }
+.cd-video-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.cd-video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.cd-img-glow {
+  position: absolute;
+  inset: -24px;
+  background: radial-gradient(circle, rgba(124,92,255,0.3) 0%, transparent 70%);
+  filter: blur(30px);
+  z-index: 0;
+}
+
+/* ── Body Layout ──────────────────────────────────────────────────────────── */
+.cd-body {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
+  align-items: start;
+}
+@media (max-width: 1024px) { .cd-body { grid-template-columns: 1fr; } }
+
+/* ── Cards ────────────────────────────────────────────────────────────────── */
+.cd-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(12px);
+}
+
+.cd-section-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── What you'll learn ────────────────────────────────────────────────────── */
+.cd-learn-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.6rem;
+}
+.cd-learn-grid li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.cd-learn-grid li i { color: var(--brand); margin-top: 0.2rem; flex-shrink: 0; }
+
+/* ── Requirements ─────────────────────────────────────────────────────────── */
+.cd-req-list { list-style: none; }
+.cd-req-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 0.35rem 0;
+}
+.cd-req-list li i { color: var(--brand2); font-size: 0.45rem; flex-shrink: 0; }
+
+/* ── Description ──────────────────────────────────────────────────────────── */
+.cd-description p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 0.93rem;
+}
+
+/* ── Curriculum ───────────────────────────────────────────────────────────── */
+.cd-curriculum { display: flex; flex-direction: column; gap: 0.45rem; }
+
+.cd-section {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.cd-section-header {
+  width: 100%;
+  background: var(--panel);
+  border: none;
+  color: var(--text);
+  padding: 0.85rem 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: -0.01em;
+  transition: background 0.15s;
+}
+.cd-section-header:hover { background: var(--panel2); }
+.cd-section-header span:first-child { display: flex; align-items: center; gap: 0.7rem; }
+
+.cd-chevron {
+  transition: transform 0.22s ease;
+  font-size: 0.75rem;
+  color: var(--brand);
+}
+.cd-section.open .cd-chevron { transform: rotate(90deg); }
+
+.cd-sec-meta { font-size: 0.78rem; color: var(--muted); font-weight: 500; font-family: "Inter", sans-serif; }
+
+.cd-section-body { display: none; padding: 0.4rem 0; background: rgba(255,255,255,0.02); }
+.cd-section.open .cd-section-body { display: block; }
+
+.cd-lesson {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1.1rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  transition: background 0.12s;
+}
+.cd-lesson:hover { background: rgba(124,92,255,0.06); }
+.cd-lesson i { color: var(--brand); font-size: 0.82rem; flex-shrink: 0; }
+.cd-lesson span:first-of-type { flex: 1; }
+
+.cd-lesson-dur {
+  font-size: 0.76rem;
+  color: var(--muted2);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 0.12rem 0.45rem;
+  border-radius: 6px;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Instructor ───────────────────────────────────────────────────────────── */
+.cd-instructor { display: flex; gap: 1.4rem; align-items: flex-start; }
+@media (max-width: 600px) {
+  .cd-instructor { flex-direction: column; align-items: center; text-align: center; }
+}
+.cd-inst-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--brand);
+  flex-shrink: 0;
+}
+.cd-inst-name {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--brand);
+  margin-bottom: 0.2rem;
+}
+.cd-inst-stats {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin: 0.6rem 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+.cd-inst-stats i { color: var(--brand2); margin-right: 0.3rem; }
+.cd-inst-bio { color: var(--muted); font-size: 0.88rem; line-height: 1.7; margin-top: 0.4rem; }
+
+/* ── Reviews ──────────────────────────────────────────────────────────────── */
+.cd-overall {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 1.4rem;
+  padding: 1.1rem;
+  background: rgba(124,92,255,0.06);
+  border: 1px solid rgba(124,92,255,0.2);
+  border-radius: var(--radius-sm);
+}
+.cd-overall-num {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  background: var(--brand-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.cd-stars-big { color: var(--brand2); font-size: 1.15rem; letter-spacing: 2px; }
+
+.cd-reviews { display: flex; flex-direction: column; gap: 0.9rem; }
+.cd-review-card {
+  background: var(--panel);
+  border-radius: var(--radius-sm);
+  padding: 1.1rem;
+  border: 1px solid var(--border);
+}
+.cd-review-header { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.7rem; }
+.cd-reviewer-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--brand-grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+.cd-reviewer-name { font-weight: 700; font-size: 0.9rem; }
+.cd-reviewer-meta { display: flex; align-items: center; gap: 0.5rem; margin-top: 2px; }
+.cd-review-text { color: var(--muted); font-size: 0.88rem; line-height: 1.7; }
+
+/* "No reviews" state */
+.cd-no-reviews {
+  color: var(--muted2);
+  font-size: 0.88rem;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────────────────────── */
+.cd-sidebar { position: sticky; top: calc(var(--header-h) + 20px); }
+
+.cd-includes-card {
+  background: var(--panel2);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+}
+.cd-includes-card h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.1rem;
+}
+.cd-includes-list { list-style: none; }
+.cd-includes-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.cd-includes-list li:last-child { border-bottom: none; }
+.cd-includes-list li i { color: var(--brand); width: 16px; text-align: center; flex-shrink: 0; }
+
+/* ── Curriculum meta text ─────────────────────────────────────────────────── */
+#cd-curriculum-meta { color: var(--muted); font-size: 0.84rem; margin-bottom: 1rem; }
