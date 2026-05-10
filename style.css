@@ -857,6 +857,15 @@ a.read-more:hover {
   gap: 16px;
 }
 
+.newsletter h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+
+}
+
 .newsletter-actions {
   display: flex;
   gap: 10px;
